@@ -11,44 +11,81 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Josefin+Sans|Roboto+Condensed|Satisfy" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/jquery.pagepiling.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="CSS/examples.css" /> -->
+    <script type="text/javascript" src="JavaScript/jquery.pagepiling.min.js"></script>
+    <script type="text/javascript">
+  		$(document).ready(function() {
+  	    	$('#pagepiling').pagepiling({
+  	    		menu: '#menu',
+  	    		anchors: ['page1', 'page2', 'page3', 'page4'],
+  			    sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
+  			    navigation: {
+  			    	'position': 'right',
+  			   		'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+  			   	},
+  			    afterRender: function(){
+  			    	$('#pp-nav').addClass('custom');
+  			    },
+  			    afterLoad: function(anchorLink, index){
+  			    	if(index>1){
+  			    		$('#pp-nav').removeClass('custom');
+  			    	}else{
+  			    		$('#pp-nav').addClass('custom');
+  			    	}
+  			    }
+  			});
+  	    });
+      </script>
   </head>
   <body>
-    <script>
-  AOS.init();
-</script>
     <div id="target" style="font-family:Josefin Sans">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Works</a></li>
+      <ul id="menu">
+        <li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
+        <li data-menuanchor="page2"><a href="#page2">About</a></li>
+        <li data-menuanchor="page3"><a href="#page3">Contact</a></li>
+        <li data-menuanchor="page4"><a href="#page4">Works</a></li>
       </ul>
     </div>
     <div id="mouse"></div>
     <script type="text/javascript" src="JavaScript/home.js"/></script>
     <!-- <script type="text/javascript" src="JavaScript/matrix.js"/></script> -->
+    <div id="pagepiling">
+        <div class="section" id="section1">
+          <h1>pagePiling.js</h1>
+        <p>Create an original scrolling site</p>
+        <img src="imgs/pagePiling-plugin.gif" alt="pagePiling" />
+        <br />
 
-    <section id="intro">
-      <div class="container-fluid fill">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12" >
-            <p class="intro-text">Hey  guyz..it's</p>
-            <h1 class="intro-text-name">P Udaya Charan</h1><br>
-            <a class="btn btn-default btn-lg showcase-btn" href="#profile">Welcome!</a>
+        </div>
+        <div class="section" id="section2">
+          <div class="intro">
+            <div id="colors"></div>
+            <h1>jQuery plugin</h1>
+            <p>Pile your sections one over another and access them scrolling or by URL!</p>
+            <div id="markup">
+              <script src="https://gist.github.com/alvarotrigo/4a87a4b8757d87df8a72.js"></script>
+            </div>
           </div>
-        </div><!--end of row-->
-      </div><!--end of container-->
-    </section>
-    <section id="skill">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12" >
-            <p class="intro-text" id="int-text">Hey</p>
-            <h1 class="intro-text-name">P Udaya Charan</h1><br>
-            <a class="btn btn-default btn-lg showcase-btn" href="#profile">Welcome!</a>
+        </div>
+        <div class="section" id="section3">
+          <div class="intro">
+            <h1>Configurable</h1>
+            <p>Plenty of options, methods and callbacks to use.</p>
+            <div id="colors2"></div>
+            <div id="colors3"></div>
           </div>
-        </div><!--end of row-->
-      </div><!--end of container-->
-    </section>
+        </div>
+        <div class="section" id="section4">
+          <div class="intro">
+            <h1>Compatible</h1>
+            <p>Designed to work on tablet and mobile devices.</p>
+            <p>Oh! And its compatible with old browsers such as IE 8 or Opera 12!</p>
+          </div>
+        </div>
+    </div>
+    <script>
+    AOS.init({duration: 1200,});
+    </script>
   </body>
 </html>
