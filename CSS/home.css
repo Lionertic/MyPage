@@ -9,21 +9,35 @@ html {
   overflow: hidden;
 }
 body {
+  overflow: scroll;
   display: grid;
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: white;
 }
-#intro{
-  margin: auto;
-  height: 100%;
-  text-align: center;
 
+#intro{
+  /* margin-top: 100%; */
+  margin: auto;
+  text-align: center;
 }
-#int-text{
-  margin-top: -4%;
-  font-size: 1.5em;
+,#skill{
+  /* margin-top: 100%; */
+  margin-top: 10px;
+  text-align: center;
+}
+.intro-text{
+	font-family: 'Roboto Condensed',sans-serif;
+	text-align: center;
+	font-size: 60px;
+	margin-top: 14%;
+}
+.intro-text-name{
+	font-weight: bold;
+	font-size: 100px;
+	text-align: center;
+	font-family: 'Roboto Condensed',sans-serif;
 }
 #target {
   margin-top: -10%;
