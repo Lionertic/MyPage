@@ -5,10 +5,18 @@
     <meta charset="utf-8">
     <title>Uday</title>
     <link rel="stylesheet" href="CSS/home.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Josefin+Sans|Roboto+Condensed|Satisfy" rel="stylesheet">
   </head>
   <body>
-
-    <div id="target">
+    <script>
+  AOS.init();
+</script>
+    <div id="target" style="font-family:Josefin Sans">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
@@ -19,8 +27,19 @@
     <div id="mouse"></div>
     <script type="text/javascript" src="JavaScript/home.js"/></script>
     <!-- <script type="text/javascript" src="JavaScript/matrix.js"/></script> -->
-    <div class="content">
-      sFrsg
-    </div>
+
+
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="content col-sm-12 col-md-12 col-lg-12 col-xs-12" >
+            <p class="intro-text">It's</p>
+            <h1 class="intro-text-name">Neil S Paul</h1><br>
+            <a class="btn btn-default btn-lg showcase-btn" href="#profile">Welcome!</a>
+          </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+
   </body>
 </html>

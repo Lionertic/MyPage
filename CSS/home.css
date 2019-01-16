@@ -12,14 +12,19 @@ body {
   display: grid;
   height: 30%;
   margin: 0;
-  font-family: Roboto, monospace;
   overflow: hidden;
   background-color: white;
 }
-
-#target {
+.content{
   margin: auto;
-  font-size: 1.5rem;
+  height: 200%;
+  overflow: auto;
+  background-color: red;
+}
+#target {
+  font-family: sans-serif;
+  margin: auto;
+  font-size: 2.5rem;
   position: relative;
   cursor: none;
   color: black;
