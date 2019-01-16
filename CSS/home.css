@@ -10,16 +10,19 @@ html {
 }
 body {
   display: grid;
-  height: 30%;
+  height: 100%;
   margin: 0;
   overflow: hidden;
   background-color: white;
 }
-.content{
+#intro{
   margin: auto;
-  height: 200%;
-  overflow: auto;
-  background-color: red;
+  height: 100%;
+}
+#int-text{
+  margin-top: -4%;
+  font-size: 1.5em;
+  text-align: center;
 }
 #target {
   font-family: sans-serif;
