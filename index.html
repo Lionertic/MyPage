@@ -32,6 +32,16 @@
           });
       </script>
 
+      <script src="https://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
+      	<script>
+      		// Wait for window load
+      		$(window).load(function() {
+      			// Animate loader off screen
+      			$("#loader").animate({
+      				top: -200
+      			}, 1500);
+      		});
+      	</script>	
   </head>
   <body>
     <div id="target" style="font-family:Josefin Sans">
