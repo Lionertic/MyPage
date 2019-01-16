@@ -9,7 +9,7 @@ html {
   overflow: hidden;
 }
 
-#toolbar {
+body {
   display: grid;
   height: 30%;
   margin: 0;
