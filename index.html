@@ -6,8 +6,6 @@
     <title>Uday</title>
     <!-- CUSTOM -->
     <link rel="stylesheet" href="CSS/home.css">
-    <link rel="stylesheet" href="CSS/anim.css">
-    <script src="JavaScript/anim.js"></script>
 
     <!-- BOOTSRTAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,6 +28,19 @@
             background-size: 100% auto;
             top: 48%;
             left: 0;
+            -webkit-animation-name: img1; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            animation-name: img1;
+            animation-duration: 1s;
+        }
+        @-webkit-keyframes img1 {
+          from {left:100%;}
+          to {left: 0;}
+        }
+
+        @keyframes img1 {
+          from {left:100%;}
+          to {left: 0;}
         }
         #img2 {
             width: 100%;
@@ -40,6 +51,10 @@
             background-size: 100% auto;
             top: 53%;
             left: 0;
+            -webkit-animation-name: img1; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            animation-name: img1;
+            animation-duration: 1s;
         }
         #img3 {
             width: 100%;
@@ -50,6 +65,11 @@
             background-size: 100% auto;
             top: 25%;
             left: 0;
+            -webkit-animation-name: img1; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            animation-name: img1;
+            animation-duration: 1s;
+
         }
         #overlay {
             z-index: 4;
@@ -122,14 +142,23 @@
 <script>
     // var md = new MobileDetect(window.navigator.userAgent);
 
-    //if(md.mobile()==''){
-    var s = skrollr.init({
+    if(!detectmob()){
+      var s = skrollr.init({
         render: function(data) {
             if ($("#overlay").css("opacity") == 0) {
                 change();
             }
         }
-    });
+      });
+    }
+    else {
+      $("#img1").remove();
+      $("#img2").remove();
+      $("#img3").remove();
+      $("#overlay").remove();
+      change();
+    }
+
 
     function change(){
       $(".lds-hourglass").css("top", "45%");
@@ -158,6 +187,18 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+    function detectmob() {
+      if( navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i))
+            return true;
+      else
+            return false;
+}
 </script>
 
 </html>
