@@ -120,7 +120,7 @@
             if ($("#overlay").css("opacity") == 0) {
                 $(".lds-hourglass").css("top", "45%");
                 $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
-                    $.getScript('JavaScript/jquery.multiscroll.js', function(data, textStatus, jqxhr) {
+                    $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
                         $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
                             $(".lds-hourglass").css("top", "-45%");
                             $("#img1").remove();
