@@ -24,10 +24,11 @@
             height: 450vh;
             position: fixed;
             background-repeat: no-repeat;
-            background-image: url("https://www.beargrylls.com/static/media/img/home/header/01.png");
+            background-image: url("img/back.jpg");
             background-size: 100% auto;
-            top: 48%;
+            top: 0;
             left: 0;
+            opacity: 0.5;
             -webkit-animation-name: img1; /* Safari 4.0 - 8.0 */
             -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
             animation-name: img1;
@@ -37,7 +38,6 @@
           from {left:100%;}
           to {left: 0;}
         }
-
         @keyframes img1 {
           from {left:100%;}
           to {left: 0;}
@@ -47,29 +47,46 @@
             height: 450vh;
             position: fixed;
             background-repeat: no-repeat;
-            background-image: url("https://www.beargrylls.com/static/media/img/home/header/02.png");
-            background-size: 100% auto;
-            top: 53%;
-            left: 0;
-            -webkit-animation-name: img1; /* Safari 4.0 - 8.0 */
-            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-            animation-name: img1;
+            background-image: url("img/scroll.png");
+            background-size: 18% auto;
+            top: 60%;
+            left: 5%;
+            -webkit-animation-name: img2;
+            -webkit-animation-duration: 1s;
+            animation-name: img2;
             animation-duration: 1s;
+        }
+        @-webkit-keyframes img2 {
+          from {top:-100%;}
+          to {top:60%;}
+        }
+
+        @keyframes img2 {
+          from {top:-100%;}
+          to {top:60%;}
         }
         #img3 {
             width: 100%;
-            height: 450vh;
+            height: 90vh;
             position: fixed;
             background-repeat: no-repeat;
-            background-image: url("https://www.beargrylls.com/static/media/img/home/header/03.png");
-            background-size: 100% auto;
-            top: 25%;
-            left: 0;
-            -webkit-animation-name: img1; /* Safari 4.0 - 8.0 */
-            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-            animation-name: img1;
+            background-image: url("img/name.gif");
+            background-size: 42% auto;
+            top: 13%;
+            left: 3%;
+            -webkit-animation-name: img3;
+            -webkit-animation-duration: 1s;
+            animation-name: img3;
             animation-duration: 1s;
+        }
+        @-webkit-keyframes img3 {
+          from {top:100%;}
+          to {top:13%;}
+        }
 
+        @keyframes img3 {
+          from {top:100%;}
+          to {top:13%;}
         }
         #overlay {
             z-index: 4;
@@ -86,9 +103,9 @@
 
 <body>
     <div class="lds-hourglass"></div>
-    <div id="img1" class="block animatable bounceIn" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:150%;z-index:1;" data-501="opacity:0;"></div>
-    <div id="img2" data-0="background-size:100%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:150%;z-index:1;" data-501="opacity:0;"></div>
-    <div id="img3" data-0="background-size:100%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
+    <div id="img1" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
+    <div id="img2" data-0="background-size:18%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:18%;z-index:1;" data-501="opacity:0;"></div>
+    <div id="img3" data-0="background-size:42%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:1;"></div>
     <div id="overlay" data-0="opacity:0.1" data-250="opacity:0.5;" data-500="opacity:1;" data-501="opacity:0;"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 
@@ -162,6 +179,7 @@
 
     function change(){
       $(".lds-hourglass").css("top", "45%");
+      $("#img3").css("opacity",0);
       $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
           $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
               $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {

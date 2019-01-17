@@ -2,6 +2,7 @@ const data = {
   elems: document.querySelectorAll("#target ul li"),
   mouse: document.getElementById("mouse"),
   colors: [
+    "rgb(244,160,0)",
     "rgb(66,133,244)",
     "rgb(219,68,55)",
     "rgb(244,160,0)",
@@ -44,6 +45,7 @@ class Control {
   init() {
     for (let i = 0; i < this.elems.length; i++) {
       this.lis.push(new Lis(this.elems[i], this.colors[i]));
+      console.log(i+this.colors[i]);
       this.lis[i].init();
       this.lis[i].el.addEventListener("click", () => {
         this.mouse.classList.toggle("click");
@@ -78,7 +80,7 @@ class Control {
         break;
       } else {
         this.bigger = false;
-        this.mouseColor = "blue";
+        this.mouseColor = "red";
       }
     }
     if (this.bigger) {
