@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Uday</title>
     <!-- CUSTOM -->
@@ -14,77 +15,138 @@
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Josefin+Sans|Roboto+Condensed|Satisfy" rel="stylesheet">
 
-    <!-- MULTI-SCROLL -->
-    <link rel="stylesheet" type="text/css" href="CSS/jquery.multiscroll.css" />
-    <script type="text/javascript" src="JavaScript/jquery.easings.min.js"></script>
-    <script type="text/javascript" src="JavaScript/jquery.multiscroll.js"></script>
+    <style media="screen">
+        body {
+            background-color: #1f1f1f;
+        }
+        #img1 {
+            width: 100%;
+            height: 450vh;
+            position: fixed;
+            background-repeat: no-repeat;
+            background-image: url("https://www.beargrylls.com/static/media/img/home/header/01.png");
+            background-size: 100% auto;
+            top: 48%;
+            left: 0;
+        }
+        #img2 {
+            width: 100%;
+            height: 450vh;
+            position: fixed;
+            background-repeat: no-repeat;
+            background-image: url("https://www.beargrylls.com/static/media/img/home/header/02.png");
+            background-size: 100% auto;
+            top: 53%;
+            left: 0;
+        }
+        #img3 {
+            width: 100%;
+            height: 450vh;
+            position: fixed;
+            background-repeat: no-repeat;
+            background-image: url("https://www.beargrylls.com/static/media/img/home/header/03.png");
+            background-size: 100% auto;
+            top: 25%;
+            left: 0;
+        }
+        #overlay {
+            z-index: 4;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            overflow: auto;
+            top: 0px;
+            left: 0px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
 
-    <!-- MULTI-SCREEN INITIALIZATION -->
-    <script type="text/javascript">
-  	 $(document).ready(function() {
-              $('#myContainer').multiscroll({
-              	sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0'],
-              	anchors: ['first', 'second', 'third','forth'],
-              	menu: '#menu',
-              	easing: 'easeOutBack'
+<body>
+    <div class="lds-hourglass"></div>
+    <div id="img1" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:150%;z-index:1;" data-501="opacity:0;"></div>
+    <div id="img2" data-0="background-size:100%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:150%;z-index:1;" data-501="opacity:0;"></div>
+    <div id="img3" data-0="background-size:100%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
+    <div id="overlay" data-0="opacity:0.1" data-250="opacity:0.5;" data-500="opacity:1;" data-501="opacity:0;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 
-              });
-          });
-      </script>
-
-      <script src="https://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
-      	<script>
-      		// Wait for window load
-      		$(window).load(function() {
-      			// Animate loader off screen
-      			$("#loader").animate({
-      				top: -200
-      			}, 1500);
-      		});
-      	</script>	
-  </head>
-  <body>
     <div id="target" style="font-family:Josefin Sans">
-      <ul id="menu">
-        <li data-menuanchor="first" class="active"><a href="#first">Home</a></li>
-        <li data-menuanchor="second"><a href="#second">About</a></li>
-        <li data-menuanchor="third"><a href="#third">Contact</a></li>
-        <li data-menuanchor="forth"><a href="#forth">Works</a></li>
-      </ul>
+        <ul id="menu">
+            <li data-menuanchor="first" class="active"><a href="#first">Home</a></li>
+            <li data-menuanchor="second"><a href="#second">About</a></li>
+            <li data-menuanchor="third"><a href="#third">Contact</a></li>
+            <li data-menuanchor="forth"><a href="#forth">Works</a></li>
+        </ul>
     </div>
     <div id="mouse"></div>
-    <script type="text/javascript" src="JavaScript/home.js"/></script>
-    <!-- <script type="text/javascript" src="JavaScript/matrix.js"/></script> -->
     <div id="myContainer">
 
-      <div class="ms-left">
-		      <div class="ms-section">
-			         <div class="fullscreen"></div>
-		      </div>
+        <div class="ms-left">
+            <div class="ms-section">1
+                <!-- <div class="fullscreen"></div> -->
+            </div>
 
-		      <div class="ms-section">
-		      </div>
+            <div class="ms-section">2
+            </div>
 
-		      <div class="ms-section">
-          </div>
+            <div class="ms-section">3
+            </div>
 
-	        <div class="ms-section">
-    		  </div>
-    	</div>
+            <div class="ms-section">4
+            </div>
+        </div>
 
-    	<div class="ms-right">
-          <div class="ms-section" >
-    		  </div>
+        <div class="ms-right">
+            <div class="ms-section">1
+            </div>
 
-    		  <div class="ms-section" >
-    		  </div>
+            <div class="ms-section">2
+            </div>
 
-    		  <div class="ms-section" >
-    		  </div>
+            <div class="ms-section">3
+            </div>
 
-          <div class="ms-section" >
-    		  </div>
-    	</div>
+            <div class="ms-section">4
+            </div>
+        </div>
     </div>
-  </body>
+    <script type="text/javascript" src="JavaScript/home.js" /></script>
+</body>
+
+<!-- PARALLAX-EFFECT -->
+<script type="text/javascript">
+    var s = skrollr.init({
+        render: function(data) {
+            if ($("#overlay").css("opacity") == 0) {
+                $(".lds-hourglass").css("top", "45%");
+                $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
+                    $.getScript('JavaScript/jquery.multiscroll.js', function(data, textStatus, jqxhr) {
+                        $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
+                            $(".lds-hourglass").css("top", "-45%");
+                            $("#img1").remove();
+                            $("#img2").remove();
+                            $("#img3").remove();
+                            topFunction();
+                            $("#overlay").remove();
+                            $("#target").css("z-index", 6);
+                            $("#target").css("opacity", 1);
+                            $('#myContainer').multiscroll({
+                                sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0'],
+                                anchors: ['first', 'second', 'third', 'forth'],
+                                menu: '#menu',
+                                easing: 'easeOutBack'
+                            });
+                        });
+                    });
+                });
+            }
+        }
+    });
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
 </html>
