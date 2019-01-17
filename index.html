@@ -113,21 +113,21 @@
     <script type="text/javascript" src="JavaScript/home.js" /></script>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.3/mobile-detect.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.3/mobile-detect.min.js"></script> -->
 
 
 <!-- PARALLAX-EFFECT -->
 <script>
-    var md = new MobileDetect(window.navigator.userAgent);
+    // var md = new MobileDetect(window.navigator.userAgent);
 
-    if(md.mobile()==''){
+    //if(md.mobile()==''){
     var s = skrollr.init({
         render: function(data) {
             if ($("#overlay").css("opacity") == 0) {
                 change();
             }
         }
-    });}
+    });
 
     function change(){
       $(".lds-hourglass").css("top", "45%");
