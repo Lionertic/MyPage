@@ -113,8 +113,14 @@
     <script type="text/javascript" src="JavaScript/home.js" /></script>
 </body>
 
+<script src="mobile-detect.js"></script>
+<script>
+    var md = new MobileDetect(window.navigator.userAgent);
+    // ... see below
+</script>
 <!-- PARALLAX-EFFECT -->
 <script type="text/javascript">
+
     var s = skrollr.init({
         render: function(data) {
             if ($("#overlay").css("opacity") == 0) {
