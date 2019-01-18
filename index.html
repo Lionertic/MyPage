@@ -231,7 +231,14 @@
       var isEdge = !isIE && !!window.StyleMedia;
       var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
       var isBlink = (isChrome || isOpera) && !!window.CSS;
-      var isSamsung =navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i);
+      var sams =navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i);
+      var isSamsung;
+        
+      if(zams! = null) 
+        isSamsung = true;
+      else
+        isSamsung = false;
+
 
 alert(isSamsung) ;
 
