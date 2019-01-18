@@ -19,6 +19,12 @@
         body {
             background-color: #1f1f1f;
         }
+        #menu li a{
+          color: white;
+        }
+        #menu li a:active{
+          color: #1f1f1f;
+        }
         #img1 {
             width: 100%;
             height: 450vh;
@@ -148,7 +154,7 @@
 </head>
 
 <body>
-    <div class="lds-ripple"><div>
+    <div class="lds-hourglass"></div>
     <div id="img1" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
     <div id="img2" data-0="background-size:18%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:18%;z-index:1;" data-501="opacity:0;"></div>
     <div id="img3" data-0="background-size:35%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:1;"></div>
@@ -157,10 +163,10 @@
 
     <div id="target" style="font-family:Josefin Sans">
         <ul id="menu">
-            <li data-menuanchor="first" class="active"><a href="#first">Home</a></li>
-            <li data-menuanchor="second"><a href="#second">About</a></li>
-            <li data-menuanchor="third"><a href="#third">Contact</a></li>
-            <li data-menuanchor="forth"><a href="#forth">Works</a></li>
+            <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+            <li data-menuanchor="about"><a href="#about">About</a></li>
+            <li data-menuanchor="works"><a href="#works">Works</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
         </ul>
     </div>
     <div id="mouse"></div>
@@ -218,9 +224,9 @@
     }
     else {
 
-      var isChrome = !!window.chrome;
+      var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 
-      if(isChrome){
+      if(navigator.userAgent.indexOf("Chrome") != -1){
         change();
       }
       else{
@@ -272,7 +278,7 @@
       });
     }
     function change(){
-      $(".lds-ripple").css("top", "45%");
+      $(".lds-hourglass").css("top", "45%");
       $("#img3").css("opacity",0);
       $("#img1").remove();
       $("#img2").remove();
@@ -280,14 +286,14 @@
       $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
         $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
           $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
-            $(".lds-ripple").css("top", "-45%");
+            $(".lds-hourglass").css("top", "-45%");
             topFunction();
             $("#overlay").remove();
             $("#target").css("z-index", 6);
             $("#target").css("opacity", 1);
             $('#myContainer').multiscroll({
-              sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0','red'],
-              anchors: ['first', 'second', 'third', 'forth'],
+              sectionsColor: ['#291D35', '#584B4F', '#664b00','#293d3d'],
+              anchors: ['home', 'about', 'works', 'contact'],
               menu: '#menu',
               easing: 'easeOutBack'
             });

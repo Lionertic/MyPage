@@ -2,11 +2,10 @@ const data = {
   elems: document.querySelectorAll("#target ul li"),
   mouse: document.getElementById("mouse"),
   colors: [
-    "rgb(244,160,0)",
-    "rgb(66,133,244)",
-    "rgb(219,68,55)",
-    "rgb(244,160,0)",
-    "rgb(15,157,88)"
+    "rgb(41,29,53)",
+    "rgb(88,75,79)",
+    "rgb(102,75,0)",
+    "rgb(41,61,61)"
   ],
   lis: [],
   scaleVal: 1,
@@ -80,7 +79,7 @@ class Control {
         break;
       } else {
         this.bigger = false;
-        this.mouseColor = "red";
+        this.mouseColor = "#ff8080";
       }
     }
     if (this.bigger) {
