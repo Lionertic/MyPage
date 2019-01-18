@@ -232,10 +232,10 @@
       var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
       var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-      if(isChrome){
+      if(isChrome || isIE ){
         change();
       }
-      else if(isOpera || isFirefox || isSafari || isIE || isEdge ||isBlink){
+      else if(isOpera || isFirefox || isSafari  || isEdge ||isBlink){
         $('#img1').css("-webkit-animation-name","img1m");
         $('#img1').css("animation-name","img1m");
         $('#img1').css("background-size","210%");
