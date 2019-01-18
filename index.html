@@ -25,22 +25,30 @@
             position: fixed;
             background-repeat: no-repeat;
             background-image: url("img/back.jpg");
-            background-size: 100% auto;
+            background-size: 300% auto;
             top: 0;
             left: 0;
             opacity: 0.5;
-            -webkit-animation-name: img1; /* Safari 4.0 - 8.0 */
+            -webkit-animation-name: img1d; /* Safari 4.0 - 8.0 */
             -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-            animation-name: img1;
+            animation-name: img1d;
             animation-duration: 1s;
         }
-        @-webkit-keyframes img1 {
+        @-webkit-keyframes img1d {
           from {left:100%;}
           to {left: 0;}
         }
-        @keyframes img1 {
+        @keyframes img1d {
           from {left:100%;}
           to {left: 0;}
+        }
+        @-webkit-keyframes img1m {
+          from {left:100%;}
+          to {left: -60%;}
+        }
+        @keyframes img1m {
+          from {left:100%;}
+          to {left: -60%;}
         }
         #img2 {
             width: 100%;
@@ -51,29 +59,48 @@
             background-size: 18% auto;
             top: 60%;
             left: 5%;
-            -webkit-animation-name: img2;
+            -webkit-animation-name: img2d;
             -webkit-animation-duration: 1s;
-            animation-name: img2;
+            animation-name: img2d;
             animation-duration: 1s;
         }
-        @-webkit-keyframes img21 {
-          0%   {top:60%;}
-          50% {top:63%;}
-          100% {top:60%;}
-        }
-        @keyframes img21 {
-          0% {top:60%;}
-          50% {top:63%;}
-          100% {top:60%;}
-        }
-        @-webkit-keyframes img2 {
+        @-webkit-keyframes img2d {
           from {top:-100%;}
           to {top:60%;}
         }
 
-        @keyframes img2 {
+        @keyframes img2d {
           from {top:-100%;}
           to {top:60%;}
+        }
+        @-webkit-keyframes img21d {
+          0%   {top:60%;}
+          50% {top:63%;}
+          100% {top:60%;}
+        }
+        @keyframes img21d {
+          0% {top:60%;}
+          50% {top:63%;}
+          100% {top:60%;}
+        }
+        @-webkit-keyframes img2m {
+          from {top:-100%;}
+          to {top:70%;}
+        }
+
+        @keyframes img2m {
+          from {top:-100%;}
+          to {top:70%;}
+        }
+        @-webkit-keyframes img21m {
+          0%   {top:70%;}
+          50% {top:73%;}
+          100% {top:70%;}
+        }
+        @keyframes img21m {
+          0% {top:70%;}
+          50% {top:73%;}
+          100% {top:70%;}
         }
         #img3 {
             width: 100%;
@@ -81,22 +108,31 @@
             position: fixed;
             background-repeat: no-repeat;
             background-image: url("img/name.gif");
-            background-size: 42% auto;
+            background-size: 35% auto;
             top: 13%;
             left: 3%;
-            -webkit-animation-name: img3;
+            -webkit-animation-name: img3d;
             -webkit-animation-duration: 1s;
-            animation-name: img3;
+            animation-name: img3d;
             animation-duration: 1s;
         }
-        @-webkit-keyframes img3 {
+        @-webkit-keyframes img3d {
           from {top:100%;}
           to {top:13%;}
         }
 
-        @keyframes img3 {
+        @keyframes img3d {
           from {top:100%;}
           to {top:13%;}
+        }
+        @-webkit-keyframes img3m {
+          from {top:100%;}
+          to {top:25%;}
+        }
+
+        @keyframes img3m {
+          from {top:100%;}
+          to {top:25%;}
         }
         #overlay {
             z-index: 4;
@@ -115,7 +151,7 @@
     <div class="lds-hourglass"></div>
     <div id="img1" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
     <div id="img2" data-0="background-size:18%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:18%;z-index:1;" data-501="opacity:0;"></div>
-    <div id="img3" data-0="background-size:42%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:1;"></div>
+    <div id="img3" data-0="background-size:35%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:1;"></div>
     <div id="overlay" data-0="opacity:0.1" data-250="opacity:0.5;" data-500="opacity:1;" data-501="opacity:0;"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 
@@ -180,22 +216,61 @@
       });
     }
     else {
-      $("#img1").remove();
-      $("#img2").remove();
-      $("#img3").remove();
-      $("#overlay").remove();
-      change();
+      $('#img1').css("-webkit-animation-name","img1m");
+      $('#img1').css("animation-name","img1m");
+      $('#img1').css("background-size","205%");
+      $('#img1').css("left","-60%");
+      $('#img1').css("width","160%");
+      $('#img1').attr("data-0","background-size:205%;z-index:3;opacity:1;");
+      $('#img1').attr("data-500","background-size:205%;z-index:1;opacity:0.5;");
+      $('#img1').attr("data-50100","opacity:0;");
+
+      $('#img2').css("-webkit-animation-name","img2m");
+      $('#img2').css("animation-name","img2m");
+      $('#img2').css("background-size","40%");
+      $('#img2').css("top","70%");
+      $('#img2').css("width","95%");
+      $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+        $(this).css("-webkit-animation-name","img21m");
+        $(this).css("-webkit-animation-iteration-count","infinite");
+        $(this).css("animation-name","img21m");
+        $(this).css("animation-iteration-count","infinite");
+      });
+      $('#img2').attr("data-0","background-size:40%;z-index:3;opacity:1;");
+      $('#img2').attr("data-50000","background-size:350%;z-index:1;opacity:0.5;");
+      $('#img2').attr("data-50100","opacity:0;");
+
+      $('#img3').css("-webkit-animation-name","img3m");
+      $('#img3').css("animation-name","img3m");
+      $('#img3').css("background-size","45%");
+      $('#img3').css("left","3%");
+      $('#img3').css("top","25%");
+      $('#img3').css("width","160%");
+      $('#img3').attr("data-0","background-size:45%;z-index:3;opacity:1;");
+      $('#img3').attr("data-10000","background-size:30%;z-index:1;opacity:0.5;");
+      $('#img3').attr("data-50010","opacity:0;");
+
+      var s = skrollr.init({
+        render: function(data) {
+            if ($("#img1").css("opacity") < 0.1) {
+              $('#img1').css("z-index","1");
+              $('#img2').css("z-index","1");
+              $('#img3').css("z-index","1");
+              change();
+            }
+        }
+      });
     }
     function change(){
       $(".lds-hourglass").css("top", "45%");
       $("#img3").css("opacity",0);
+      $("#img1").remove();
+      $("#img2").remove();
+      $("#img3").remove();
       $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
           $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
               $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
                   $(".lds-hourglass").css("top", "-45%");
-                  $("#img1").remove();
-                  $("#img2").remove();
-                  $("#img3").remove();
                   topFunction();
                   $("#overlay").remove();
                   $("#target").css("z-index", 6);
