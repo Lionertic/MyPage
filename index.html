@@ -232,7 +232,7 @@
       var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
       var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-      if(isChrome || isIE || isEdge){
+      if(navigator.userAgent.indexOf("Chrome") != -1){
         alert("no");
         change();
       }
