@@ -6,7 +6,11 @@
       <p id="demo"></p>
       <script>
         function myFunction() {
-          if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) { 
+          if(navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i)) {
+            alert("it's Samsung");
+
+} 
+          else if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) { 
             alert('Opera'); 
           } 
           else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
@@ -14,7 +18,7 @@
           }
           else if(navigator.userAgent.indexOf("Safari") != -1) {
             alert('Safari'); 
-          }
+          
           else if(navigator.userAgent.indexOf("Firefox") != -1 ) { 
             alert('Firefox'); 
           }
