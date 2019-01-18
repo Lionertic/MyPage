@@ -233,9 +233,11 @@
       var isBlink = (isChrome || isOpera) && !!window.CSS;
 
       if(isChrome || isIE || isEdge){
+        alert("no");
         change();
       }
-      else if(isOpera || isFirefox || isSafari   ||isBlink){
+      else if(isOpera || isFirefox || isSafari ||isBlink){
+        alert("s");
         $('#img1').css("-webkit-animation-name","img1m");
         $('#img1').css("animation-name","img1m");
         $('#img1').css("background-size","210%");
