@@ -201,7 +201,6 @@
 <!-- PARALLAX-EFFECT -->
 <script>
     if(!detectmob()){
-      alert("desktop");
       $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
         $(this).css("-webkit-animation-name","img21");
         $(this).css("-webkit-animation-iteration-count","infinite");
@@ -217,6 +216,7 @@
       });
     }
     else {
+      alert("not a desktop");
       $('#img1').css("-webkit-animation-name","img1m");
       $('#img1').css("animation-name","img1m");
       $('#img1').css("background-size","205%");
