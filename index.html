@@ -231,11 +231,11 @@
       var isEdge = !isIE && !!window.StyleMedia;
       var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
       var isBlink = (isChrome || isOpera) && !!window.CSS;
+      Var isSamsung =navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i);
 
-      if(navigator.userAgent.indexOf("Chrome") != -1){
-        change();
-      }
-      else if(isOpera || isFirefox || isSafari ||isBlink){
+
+
+      if(isOpera || isFirefox || isSafari ||isBlink || isSamsung){
         $('#img1').css("-webkit-animation-name","img1m");
         $('#img1').css("animation-name","img1m");
         $('#img1').css("background-size","210%");
@@ -270,6 +270,9 @@
         $('#img3').attr("data-0","background-size:45%;z-index:3;opacity:1;");
         $('#img3').attr("data-10000","background-size:30%;z-index:1;opacity:0.5;");
         $('#img3').attr("data-50010","opacity:0;");
+      }
+      else if(navigator.userAgent.indexOf("Chrome") != -1){
+        change();
       }
 
       var s = skrollr.init({
