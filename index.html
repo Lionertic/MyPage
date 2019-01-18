@@ -44,11 +44,11 @@
         }
         @-webkit-keyframes img1m {
           from {left:100%;}
-          to {left: -60%;}
+          to {left: -100%;}
         }
         @keyframes img1m {
           from {left:100%;}
-          to {left: -60%;}
+          to {left: -100%;}
         }
         #img2 {
             width: 100%;
@@ -218,11 +218,12 @@
     else {
       $('#img1').css("-webkit-animation-name","img1m");
       $('#img1').css("animation-name","img1m");
-      $('#img1').css("background-size","205%");
-      $('#img1').css("left","-60%");
-      $('#img1').css("width","160%");
-      $('#img1').attr("data-0","background-size:205%;z-index:3;opacity:1;");
-      $('#img1').attr("data-500","background-size:205%;z-index:1;opacity:0.5;");
+      $('#img1').css("background-size","210%");
+      $('#img1').css("left","-100%");
+      $('#img1').css("width","210%");
+      $('#img1').css("top","-10%");
+      $('#img1').attr("data-0","background-size:195%;z-index:3;opacity:1;");
+      $('#img1').attr("data-50000","background-size:195%;z-index:1;opacity:0.5;");
       $('#img1').attr("data-50100","opacity:0;");
 
       $('#img2').css("-webkit-animation-name","img2m");
