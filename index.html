@@ -201,6 +201,7 @@
 <!-- PARALLAX-EFFECT -->
 <script>
     if(!detectmob()){
+      alert("desktop");
       $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
         $(this).css("-webkit-animation-name","img21");
         $(this).css("-webkit-animation-iteration-count","infinite");
