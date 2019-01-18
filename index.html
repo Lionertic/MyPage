@@ -228,21 +228,24 @@
       var isFirefox = typeof InstallTrigger !== 'undefined';
       var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
       var isIE = /*@cc_on!@*/false || !!document.documentMode;
-      var isEdge = !isIE && !!window.StyleMedia;
+      var edge = navigator.userAgent.match(/Edg/i);
       var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
       var isBlink = (isChrome || isOpera) && !!window.CSS;
       var sams =navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i);
       var isSamsung;
-        
+      var isEdge;
       if(sams != null) 
         isSamsung = true;
       else
         isSamsung = false;
 
+      if(edge != null) 
+        isEdge = true;
+      else
+        isEdge = false;
 
 
-
-      if(isOpera || isFirefox || isSafari ||isBlink|| isSamsung){
+      if(isOpera || isFirefox || isSafari ||isBlink|| isSamsung || isEdge){
         $('#img1').css("-webkit-animation-name","img1m");
         $('#img1').css("animation-name","img1m");
         $('#img1').css("background-size","210%");
