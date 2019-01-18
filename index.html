@@ -231,11 +231,11 @@
       var isEdge = !isIE && !!window.StyleMedia;
       var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
       var isBlink = (isChrome || isOpera) && !!window.CSS;
-      Var isSamsung =navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i);
+      var isSamsung =navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i);
 
+alert(isSamsung) ;
 
-
-      if(isOpera || isFirefox || isSafari ||isBlink || isSamsung){
+      if(isOpera || isFirefox || isSafari ||isBlink) {//|| isSamsung){
         $('#img1').css("-webkit-animation-name","img1m");
         $('#img1').css("animation-name","img1m");
         $('#img1').css("background-size","210%");
