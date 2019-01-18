@@ -56,6 +56,16 @@
             animation-name: img2;
             animation-duration: 1s;
         }
+        @-webkit-keyframes img21 {
+          0%   {top:60%;}
+          50% {top:63%;}
+          100% {top:60%;}
+        }
+        @keyframes img21 {
+          0% {top:60%;}
+          50% {top:63%;}
+          100% {top:60%;}
+        }
         @-webkit-keyframes img2 {
           from {top:-100%;}
           to {top:60%;}
@@ -152,14 +162,15 @@
     <script type="text/javascript" src="JavaScript/home.js" /></script>
 </body>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.3/mobile-detect.min.js"></script> -->
-
-
 <!-- PARALLAX-EFFECT -->
 <script>
-    // var md = new MobileDetect(window.navigator.userAgent);
-
     if(!detectmob()){
+      $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+        $(this).css("-webkit-animation-name","img21");
+        $(this).css("-webkit-animation-iteration-count","infinite");
+        $(this).css("animation-name","img21");
+        $(this).css("animation-iteration-count","infinite");
+      });
       var s = skrollr.init({
         render: function(data) {
             if ($("#overlay").css("opacity") == 0) {
