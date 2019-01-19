@@ -18,6 +18,7 @@
     <style media="screen">
         body {
             background-color: #1f1f1f;
+            color: #fff;
         }
         #menu li a{
           color: white;
@@ -150,6 +151,96 @@
             left: 0px;
             background: rgba(0, 0, 0, 0.7);
         }
+
+        .c-logo {
+          width: 180px;
+          height: 200px;
+          box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);
+          border-radius: 50%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          background-repeat: no-repeat;
+          background-image: url("img/face.jpg");
+          background-size: 100% auto;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          color: white;
+          font-size: 3.16667rem;
+          line-height: 1.26316;
+          text-decoration: none;
+          font-weight: 300;
+          -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+          -webkit-transform: perspective(500px);
+          transform: perspective(500px);
+      }
+      .c-logo:after {
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          box-shadow: 0 20px 70px -10px rgba(51, 51, 51, 0.7), 0 50px 100px 0 rgba(51, 51, 51, 0.2);
+          z-index: -1;
+          -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+          -webkit-transition: .3s;
+          transition: .3s;
+        }
+        .c-logo > span {
+          color: #1f1f1f;
+          display: block;
+          position: fixed;
+          visibility: hidden;
+          left: 5%;
+          top: 55%;
+          -webkit-transform: translateZ(50px) scale(0.7);
+          transform: translateZ(50px) scale(0.7);
+        }
+        .c-logo:hover .me {
+          visibility: visible;
+        }
+        .c-logo:hover:after {
+          -webkit-transform: translateZ(-100px);
+          transform: translateZ(-100px);
+          opacity: 1;
+        }
+        .homed{
+          position: absolute;
+          text-align: center;
+          margin-top: 40%;
+          font-size: 3vh;
+        }
+        .worksd1{
+          position: absolute;
+          text-align: center;
+          margin-top: 35%;
+          font-size: 3vh;
+        }
+        .worksd2{
+          position: absolute;
+          text-align: center;
+          margin-top: 75%;
+          font-size: 3vh;
+        }
+        .worksd1r{
+          position: absolute;
+          text-align: center;
+          margin-top: 15%;
+          font-size: 3vh;
+        }
+        .worksd2r{
+          position: absolute;
+          text-align: center;
+          margin-top: 55%;
+          font-size: 3vh;
+        }
     </style>
 </head>
 
@@ -171,16 +262,45 @@
     </div>
     <div id="mouse"></div>
     <div id="myContainer">
-
         <div class="ms-left">
-            <div class="ms-section">1
-                <!-- <div class="fullscreen"></div> -->
+            <div class="ms-section">
+              <div class="container-fluid">
+                <div class="homed row">
+                  <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+                  </div>
+                  <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
+                    <p>
+                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can control human beings as players, and Logan Lerman as the player who controls him. Alongside Butler and Lerman, it also stars Michael C. Hall, Ludacris, Amber Valletta, Terry Crews, Alison Lohman, John Leguizamo, and Zoë Bell.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="ms-section">2
             </div>
 
-            <div class="ms-section">3
+            <div class="ms-section">
+              <div class="container-fluid">
+                <div class="worksd1 row">
+                  <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                  </div>
+                  <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
+                    <p>
+                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                    </p>
+                  </div>
+                </div>
+                <div class="worksd2 row">
+                  <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                  </div>
+                  <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
+                    <p>
+                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="ms-section">4
@@ -188,15 +308,45 @@
         </div>
 
         <div class="ms-right">
-            <div class="ms-section">1
+            <div class="ms-section">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-12	col-sm-12	col-md-5 col-lg-5">
+                  </div>
+                  <div style="left:30%;"class="homed col-xs-6	col-sm-6	col-md-3 col-lg-3">
+                    <div class="c-logo js-tilt" data-tilt-glare="false" data-tilt-speed="400" data-tilt-scale="1.1" data-tilt-maxtilt="50" data-tilt-perspective="500">
+                         <span class="me">This is me..</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="ms-section">2
+            <div class="ms-section">
             </div>
 
-            <div class="ms-section">3
+            <div class="ms-section">
+              <div class="container-fluid">
+                <div class="worksd1r row">
+                  <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                  </div>
+                  <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
+                    <p>
+                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                    </p>
+                  </div>
+                </div>
+                <div class="worksd2r row">
+                  <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                  </div>
+                  <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
+                    <p>
+                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-
             <div class="ms-section">4
             </div>
         </div>
@@ -207,7 +357,8 @@
 <!-- PARALLAX-EFFECT -->
 <script>
     if(!detectmob()){
-
+      change();
+      $("#myContainer").css("visibility","hidden");
       $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
         $(this).css("-webkit-animation-name","img21");
         $(this).css("-webkit-animation-iteration-count","infinite");
@@ -223,7 +374,8 @@
       });
     }
     else {
-
+      change();
+      $("#mouse").remove();
       var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
       var isFirefox = typeof InstallTrigger !== 'undefined';
       var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
@@ -234,12 +386,12 @@
       var sams =navigator.userAgent.match(/SAMSUNG|Samsung|SGH-[I|N|T]|GT-[I|N]|SM-[N|P|T|Z]|SHV-E|SCH-[I|J|R|S]|SPH-L/i);
       var isSamsung;
       var isEdge;
-      if(sams != null) 
+      if(sams != null)
         isSamsung = true;
       else
         isSamsung = false;
 
-      if(edge != null) 
+      if(edge != null)
         isEdge = true;
       else
         isEdge = false;
@@ -305,6 +457,7 @@
       $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
         $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
           $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
+            $("#myContainer").css("visibility","visible");
             $(".lds-hourglass").css("top", "-45%");
             topFunction();
             $("#overlay").remove();
@@ -337,5 +490,11 @@
             return false;
     }
 </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.6.1/vanilla-tilt.min.js"></script>
 
+<script type="text/javascript">
+  const element = document.querySelector(".js-tilt");
+
+VanillaTilt.init(element);
+</script>
 </html>

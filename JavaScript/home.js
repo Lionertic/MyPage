@@ -44,7 +44,6 @@ class Control {
   init() {
     for (let i = 0; i < this.elems.length; i++) {
       this.lis.push(new Lis(this.elems[i], this.colors[i]));
-      console.log(i+this.colors[i]);
       this.lis[i].init();
       this.lis[i].el.addEventListener("click", () => {
         this.mouse.classList.toggle("click");
