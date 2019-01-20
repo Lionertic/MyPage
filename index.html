@@ -753,7 +753,7 @@
       $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
         $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
           $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
-            $.getScript('JavaScript/scramble.js', function(data, textStatus, jqxhr) {
+            // $.getScript('JavaScript/scramble.js', function(data, textStatus, jqxhr) {
               $("#myContainer").css("visibility","visible");
               $(".lds-hourglass").css("top", "-45%");
               topFunction();
@@ -769,7 +769,7 @@
             });
           });
         });
-      });
+      // });
     }
     function topFunction() {
       document.body.scrollTop = 0;
