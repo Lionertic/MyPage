@@ -374,7 +374,8 @@
       });
     }
     else {
-      change();
+      //change();
+      $("#myContainer").css("visibility","hidden");
       $("#mouse").remove();
       var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
       var isFirefox = typeof InstallTrigger !== 'undefined';
