@@ -14,6 +14,8 @@
 
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Josefin+Sans|Roboto+Condensed|Satisfy" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <style media="screen">
         body {
@@ -21,7 +23,7 @@
             color: #fff;
         }
         #menu li a{
-          color: white;
+          color: #fff;
         }
         #menu li a:active{
           color: #1f1f1f;
@@ -241,6 +243,196 @@
           margin-top: 55%;
           font-size: 3vh;
         }
+        body {
+          font-size: 62.5%;
+          font-family: 'Lato', sans-serif;
+          font-weight: 300;
+
+        }
+        body #hire {
+          color: #ff8080;
+          margin: 60px auto 120px;
+          text-align: center;
+          padding: 50px 0 110px;
+          width: 100%;
+          max-width: 1100px;
+        }
+        body #hire h1 {
+          margin-bottom: 40px;
+          font-size: 4em;
+          text-transform: uppercase;
+          font-family: 'Lato', sans-serif;
+          font-weight: 100;
+        }
+        form {
+          width: 58.3333333333%;
+          margin: 0 auto;
+        }
+        form .field {
+          width: 100%;
+          position: relative;
+          margin-bottom: 15px;
+        }
+        form .field label {
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #1f1f1f;
+            width: 100%;
+            padding: 18px 0;
+            font-size: 2.45em;
+            letter-spacing: 0.075em;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
+          }
+          form .field label + span {
+            font-family: 'SSStandard';
+            opacity: 0;
+            color: #ff8080;
+            display: block;
+            position: absolute;
+            top: 12px;
+            left: 7%;
+            font-size: 2.5em;
+            text-shadow: 1px 2px 0 #cd6302;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
+          }
+          form .field input[type="text"],
+          form .field textarea {
+            border: none;
+            background: #E8E9EA;
+            width: 100%;
+            margin: 0;
+            padding: 18px 0;
+            padding-left: 19.5%;
+            color: #1f1f1f;
+            font-size: 2.4em;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+          }
+          form .field input[type="text"]#msg,
+          form .field textarea#msg {
+            height: 57px;
+            resize: none;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
+          }
+          form .field input[type="text"]:focus, form .field input[type="text"].focused,
+          form .field textarea:focus,
+          form .field textarea.focused {
+            outline: none;
+          }
+          form .field input[type="text"]:focus#msg, form .field input[type="text"].focused#msg,
+          form .field textarea:focus#msg,
+          form .field textarea.focused#msg {
+            /* color: red; */
+
+            padding-bottom: 150px;
+          }
+          form .field input[type="text"]:focus + label, form .field input[type="text"].focused + label,
+          form .field textarea:focus + label,
+          form .field textarea.focused + label {
+            width: 18%;
+            background: #ff8080;
+            color: #1f1f1f;
+          }
+          form .field input[type="text"].focused + label,
+          form .field textarea.focused + label {
+            color: #fff;
+          }
+          form .field:hover label {
+            width: 17%;
+            background: #1f1f1f;
+            color:#ff8080;
+          }
+          form input[type="submit"] {
+            background: #ff8080;
+            color: #1f1f1f;
+            -webkit-appearance: none;
+            border: none;
+            text-transform: uppercase;
+            position: relative;
+            padding: 13px 50px;
+            font-size: 2.4em;
+            letter-spacing: 0.1em;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            -webkit-transition: all 333ms ease-in-out;
+            -moz-transition: all 333ms ease-in-out;
+            -o-transition: all 333ms ease-in-out;
+            -ms-transition: all 333ms ease-in-out;
+            transition: all 333ms ease-in-out;
+          }
+          form input[type="submit"]:hover {
+            background: #1f1f1f;
+            color: #ff8080;
+          }
+          form input[type="submit"]:focus {
+            outline: none;
+            background: #cd6302;
+          }
+          .contactdl{
+            margin-top: 9%;
+          }
+          .contactdr1{
+            font-size: 3vh;
+            text-align: center;
+            margin-top: 35%;
+          }
+          .contactdr2{
+            margin-top: 35%;
+          }
+          .flex-center {
+            width: 100%;
+            min-height: 50vh;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+          }
+          .icon-3d {
+            font-size: 8vh;
+            padding: 25px;
+            color: #fff;
+          }
+          .icon-3d:hover {
+            -webkit-animation: icon3d 200ms infinite;
+            animation: icon3d 200ms infinite;
+          }
+
+          @keyframes icon3d {
+            0% {
+              text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+            }
+            25% {
+              text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+            }
+            50% {
+              text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+            }
+            75% {
+              text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+            }
+            100% {
+              text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+            }
+          }
+
     </style>
 </head>
 
@@ -303,7 +495,36 @@
               </div>
             </div>
 
-            <div class="ms-section">4
+            <div class="ms-section">
+              <div class="container-fluid">
+                <div class=" contactdl row">
+                  <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+                  </div>
+                  <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10" id="hire">
+                    <h1>Contact Me</h1>
+                    <form action="https://formspree.io/udayacharan.20cs@licet.ac.in" method="POST">
+                	      <div class="field name-box">
+                		        <input type="text" id="name" name="NAME" placeholder="Who Are You?"/>
+                        		<label for="name">Name</label>
+                		        <span class="ss-icon"></span>
+                	      </div>
+
+                	      <div class="field email-box">
+                		        <input type="text" id="email" name="EMAIL" placeholder="name@email.com"/>
+                		        <label for="email">Email</label>
+                		        <span class="ss-icon"></span>
+                	      </div>
+
+                	      <div class="field msg-box">
+                		        <textarea id="msg" rows="4" name="MSG" placeholder="Your message goes here..."/></textarea>
+                		        <label for="msg">Msg</label>
+                		        <span class="ss-icon"></span>
+                	      </div>
+                	      <input class="button" type="submit" value="Send" />
+                  </form>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
 
@@ -347,7 +568,26 @@
                 </div>
               </div>
             </div>
-            <div class="ms-section">4
+            <div class="ms-section">
+              <div class="container-fluid">
+                <div class="contactdr1 row">
+                  <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
+                    <p>
+                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                    </p>
+                  </div>
+                <div class="contactdr2 row">
+                  <div class="col-xs-6	col-sm-6 col-md-10 col-lg-10">
+                    <div class="flex-center">
+                      <a href="https://github.com/Lionertic" target="_blank"><i class="fa fa-github fa-4x icon-3d"></i></a>
+                      <a href="https://www.facebook.com/Lionertic" target="_blank"><i class="fa fa-facebook fa-4x icon-3d"></i></a>
+                      <a href="https://www.instagram.com/im_uc_047/" target="_blank"><i class="fa fa-instagram fa-4x icon-3d"></i></a>
+                      <a href="https://plus.google.com/+UdayaCharan" target="_blank"><i class="fa fa-google-plus fa-4x icon-3d"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
         </div>
     </div>
@@ -490,6 +730,48 @@
       else
             return false;
     }
+    // Input Lock
+$('textarea').blur(function () {
+    $('#hire textarea').each(function () {
+        $this = $(this);
+        if ( this.value != '' ) {
+          $this.addClass('focused');
+          $('textarea + label + span').css({'opacity': 1});
+        }
+        else {
+          $this.removeClass('focused');
+          $('textarea + label + span').css({'opacity': 0});
+        }
+    });
+});
+
+$('#hire .field:first-child input').blur(function () {
+    $('#hire .field:first-child input').each(function () {
+        $this = $(this);
+        if ( this.value != '' ) {
+          $this.addClass('focused');
+          $('.field:first-child input + label + span').css({'opacity': 1});
+        }
+        else {
+          $this.removeClass('focused');
+          $('.field:first-child input + label + span').css({'opacity': 0});
+        }
+    });
+});
+
+$('#hire .field:nth-child(2) input').blur(function () {
+    $('#hire .field:nth-child(2) input').each(function () {
+        $this = $(this);
+        if ( this.value != '' ) {
+          $this.addClass('focused');
+          $('.field:nth-child(2) input + label + span').css({'opacity': 1});
+        }
+        else {
+          $this.removeClass('focused');
+          $('.field:nth-child(2) input + label + span').css({'opacity': 0});
+        }
+    });
+});
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.6.1/vanilla-tilt.min.js"></script>
 
