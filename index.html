@@ -12,7 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Josefin+Sans|Roboto+Condensed|Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -433,15 +432,7 @@
               text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
             }
           }
-          @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
-          :root{
-            font-size: 12px;
-      font-family: 'Anonymous Pro', monospace;
-    }
-    body{
-      background-color: #111;
-    }
-    .textbox-1{
+          .textbox-1{
       /* position: relative; */
       /* margin-left: 100px; */
       /* margin-top: 4rem; */
@@ -467,7 +458,6 @@
     button:active{
       transform: translateY(2px);
     }
-
     </style>
 </head>
 
@@ -523,7 +513,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
 
             <div class="ms-section">
@@ -650,6 +639,12 @@
 
 <!-- PARALLAX-EFFECT -->
 <script>
+  $(window).scroll(function(e) {
+    if($(window).scrollTop() >=570) {
+       change();
+       $(window).scrollTop(0);
+    }
+});
     if(!detectmob()){
       // change();
       $("#myContainer").css("visibility","hidden");
@@ -749,26 +744,29 @@
       $("#img1").remove();
       $("#img2").remove();
       $("#img3").remove();
-      $("#target").css("z-index", 6);
+      topFunction();
       $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
         $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
           $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
             $.getScript('JavaScript/scramble.js', function(data, textStatus, jqxhr) {
-              $("#myContainer").css("visibility","visible");
-              $(".lds-hourglass").css("top", "-45%");
               topFunction();
-              $("#overlay").remove();
-              $("#target").css("opacity", 1);
-              $('#myContainer').multiscroll({
-                sectionsColor: ['#291D35', '#584B4F', '#664b00','#293d3d'],
-                anchors: ['home', 'about', 'works', 'contact'],
-                menu: '#menu',
-                easing: 'easeOutBack'
-              });
+            $("#myContainer").css("visibility","visible");
+            $(".lds-hourglass").css("top", "-45%");
+            $("#overlay").remove();
+            $("#target").css("z-index", 6);
+            $("#target").css("opacity", 1);
+            topFunction();
+            $('#myContainer').multiscroll({
+              sectionsColor: ['#291D35', '#584B4F', '#664b00','#293d3d'],
+              anchors: ['home', 'about', 'works', 'contact'],
+              menu: '#menu',
+              easing: 'easeOutBack'
             });
           });
         });
       });
+    });
+
     }
     function topFunction() {
       document.body.scrollTop = 0;
@@ -828,12 +826,12 @@ $('#hire .field:nth-child(2) input').blur(function () {
         }
     });
 });
-
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.6.1/vanilla-tilt.min.js"></script>
 
 <script type="text/javascript">
   const element = document.querySelector(".js-tilt");
-  VanillaTilt.init(element);
+
+VanillaTilt.init(element);
 </script>
 </html>
