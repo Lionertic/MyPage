@@ -12,7 +12,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- <script src="JavaScript/scramble.js"></script> -->
 
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Josefin+Sans|Roboto+Condensed|Satisfy" rel="stylesheet">
@@ -750,6 +749,7 @@
       $("#img1").remove();
       $("#img2").remove();
       $("#img3").remove();
+      $("#target").css("z-index", 6);
       $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
         $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
           $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
@@ -758,7 +758,6 @@
               $(".lds-hourglass").css("top", "-45%");
               topFunction();
               $("#overlay").remove();
-              $("#target").css("z-index", 6);
               $("#target").css("opacity", 1);
               $('#myContainer').multiscroll({
                 sectionsColor: ['#291D35', '#584B4F', '#664b00','#293d3d'],
@@ -835,7 +834,6 @@ $('#hire .field:nth-child(2) input').blur(function () {
 
 <script type="text/javascript">
   const element = document.querySelector(".js-tilt");
-
-VanillaTilt.init(element);
+  VanillaTilt.init(element);
 </script>
 </html>
