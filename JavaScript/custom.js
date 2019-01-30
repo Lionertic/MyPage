@@ -23,7 +23,7 @@ function change(){
   $("#img2").remove();
   $("#img3").remove();
   topFunction();
-  $.getScript('CSS/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
+  $.getScript('css/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
     $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
       $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
         $.getScript('JavaScript/scramble.js', function(data, textStatus, jqxhr) {
