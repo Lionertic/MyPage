@@ -9,19 +9,12 @@ function desk(){
   var s = skrollr.init({
     render: function(data) {
         if ($("#overlay").css("opacity") == 0) {
-            change();
+          change();
         }
     }
   });
 }
-
-function change(){
-  $("skr").remove();
-  $(".lds-hourglass").css("top", "45%");
-  $("#img3").css("opacity",0);
-  $("#img1").remove();
-  $("#img2").remove();
-  $("#img3").remove();
+function loading(){
   topFunction();
   $.getScript('css/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
     $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
@@ -44,7 +37,17 @@ function change(){
     });
   });
 });
-
+}
+function change(){
+  $("skr").remove();
+  $(".lds-hourglass").css("top", "45%");
+  $("#img3").css("opacity",0);
+  $("#img1").remove();
+  $("#img2").remove();
+  $("#img3").remove();
+  // $('html').css("scroll-behavior","auto");
+ // setTimeout(loading,1000);
+ loading();
 }
 function topFunction() {
   document.body.scrollTop = 0;

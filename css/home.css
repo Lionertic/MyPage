@@ -288,9 +288,7 @@
 	-webkit-transform: translateZ(50px) scale(0.7);
 	transform: translateZ(50px) scale(0.7);
 }
-.c-logo:hover .me {
-	visibility: visible;
-}
+
 .c-logo:hover:after {
 	-webkit-transform: translateZ(-100px);
 	transform: translateZ(-100px);

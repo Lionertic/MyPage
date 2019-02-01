@@ -44,6 +44,38 @@
     	margin-top: 40%;
     	font-size: 3vh;
     }
+    .c-logo:hover .me {
+    	visibility: visible;
+    }
+    .c-logo:hover .hover {
+    	visibility: hidden;
+    }
+    .hover{
+      margin-top: 20%;
+      margin-left: 37%;
+      height: 15vh;
+      width: 15vw;
+      background-repeat: no-repeat;
+      background-image: url("img/hover.png");
+      background-size: 50% auto;
+      -webkit-animation-name: hover;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-iteration-count:infinite;
+      animation-name: hover;
+      animation-duration: 1s;
+      animation-iteration-count:infinite;
+
+    }
+    @-webkit-keyframes hover {
+    	0%   {margin-top: 20%;}
+    	50% {margin-top: 15%;}
+    	100% {margin-top: 20%;}
+    }
+    @keyframes hover {
+    	0% {margin-top: 20%;}
+    	50% {margin-top: 15%;}
+    	100% {margin-top: 20%;}
+    }
     </style>
 </head>
 
@@ -130,7 +162,7 @@
                   </div>
                   <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10" id="hire">
                     <h1>Contact Me</h1>
-                    <form action="https://formcarry.com/s/CEMhKfd2eA0" method="POST" accept-charset="UTF-8">
+                    <form onsubmit="return ValidateEmail()"name="myForm" action="https://formcarry.com/s/CEMhKfd2eA0" method="POST" accept-charset="UTF-8">
                 	      <div class="field name-box">
                 		        <input type="text" id="name" name="NAME" placeholder="Who Are You?"/>
                         		<label for="name">Name</label>
@@ -161,7 +193,7 @@
             <div class="ms-section">
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-xs-12	col-sm-12	col-md-5 col-lg-5">
+                  <div class="col-xs-12	col-sm-12	col-md-5 col-lg-5 hover">
                   </div>
                   <div style="left:30%;"class="homed col-xs-6	col-sm-6	col-md-3 col-lg-3">
                     <div class="c-logo js-tilt" data-tilt-glare="false" data-tilt-speed="400" data-tilt-scale="1.1" data-tilt-maxtilt="50" data-tilt-perspective="500">
@@ -225,14 +257,55 @@
 
 <!-- PARALLAX-EFFECT -->
 <script>
+var i =0;
   $(window).scroll(function(e) {
+
     if($(window).scrollTop() >=570) {
       $(window).scrollTop(0);
-       change();
+      topFunction();
+      change();
+    }
+});
+
+function ValidateEmail()
+{
+  var name = document.forms["myForm"]["NAME"].value;
+  var msg = document.forms["myForm"]["MSG"].value;
+  var mail = document.forms["myForm"]["EMAIL"].value;
+
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+   {
+    return (true)
+   }
+   else{
+    alert("You have entered an invalid email address!")
+    return (false)
+  }
+  if (msg == "") {
+    alert("message must be filled out");
+    return false;
+  }
+}
+
+$('body').bind('mousewheel DOMMouseScroll', function(){
+      if(i==0){
+        $(document).scrollTop($(document).height());
+        i++;
+    }
+    else if($('#target').css('opacity')==1){
+      return true;
+    }
+    else{
+      topFunction();
+      return false;
     }
 });
     if(!detectmob()){
-      // change();
+      change();
       desk();
     }
     else {
