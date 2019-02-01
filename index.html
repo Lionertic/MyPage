@@ -258,8 +258,11 @@
 <!-- PARALLAX-EFFECT -->
 <script>
 var i =0;
+var sc=false;
+$(document).ready(function(){
+  topFunction();
+})
   $(window).scroll(function(e) {
-
     if($(window).scrollTop() >=570) {
       $(window).scrollTop(0);
       topFunction();
@@ -290,18 +293,23 @@ function ValidateEmail()
     return false;
   }
 }
-
+function chn(){
+  sc= true;
+}
 $('body').bind('mousewheel DOMMouseScroll', function(){
-      if(i==0){
+
+    if(i==0){
         $(document).scrollTop($(document).height());
         i++;
     }
     else if($('#target').css('opacity')==1){
-      return true;
+      setTimeout(chn,1000);
+      return sc;
     }
     else{
       topFunction();
       return false;
+
     }
 });
     if(!detectmob()){
