@@ -260,7 +260,7 @@
 var i =0;
 var sc=false;
 $(document).ready(function(){
-  topFunction();
+//   topFunction();
 })
   $(window).scroll(function(e) {
     if($(window).scrollTop() >=570) {
@@ -296,22 +296,22 @@ function ValidateEmail()
 function chn(){
   sc= true;
 }
-// $('body').bind('mousewheel DOMMouseScroll', function(){
+$('body').bind('mousewheel DOMMouseScroll', function(){
 
-//     if(i==0){
-//         $(document).scrollTop($(document).height());
-//         i++;
-//     }
-//     else if($('#target').css('opacity')==1){
-//       setTimeout(chn,1000);
-//       return sc;
-//     }
-//     else{
-//       topFunction();
-//       return false;
+    if(i==0){
+        $(document).scrollTop($(document).height());
+        i++;
+    }
+    else if($('#target').css('opacity')==1){
+      setTimeout(chn,1000);
+      return sc;
+    }
+    else{
+      topFunction();
+      return false;
 
-//     }
-// });
+    }
+});
     if(!detectmob()){
       // change();
       desk();
