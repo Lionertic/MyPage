@@ -27,6 +27,8 @@ function loading(){
         $("#target").css("z-index", 6);
         $("#target").css("opacity", 1);
         topFunction();
+        const element = document.querySelector(".js-tilt");
+        VanillaTilt.init(element);
         $('#myContainer').multiscroll({
           sectionsColor: ['#291D35', '#584B4F', '#664b00','#293d3d'],
           anchors: ['home', 'about', 'works', 'contact'],
@@ -130,3 +132,85 @@ function mob(){
     }
   });
 }
+
+function ValidateEmail()
+{
+  var name = document.forms["myForm"]["NAME"].value;
+  var msg = document.forms["myForm"]["MSG"].value;
+  var mail = document.forms["myForm"]["EMAIL"].value;
+
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+   {
+    return (true)
+   }
+   else{
+    alert("You have entered an invalid email address!")
+    return (false)
+  }
+  if (msg == "") {
+    alert("message must be filled out");
+    return false;
+  }
+}
+function chn(){
+  sc= true;
+}
+
+var i =0;
+var sc=false;
+$(document).ready(function(){
+      // Input Lock
+  $('textarea').blur(function () {
+      $('#hire textarea').each(function () {
+          $this = $(this);
+          if ( this.value != '' ) {
+            $this.addClass('focused');
+            $('textarea + label + span').css({'opacity': 1});
+          }
+          else {
+            $this.removeClass('focused');
+            $('textarea + label + span').css({'opacity': 0});
+          }
+      });
+  });
+
+  $('#hire .field:first-child input').blur(function () {
+      $('#hire .field:first-child input').each(function () {
+          $this = $(this);
+          if ( this.value != '' ) {
+            $this.addClass('focused');
+            $('.field:first-child input + label + span').css({'opacity': 1});
+          }
+          else {
+            $this.removeClass('focused');
+            $('.field:first-child input + label + span').css({'opacity': 0});
+          }
+      });
+  });
+
+  $('#hire .field:nth-child(2) input').blur(function () {
+      $('#hire .field:nth-child(2) input').each(function () {
+          $this = $(this);
+          if ( this.value != '' ) {
+            $this.addClass('focused');
+            $('.field:nth-child(2) input + label + span').css({'opacity': 1});
+          }
+          else {
+            $this.removeClass('focused');
+            $('.field:nth-child(2) input + label + span').css({'opacity': 0});
+          }
+      });
+  });
+
+});
+  $(window).scroll(function(e) {
+    if($(window).scrollTop() >=570) {
+      $(window).scrollTop(0);
+      topFunction();
+      change();
+    }
+});

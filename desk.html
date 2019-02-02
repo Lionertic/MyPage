@@ -44,38 +44,80 @@
     	margin-top: 40%;
     	font-size: 3vh;
     }
-    .c-logo:hover .me {
-    	visibility: visible;
-    }
-    .c-logo:hover .hover {
-    	visibility: hidden;
-    }
-    .hover{
-      margin-top: 20%;
-      margin-left: 37%;
-      height: 15vh;
-      width: 15vw;
-      background-repeat: no-repeat;
-      background-image: url("img/hover.png");
-      background-size: 50% auto;
-      -webkit-animation-name: hover;
-      -webkit-animation-duration: 1s;
-      -webkit-animation-iteration-count:infinite;
-      animation-name: hover;
-      animation-duration: 1s;
-      animation-iteration-count:infinite;
 
-    }
-    @-webkit-keyframes hover {
-    	0%   {margin-top: 20%;}
-    	50% {margin-top: 15%;}
-    	100% {margin-top: 20%;}
-    }
-    @keyframes hover {
-    	0% {margin-top: 20%;}
-    	50% {margin-top: 15%;}
-    	100% {margin-top: 20%;}
-    }
+
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
     </style>
 </head>
 
@@ -104,7 +146,7 @@
                   </div>
                   <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
                     <p>
-                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can control human beings as players, and Logan Lerman as the player who controls him. Alongside Butler and Lerman, it also stars Michael C. Hall, Ludacris, Amber Valletta, Terry Crews, Alison Lohman, John Leguizamo, and Zoë Bell.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo, ut ullamcorper magna velit ut dolor. Aenean tincidunt lectus eu purus suscipit fringilla. Curabitur ante odio, malesuada ut sapien vitae, volutpat euismod lorem. Ut et augue et urna maximus gravida. Phasellus mauris mi, scelerisque et auctor eu, fermentum a est. Vivamus sed est eget magna venenatis feugiat sed tincidunt nibh. Vivamus tristique sit amet eros a ultrices.
                     </p>
                   </div>
                 </div>
@@ -114,19 +156,21 @@
             <div class="ms-section">
               <div class="container-fluid">
                 <div class="aboutl row">
-                  <div class="col-xs-6	col-sm-6	col-md-12 col-lg-12">
+                  <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+                  </div>
+                  <div class="col-xs-6	col-sm-6	col-md-10 col-lg-10">
                     <div class="textbox-1">
-                      <p id="text1">This text will morph into a quote from Väinö Linna</p>
-                      <p id="text2">Walking out to the street, seeking way through rainy wind, I see a group of old people walking</p>
+                      <p id="text1">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
+                      <p id="text2">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
                       <p id="text3">Tuomion Sammakko</p>
                       <p id="text4">Tuomion Sammakko</p>
                       <p id="text5">Tuomion Sammakko</p>
-                      <button id="back" type="button" name="button"><b>back</b></button>
-                      <button id="next" type="button" name="button"><b>Next</b></button>
-                      <a href="index.html" download>
-                        <button id="reset" type="button" name="button"><b>Resume</b></button>
-                      </a>
                     </div>
+                    <button id="back" class="abbu" type="button" name="button"><b>back</b></button>
+                    <button id="next" class="abbu" type="button" name="button"><b>Next</b></button>
+                    <a href="index.html" download>
+                      <button id="download" class="abbu" type="button" name="button"><b>Resume</b></button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -139,7 +183,7 @@
                   </div>
                   <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
                     <p>
-                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo,
                     </p>
                   </div>
                 </div>
@@ -148,7 +192,7 @@
                   </div>
                   <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
                     <p>
-                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo,
                     </p>
                   </div>
                 </div>
@@ -205,7 +249,51 @@
             </div>
 
             <div class="ms-section">
-            </div>
+                  <!-- <div class="aboutl container-fluid">
+                    <div class="skillbar clearfix " data-percent="20%">
+	                     <div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
+	                      <div class="skillbar-bar" style="background: #e67e22;"></div>
+	                       <div class="skill-bar-percent">20%</div>
+                       </div>
+
+                       <div class="skillbar clearfix " data-percent="25%">
+	                        <div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
+	                         <div class="skillbar-bar" style="background: #3498db;"></div>
+	                          <div class="skill-bar-percent">25%</div>
+                          </div>
+
+                          <div class="skillbar clearfix " data-percent="50%">
+	                           <div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
+	                            <div class="skillbar-bar" style="background: #2c3e50;"></div>
+	                             <div class="skill-bar-percent">50%</div>
+                             </div>
+
+                             <div class="skillbar clearfix " data-percent="40%">
+	                              <div class="skillbar-title" style="background: #46465e;"><span>PHP</span></div>
+	                               <div class="skillbar-bar" style="background: #5a68a5;"></div>
+	                                <div class="skill-bar-percent">40%</div>
+                                </div>
+
+                                <div class="skillbar clearfix " data-percent="75%">
+	                                 <div class="skillbar-title" style="background: #333333;"><span>Wordpress</span></div>
+	                                  <div class="skillbar-bar" style="background: #525252;"></div>
+	                                   <div class="skill-bar-percent">75%</div>
+                                   </div>
+
+                                   <div class="skillbar clearfix " data-percent="100%">
+	                                    <div class="skillbar-title" style="background: #27ae60;"><span>SEO</span></div>
+	                                     <div class="skillbar-bar" style="background: #2ecc71;"></div>
+	                                      <div class="skill-bar-percent">100%</div>
+                                      </div>
+
+                                      <div class="skillbar clearfix " data-percent="70%">
+	                                       <div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
+	                                        <div class="skillbar-bar" style="background: #4288d0;"></div>
+	                                         <div class="skill-bar-percent">70%</div>
+                                         </div>
+
+</div> -->
+                                       </div>
 
             <div class="ms-section">
               <div class="container-fluid">
@@ -214,7 +302,7 @@
                   </div>
                   <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
                     <p>
-                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo,
                     </p>
                   </div>
                 </div>
@@ -223,7 +311,7 @@
                   </div>
                   <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
                     <p>
-                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo,
                     </p>
                   </div>
                 </div>
@@ -234,7 +322,7 @@
                 <div class="contactdr1 row">
                   <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
                     <p>
-                      Gamer is a 2009 American science fiction action film written and directed by Mark Neveldine and Brian Taylor.[3] The film stars Gerard Butler as a participant in an online game in which participants can
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo, ut ullamcorper magna velit ut dolor. Aenean tincidunt lectus eu purus suscipit fringilla. Curabitur ante odio, malesuada ut sapien vitae, volutpat euismod lorem. Ut et augue et urna maximus gravida. Phasellus mauris mi, scelerisque et auctor eu, fermentum a est. Vivamus sed est eget magna venenatis feugiat sed tincidunt nibh. Vivamus tristique sit amet eros a ultrices.
                     </p>
                   </div>
                 <div class="contactdr2 row">
@@ -257,125 +345,31 @@
 
 <!-- PARALLAX-EFFECT -->
 <script>
+desk();
 var i =0;
 var sc=false;
-$(document).ready(function(){
-//   topFunction();
-})
-  $(window).scroll(function(e) {
-    if($(window).scrollTop() >=570) {
-      $(window).scrollTop(0);
-      topFunction();
-      change();
-    }
+  $('body').bind('mousewheel DOMMouseScroll', function(){
+
+      if(i==0){
+          $(document).scrollTop($(document).height());
+          i++;
+      }
+      // else if($('#target').css('opacity')==1){
+      //   setTimeout(chn,3000);
+      //   return sc;
+      // }
+      else{
+        topFunction();
+        return false;
+
+      }
+  });
+  $(document).ready(function(){
+	$('.skillbar').each(function(){
+		$(this).find('.skillbar-bar').animate({
+			width:$(this).attr('data-percent')
+		},6000);
+	});
 });
-
-function ValidateEmail()
-{
-  var name = document.forms["myForm"]["NAME"].value;
-  var msg = document.forms["myForm"]["MSG"].value;
-  var mail = document.forms["myForm"]["EMAIL"].value;
-
-  if (name == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
-   {
-    return (true)
-   }
-   else{
-    alert("You have entered an invalid email address!")
-    return (false)
-  }
-  if (msg == "") {
-    alert("message must be filled out");
-    return false;
-  }
-}
-function chn(){
-  sc= true;
-}
-$('body').bind('mousewheel DOMMouseScroll', function(){
-
-    if(i==0){
-        $(document).scrollTop($(document).height());
-        i++;
-    }
-    else if($('#target').css('opacity')==1){
-      setTimeout(chn,1000);
-      return sc;
-    }
-    else{
-      topFunction();
-      return false;
-
-    }
-});
-    if(!detectmob()){
-      // change();
-      desk();
-    }
-    else {
-      //change();
-      mob();
-    }
-
-    function detectmob() {
-      if( navigator.userAgent.match(/Android/i)
-        || navigator.userAgent.match(/webOS/i)
-        || navigator.userAgent.match(/iPhone/i)
-        || navigator.userAgent.match(/iPad/i)
-        || navigator.userAgent.match(/iPod/i)
-        || navigator.userAgent.match(/BlackBerry/i)
-        || navigator.userAgent.match(/Windows Phone/i))
-            return true;
-      else
-            return false;
-    }
-    // Input Lock
-$('textarea').blur(function () {
-    $('#hire textarea').each(function () {
-        $this = $(this);
-        if ( this.value != '' ) {
-          $this.addClass('focused');
-          $('textarea + label + span').css({'opacity': 1});
-        }
-        else {
-          $this.removeClass('focused');
-          $('textarea + label + span').css({'opacity': 0});
-        }
-    });
-});
-
-$('#hire .field:first-child input').blur(function () {
-    $('#hire .field:first-child input').each(function () {
-        $this = $(this);
-        if ( this.value != '' ) {
-          $this.addClass('focused');
-          $('.field:first-child input + label + span').css({'opacity': 1});
-        }
-        else {
-          $this.removeClass('focused');
-          $('.field:first-child input + label + span').css({'opacity': 0});
-        }
-    });
-});
-
-$('#hire .field:nth-child(2) input').blur(function () {
-    $('#hire .field:nth-child(2) input').each(function () {
-        $this = $(this);
-        if ( this.value != '' ) {
-          $this.addClass('focused');
-          $('.field:nth-child(2) input + label + span').css({'opacity': 1});
-        }
-        else {
-          $this.removeClass('focused');
-          $('.field:nth-child(2) input + label + span').css({'opacity': 0});
-        }
-    });
-});
-const element = document.querySelector(".js-tilt");
-VanillaTilt.init(element);
 </script>
 </html>
