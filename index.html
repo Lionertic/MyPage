@@ -1,28 +1,34 @@
 <html>
-  <head>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-       if(!detectmob()){
-          $(document).ready(function(){window.location.replace("https://udayacharan.me/desk.html");});
-      }
-    else {
-        $(document).ready(function(){window.location.replace("https://udayacharan.me/mob.html");});
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    if (!detectmob()) {
+      $(document).ready(function() {
+        window.location.replace("https://udayacharan.me/desk.html");
+      });
+    } else {
+      $(document).ready(function() {
+        window.location.replace("https://udayacharan.me/mob.html");
+      });
     }
 
     function detectmob() {
-      if( navigator.userAgent.match(/Android/i)
-        || navigator.userAgent.match(/webOS/i)
-        || navigator.userAgent.match(/iPhone/i)
-        || navigator.userAgent.match(/iPad/i)
-        || navigator.userAgent.match(/iPod/i)
-        || navigator.userAgent.match(/BlackBerry/i)
-        || navigator.userAgent.match(/Windows Phone/i))
-            return true;
+      if (navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i))
+        return true;
       else
-            return false;
+        return false;
     }
-    </script>
-  </head>
-  <body>
-  </body>
+  </script>
+</head>
+
+<body>
+</body>
+
 </html>
