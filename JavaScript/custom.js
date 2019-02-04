@@ -216,10 +216,12 @@ $(document).ready(function() {
       }
     });
   });
-  $('.skillbar').each(function() {
-    $(this).find('.skillbar-bar').animate({
+  $("#aboutbar").click(function(){
+    $('.skillbar').each(function() {
+      $(this).find('.skillbar-bar').animate({
       width: $(this).attr('data-percent')
-    }, 6000);
+    }, 2000);
+    });
   });
 });
 $(window).scroll(function(e) {
