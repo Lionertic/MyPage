@@ -282,6 +282,13 @@
 
 <!-- PARALLAX-EFFECT -->
 <script>
+  $("#myContainer").css("visibility", "hidden");
+  $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+    $(this).css("-webkit-animation-name", "img21");
+    $(this).css("-webkit-animation-iteration-count", "infinite");
+    $(this).css("animation-name", "img21");
+    $(this).css("animation-iteration-count", "infinite");
+  });
   desk();
   var i = 0;
   var sc = false;
