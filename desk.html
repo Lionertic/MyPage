@@ -282,7 +282,7 @@
 <!-- PARALLAX-EFFECT -->
 <script>
   desk();
-  $('<img/>').attr('src', 'http://picture.de/image.png').on('load', function() {
+  $('<img/>').attr('src', 'url("../img/back.jpg")').on('load', function() {
    $(this).remove();
    $('#img1').css('background-image', 'url("../img/back.jpg")');
    $(".lds-hourglass").css("top", "-45%");
