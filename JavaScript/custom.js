@@ -165,6 +165,14 @@ $(document).ready(function() {
     $(this).css("animation-name", "img21d");
     $(this).css("animation-iteration-count", "infinite");
   });
+  $(".lds-hourglass").css("top", "45%");
+  $( "#img1" ).load(function() {
+    $( "#img2" ).load(function() {
+      $( "#img3" ).load(function() {
+        alert("fin");
+      });
+    });
+  });
   // Input Lock
   $('textarea').blur(function() {
     $('#hire textarea').each(function() {
