@@ -285,12 +285,6 @@
 <script>
   
   desk();
-  $('<img/>').attr('src', 'img/back.jpg').on('load', function() {
-   $(this).remove();
-   $('#img1').css('background-image', 'url("img/back.jpg")');
-   $(".lds-hourglass").css("top", "-45%");
-  });
-  
   var i = 0;
   var sc = false;
   $('body').bind('mousewheel DOMMouseScroll', function() {
