@@ -284,6 +284,7 @@
   $('<img/>').attr('src', 'http://picture.de/image.png').on('load', function() {
    $(this).remove();
    $('#img1').css('background-image', 'url("../img/back.jpg")');
+   $(".lds-hourglass").css("top", "-45%");
    $('#img1').css("animation-play-state","running");
    $('#img2').css("animation-play-state","running");
    $('#img3').css("animation-play-state","running");
