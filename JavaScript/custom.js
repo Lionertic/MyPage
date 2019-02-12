@@ -166,12 +166,6 @@ $(document).ready(function() {
     $(this).css("animation-iteration-count", "infinite");
   });
   $(".lds-hourglass").css("top", "45%");
-  $( "#img3" ).load(function() {
-   $(".lds-hourglass").css("top", "-45%");
-   $( "#img1" ).css("animation-play-state","running");
-   $( "#img2" ).css("animation-play-state","running");
-   $( "#img3" ).css("animation-play-state","running");
-  });
   // Input Lock
   $('textarea').blur(function() {
     $('#hire textarea').each(function() {
