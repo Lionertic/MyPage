@@ -160,9 +160,9 @@ var sc = false;
 $(document).ready(function() {
   $("#myContainer").css("visibility", "hidden");
   $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
-    $(this).css("-webkit-animation-name", "img21");
+    $(this).css("-webkit-animation-name", "img21d");
     $(this).css("-webkit-animation-iteration-count", "infinite");
-    $(this).css("animation-name", "img21");
+    $(this).css("animation-name", "img21d");
     $(this).css("animation-iteration-count", "infinite");
   });
   // Input Lock
