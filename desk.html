@@ -281,6 +281,7 @@
 
 <!-- PARALLAX-EFFECT -->
 <script>
+  desk();
   $('<img/>').attr('src', 'http://picture.de/image.png').on('load', function() {
    $(this).remove();
    $('#img1').css('background-image', 'url("../img/back.jpg")');
@@ -289,7 +290,7 @@
    $('#img2').css("animation-play-state","running");
    $('#img3').css("animation-play-state","running");
   });
-  desk();
+  
   var i = 0;
   var sc = false;
   $('body').bind('mousewheel DOMMouseScroll', function() {
