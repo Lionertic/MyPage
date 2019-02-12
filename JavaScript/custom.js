@@ -1,11 +1,4 @@
 function desk() {
-  $("#myContainer").css("visibility", "hidden");
-  $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
-    $(this).css("-webkit-animation-name", "img21");
-    $(this).css("-webkit-animation-iteration-count", "infinite");
-    $(this).css("animation-name", "img21");
-    $(this).css("animation-iteration-count", "infinite");
-  });
   var s = skrollr.init({
     render: function(data) {
       if ($("#overlay").css("opacity") == 0) {
@@ -165,6 +158,13 @@ function chn() {
 var i = 0;
 var sc = false;
 $(document).ready(function() {
+  $("#myContainer").css("visibility", "hidden");
+  $('#img2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+    $(this).css("-webkit-animation-name", "img21");
+    $(this).css("-webkit-animation-iteration-count", "infinite");
+    $(this).css("animation-name", "img21");
+    $(this).css("animation-iteration-count", "infinite");
+  });
   // Input Lock
   $('textarea').blur(function() {
     $('#hire textarea').each(function() {
