@@ -769,6 +769,7 @@ form .field input[type="text"].focused#msg,
 form .field textarea:focus#msg,
 form .field textarea.focused#msg {
 	padding-bottom: 150px;
+	overflow:auto;
 }
 
 form .field input[type="text"]:focus+label,
