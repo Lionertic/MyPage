@@ -762,6 +762,7 @@ form .field input[type="text"].focused,
 form .field textarea:focus,
 form .field textarea.focused {
 	outline: none;
+	overflow:auto;
 }
 
 form .field input[type="text"]:focus#msg,
@@ -778,12 +779,14 @@ form .field textarea:focus+label,
 form .field textarea.focused+label {
 	width: 18%;
 	background: #ff8080;
+	overflow:auto;
 	color: #1f1f1f;
 }
 
 form .field input[type="text"].focused+label,
 form .field textarea.focused+label {
 	color: #fff;
+	overflow:auto;
 }
 
 form .field:hover label {
