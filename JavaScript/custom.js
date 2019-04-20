@@ -1,11 +1,6 @@
 function desk() {
-  var s = skrollr.init({
-    render: function(data) {
-      if ($("#overlay").css("opacity") == 0) {
-        change();
-      }
-    }
-  });
+  $(".lds-hourglass").css("top", "45%");
+  loading();
 }
 
 function loading() {
@@ -13,7 +8,6 @@ function loading() {
   $.getScript('css/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
     $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
       $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
-        $.getScript('JavaScript/scramble.js', function(data, textStatus, jqxhr) {
           topFunction();
           $("#myContainer").css("visibility", "visible");
           $(".lds-hourglass").css("top", "-45%");
@@ -32,19 +26,6 @@ function loading() {
         });
       });
     });
-  });
-}
-
-function change() {
-  $("skr").remove();
-  $(".lds-hourglass").css("top", "45%");
-  $("#img3").css("opacity", 0);
-  $("#img1").remove();
-  $("#img2").remove();
-  $("#img3").remove();
-  // $('html').css("scroll-behavior","auto");
-  // setTimeout(loading,1000);
-  loading();
 }
 
 function topFunction() {
@@ -217,13 +198,29 @@ $(document).ready(function() {
       }
     });
   });
-  $("#aboutbar").click(function(){
-    $('.skillbar').each(function() {
-      $(this).find('.skillbar-bar').animate({
-      width: $(this).attr('data-percent')
-    }, 2000);
-    });
+  $(window).on('hashchange', function () {
+    var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+    if(hash.localeCompare("about")==0){
+      $('.skillbar').each(function(){
+        $(this).find('.skillbar-bar').animate({
+          width:$(this).attr('data-percent')
+        },2000);
+      });
+    }
+    else {
+      $('.skillbar').each(function() {
+        $(this).find('.skillbar-bar').animate({
+        width: 0
+      }, 200);
+      });
+    }
   });
+
+  if (window.location.hash) {
+    $(window).trigger('hashchange')
+  }
+
+
 });
 $(window).scroll(function(e) {
   if ($(window).scrollTop() >= 570) {

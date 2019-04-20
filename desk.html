@@ -18,24 +18,18 @@
   <!-- JAVASCRIPT -->
   <script src="JavaScript/jquery.js"></script>
   <script src="JavaScript/custom.js"></script>
-  <script id="skr" src="JavaScript/scrollr.js"></script>
   <script src="JavaScript/tilt.js"></script>
 
   <style media="screen">
-
     * {
     	padding: 0;
     	margin: 0;
     	box-sizing: border-box;
-    	cursor: none
+    	cursor: none;
+
     }
- .js-loading *,
-.js-loading *:before,
-.js-loading *:after {
-  animation-play-state: paused !important;
-}
     ::-webkit-scrollbar {
-    	display: none
+    	display: none;
     }
     body {
       background-color: #1f1f1f;
@@ -43,6 +37,7 @@
     	font-size: 62.5%;
     	font-family: 'Lato', sans-serif;
     	font-weight: 300;
+      overflow: hidden;
     }
     .homed{
     	position: absolute;
@@ -50,16 +45,14 @@
     	margin-top: 40%;
     	font-size: 3vh;
     }
-
+    #myContainer{
+      visibility: hidden;
+    }
     </style>
 </head>
 
 <body>
   <div class="lds-hourglass"></div>
-  <div id="img1" class="js-loading" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
-  <div id="img2" class="js-loading" data-0="background-size:18%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:18%;z-index:1;" data-501="opacity:0;"></div>
-  <div id="img3" class="js-loading" data-0="background-size:35%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:1;"></div>
-  <div id="overlay" data-0="opacity:0.1" data-250="opacity:0.5;" data-500="opacity:1;" data-501="opacity:0;"></div>
 
   <div id="target" style="font-family:Josefin Sans">
     <ul id="menu">
@@ -79,9 +72,10 @@
             </div>
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo, ut ullamcorper magna velit ut dolor. Aenean tincidunt lectus eu purus suscipit fringilla. Curabitur
-                ante odio, malesuada ut sapien vitae, volutpat euismod lorem. Ut et augue et urna maximus gravida. Phasellus mauris mi, scelerisque et auctor eu, fermentum a est. Vivamus sed est eget magna venenatis feugiat sed tincidunt nibh.
-                Vivamus tristique sit amet eros a ultrices.
+                I have a great passion towards learning and developing new
+                things . I am a crazy coder . I am multilinguist who can
+                speak english,tamil,telugu and a little of french.I did a month
+                summer program in france .
               </p>
             </div>
           </div>
@@ -91,21 +85,27 @@
       <div class="ms-section">
         <div class="container-fluid">
           <div class="aboutl row">
-            <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+            <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
             </div>
-            <div class="col-xs-6	col-sm-6	col-md-10 col-lg-10">
-              <div class="textbox-1">
-                <p id="text1">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-                <p id="text2">Lorem ipsum dolor sit amet, consectetur adipiscing </p>
-                <p id="text3">Tuomion Sammakko</p>
-                <p id="text4">Tuomion Sammakko</p>
-                <p id="text5">Tuomion Sammakko</p>
+            <div class="col-xs-6	col-sm-6	col-md-7 col-lg-7">
+              <p>
+                I am professional website and app developer . I always try to improve my skills.
+                I have RHCSA and RHCE certifications. I also done many online courses and tuned my skills.
+                I never stop learning new things . Click resume for my full resume.
+              </p>
+            </div>
+            <div class="col-xs-3	col-sm-3	col-md-2 col-lg-2">
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-3 col-sm-3 col-md-4 col-lg-4">
               </div>
-              <button id="back" class="abbu" type="button" name="button"><b>back</b></button>
-              <button id="next" class="abbu" type="button" name="button"><b>Next</b></button>
-              <a href="resume.pdf" download>
-                <button id="download" class="abbu" type="button" name="button"><b>Resume</b></button>
-              </a>
+              <div class="col-xs-6	col-sm-6	col-md-5 col-lg-5">
+                <a href="resume.pdf" download class="button">
+                  <button id="download" class="finbyz-button" type="button" name="button"><b>Resume</b></button>
+                </a>
+              </div>
+              <div class="col-xs-3	col-sm-3	col-md-3 col-lg-3">
             </div>
           </div>
         </div>
@@ -117,18 +117,27 @@
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo,
-              </p>
+              <a class="proj" style="text-decoration:none;color:white;" href="https://github.com/lionertic/restriteck" target="_blank">
+                <p style="line-height:10;">
+                  <h3>RESTRITECK</h3>
+                    <h4>An ANDROID APP designed to restrict the usage of apps by
+                    children and it uses biometrics for secure login</h4>
+                </p>
+              </a>
             </div>
           </div>
           <div class="worksd2 row">
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo,
-              </p>
+              <a style="text-decoration:none;color:white;">
+                <p style="line-height:10;">
+                  <h3>POLICE RESPONSIVE VEHICLE</h3>
+                    <h4>Two android application one for the user who requests
+                      for services and another for the driver to get the request.
+                      These request are handled by php server .</h4>
+                </p>
+              </a>
             </div>
           </div>
         </div>
@@ -172,7 +181,7 @@
       <div class="ms-section">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-xs-12	col-sm-12	col-md-5 col-lg-5 hover">
+            <div class="col-xs-12	col-sm-12	col-md-5 col-lg-5">
             </div>
             <div style="left:30%;" class="homed col-xs-6	col-sm-6	col-md-3 col-lg-3">
               <div class="c-logo js-tilt" data-tilt-glare="false" data-tilt-speed="400" data-tilt-scale="1.1" data-tilt-maxtilt="50" data-tilt-perspective="500">
@@ -187,44 +196,49 @@
         <div class="aboutr container-fluid">
           <div class="row">
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
-              <div style="margin-top:30%;" class="container-skillbar">
+              <div class="containerskill">
                 <div class="skillbar clearfix " data-percent="80%">
-                  <div class="skillbar-title" style="background: #9BCB3C;"><span>WEB FRONT</span></div>
-                  <div class="skillbar-bar" style="background: #9BCB3C;"></div>
-                  <div class="skill-bar-percent">70%</div>
-                </div> <!-- Ende Skill Bar -->
+  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>HTML & CSS </span></div>
+  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
+  	               <div class="skill-bar-percent">80%</div>
+                </div>
+
+                <div class="skillbar clearfix " data-percent="85%">
+  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>C & C++</span></div>
+  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
+  	               <div class="skill-bar-percent">85%</div>
+                </div>
 
                 <div class="skillbar clearfix " data-percent="70%">
-                  <div class="skillbar-title" style="background: #EFF669;"><span>SERVER SIDE</span></div>
-                  <div class="skillbar-bar" style="background: #EFF669;"></div>
-                  <div class="skill-bar-percent">65%</div>
-                </div> <!-- Ende Skill Bar -->
-
-                <div class="skillbar clearfix " data-percent="60%">
-                  <div class="skillbar-title" style="background: #F29F3D;"><span>PYTHON</span></div>
-                  <div class="skillbar-bar" style="background: #F29F3D;"></div>
-                  <div class="skill-bar-percent">25%</div>
-                </div> <!-- Ende Skill Bar -->
+  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>Server (PHP , DJANGO)</span></div>
+  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
+  	               <div class="skill-bar-percent">70%</div>
+                </div>
 
                 <div class="skillbar clearfix " data-percent="80%">
-                  <div class="skillbar-title" style="background: #900C3F;"><span>C and C++</span></div>
-                  <div class="skillbar-bar" style="background: #900C3F;"></div>
-                  <div class="skill-bar-percent">80%</div>
-                </div> <!-- Ende Skill Bar -->
+  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>App Development (IOS , Android)</span></div>
+  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
+  	               <div class="skill-bar-percent">80%</div>
+                </div>
 
-                <div class="skillbar clearfix " data-percent="45%">
-                  <div class="skillbar-title" style="background: #C70039;"><span>BLOCKCHAIN</span></div>
-                  <div class="skillbar-bar" style="background: #C70039;"></div>
-                  <div class="skill-bar-percent">85%</div>
-                </div> <!-- Ende Skill Bar -->
+                <div class="skillbar clearfix " data-percent="90%">
+  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>Database (MySql , Maria DB)</span></div>
+  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
+  	               <div class="skill-bar-percent">90%</div>
+                </div>
 
                 <div class="skillbar clearfix " data-percent="75%">
-                  <div class="skillbar-title" style="background: #FF5733;"><span>JAVA</span></div>
-                  <div class="skillbar-bar" style="background: #FF5733;"></div>
-                  <div class="skill-bar-percent">75%</div>
-                </div> <!-- Ende Skill Bar -->
-              </div><!-- Ende container Skill Bar -->
+  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>Java & Python</span></div>
+  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
+  	               <div class="skill-bar-percent">75%</div>
+                </div>
 
+                <div class="skillbar clearfix " data-percent="85%">
+  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>Javascript</span></div>
+  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
+  	               <div class="skill-bar-percent">85%</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -236,18 +250,26 @@
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo,
-              </p>
+              <a class="project" style="text-decoration:none;color:white;">
+                <p style="line-height:10;">
+                  <h3>GAMES</h3>
+                    <h4>Simple games are created using c.These games include
+                      tic-tac-toe(computer mode) , monopoly etc.</h4>
+                </p>
+              </a>
             </div>
           </div>
           <div class="worksd2r row">
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo,
-              </p>
+              <a class="project" style="text-decoration:none;color:white;">
+                <p style="line-height:10;">
+                  <h3>WEBSITES</h3>
+                    <h4>Many websites was designed including this one.
+                      Did a website design for college website.</h4>
+                </p>
+              </a>
             </div>
           </div>
         </div>
@@ -257,9 +279,9 @@
           <div class="contactdr1 row">
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sollicitudin, lacus sit amet rhoncus varius, risus purus suscipit justo, ut ullamcorper magna velit ut dolor. Aenean tincidunt lectus eu purus suscipit fringilla. Curabitur
-                ante odio, malesuada ut sapien vitae, volutpat euismod lorem. Ut et augue et urna maximus gravida. Phasellus mauris mi, scelerisque et auctor eu, fermentum a est. Vivamus sed est eget magna venenatis feugiat sed tincidunt nibh.
-                Vivamus tristique sit amet eros a ultrices.
+                I have provided my contact information. Mail me or fill in the form.
+                I will definitely find time to respond. You can also suggest me on improvements
+                that are to be noted. Feel free to share your views and help me grow. Click below !
               </p>
             </div>
             <div class="contactdr2 row">
@@ -283,26 +305,15 @@
 
 <!-- PARALLAX-EFFECT -->
 <script>
-
   desk();
-  var i = 0;
-  var sc = false;
-  $('body').bind('mousewheel DOMMouseScroll', function() {
-
-    if (i == 0) {
-      $(document).scrollTop($(document).height());
-      i++;
+  $(".proj").hover(function(){
+      $(this).css("color","black");
+    },
+    function() {
+      $(this).css("color","white");
     }
-    // else if($('#target').css('opacity')==1){
-    //   setTimeout(chn,3000);
-    //   return sc;
-    // }
-    else {
-      topFunction();
-      return false;
+  );
 
-    }
-  });
   $(document).ready(function(){
     $(window).resize(function(){
       if(detectmob()){
@@ -324,6 +335,6 @@
       else
         return false;
     }
-</script>
 
+</script>
 </html>
