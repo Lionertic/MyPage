@@ -1,7 +1,4 @@
-
-
 /* START */
-
 #img1 {
 	width: 100%;
 	height: 450vh;
@@ -343,22 +340,6 @@
 	visibility: visible;
 }
 
-.hover {
-	margin-top: 20%;
-	margin-left: 37%;
-	height: 15vh;
-	width: 15vw;
-	background-repeat: no-repeat;
-	background-image: url("img/hover.png");
-	background-size: 50% auto;
-	-webkit-animation-name: hover;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-iteration-count: infinite;
-	animation-name: hover;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-}
-
 @-webkit-keyframes hover {
 	0% {
 		margin-top: 20%;
@@ -445,35 +426,63 @@
 
 
 /* ABOUT */
-
-.textbox-1 {
-	font-size: 3.5vh;
-	line-height: 200%;
-	text-align: center;
+.finbyz-button {
+    color: grey;
+    text-decoration: none;
+    background-color: #1f1f1f;
+    -webkit-transition: .3s all ease;
+    transition: .3s ease all;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    font-weight: 700;
+    padding: 14px 0;
+    border: 3px solid grey;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.1);
+    z-index: 2;
 }
-
-.abbu {
-	margin-top: 10%;
-	margin-left: 13%;
-	padding: 2px;
-	font-size: 3.5vh;
-	line-height: 200%;
-	text-align: center;
+.finbyz-button:before {
+    -webkit-transition: .5s all ease;
+    transition: .5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: grey;
+    z-index: -1;
 }
-
-.abbu:hover {
-	font-size: 5vh;
+.finbyz-button:hover,
+.finbyz-button:focus
+{
+  color: #1f1f1f;
 }
-
+.finbyz-button:hover:before,
+.finbyz-button:focus:before{
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
 .aboutl {
-	margin-top: 20%;
+	margin-top: 30.5%;
 	margin-left: 10%;
+	font-size: 2rem;
+	text-align: justify;
+	line-height: 3.5rem;
 }
-
 button {
 	margin-top: 3rem;
 	font-family: 'Anonymous Pro', monospace;
-	font-size: 2rem;
+	font-size: 1rem;
 	border-radius: 5px;
 	box-shadow: 1px 1px 3px #333;
 	background-color: #ff8080;
@@ -484,102 +493,81 @@ button {
 button:active {
 	transform: translateY(2px);
 }
-
-#skillbar {
-	position: relative;
-	padding: 1px;
-	/*left:50%;
-	top:65%;
-	margin:-300px 0 0 -512px; */
-	width: 100%;
-	height: auto;
-	background: #2b2b2b;
-	border-radius: 7px;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	box-shadow: 0 0 1em grey;
+.containerskill{
+	margin-top: 35%;
 }
-
-.container-skillbar {
-	width: 100%;
-	margin: 30px;
-	height: auto;
-	overflow: none;
-}
-
 .skillbar {
-	position: relative;
-	display: block;
-	margin-bottom: 15px;
-	width: 95%;
-	background: #141414;
-	height: 30px;
-	border-radius: 7px;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	-webkit-transition: 0.4s linear;
-	-moz-transition: 0.4s linear;
-	-ms-transition: 0.4s linear;
-	-o-transition: 0.4s linear;
-	transition: 0.4s linear;
-	-webkit-transition-property: width, background-color;
-	-moz-transition-property: width, background-color;
-	-ms-transition-property: width, background-color;
-	-o-transition-property: width, background-color;
-	transition-property: width, background-color;
+	background-color: grey;
+  font-family: 'Open Sans', 'sans-serif';
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	/* background:#eee; */
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
 }
 
 .skillbar-title {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 30%;
-	font-weight: bold;
-	font-size: 13px;
-	color: #141414;
-	background: #6adcfa;
-	-webkit-border-top-left-radius: 7px;
-	-webkit-border-bottom-left-radius: 7px;
-	-moz-border-radius-topleft: 7px;
-	-moz-border-radius-bottomleft: 7px;
-	border-top-left-radius: 7px;
-	border-bottom-left-radius: 7px;
+	position:absolute;
+	top:0;
+	left:0;
+	font-weight:bold;
+	font-size:13px;
+	color:#fff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
 }
 
 .skillbar-title span {
-	display: block;
-	background: rgba(0, 0, 0, 0.15);
-	padding: 0 20px;
-	height: 30px;
-	line-height: 30px;
-	-webkit-border-top-left-radius: 7px;
-	-webkit-border-bottom-left-radius: 7px;
-	-moz-border-radius-topleft: 7px;
-	-moz-border-radius-bottomleft: 7px;
-	border-top-left-radius: 7px;
-	border-bottom-left-radius: 7px;
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
 }
 
 .skillbar-bar {
-	height: 30px;
-	width: 0;
-	border-radius: 15px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	box-shadow: 0 0 1em black;
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
 }
 
 .skill-bar-percent {
-	position: absolute;
-	right: 10px;
-	top: 0;
-	font-size: 11px;
-	height: 30px;
-	line-height: 30px;
-	color: #ffffff;
-	color: rgba(225, 225, 225, 0.75);
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:white;
 }
-
 
 /* WORKS */
 
@@ -625,7 +613,7 @@ button:active {
 }
 
 .contactdr2 {
-	margin-top: 35%;
+	margin-top: 30%;
 }
 
 .flex-center {
@@ -992,4 +980,3 @@ form input[type="submit"]:focus {
 	src: local('Satisfy Regular'), local('Satisfy-Regular'), url(https://fonts.gstatic.com/s/satisfy/v9/rP2Hp2yn6lkG50LoCZOIHQ.woff2) format('woff2');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
