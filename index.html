@@ -2,10 +2,34 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script id="skr" src="JavaScript/scrollr.js"></script>
+  <link rel="stylesheet" href="css/home.css?v=3.4.2">
+  <link rel="stylesheet" href="css/bootstrap.css?v=3.4.2">
+  <style media="screen">
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+  }
+  ::-webkit-scrollbar {
+    display: none
+  }
+  body {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+  </style>
   <script>
     if (!detectmob()) {
       $(document).ready(function() {
-        window.location.replace("https://udayacharan.me/desk.html");
+        var s = skrollr.init({
+          render: function(data) {
+            if ($("#overlay").css("opacity") == 0) {
+              window.location.replace("desk.html#home");
+            }
+          }
+        });
       });
     } else {
       $(document).ready(function() {
@@ -29,6 +53,10 @@
 </head>
 
 <body>
+  <div id="img1" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
+  <div id="img2" data-0="background-size:18%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:18%;z-index:1;" data-501="opacity:0;"></div>
+  <div id="img3" data-0="background-size:35%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:0;"></div>
+  <div id="overlay" data-0="opacity:0.1" data-250="opacity:0.5;" data-500="opacity:1;" data-501="opacity:0;"></div>
 </body>
 
 </html>
