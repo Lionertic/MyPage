@@ -5,6 +5,21 @@ function desk() {
 
 function loading() {
   topFunction();
+  function getBgUrl(el) {
+  var bg = "";
+  if (el.currentStyle) { // IE
+    bg = el.currentStyle.backgroundImage;
+  } else if (document.defaultView && document.defaultView.getComputedStyle) { // Firefox
+    bg = document.defaultView.getComputedStyle(el, "").backgroundImage;
+  } else { // try and get inline style
+    bg = el.style.backgroundImage;
+  }
+  return bg.replace(/url\(['"]?(.*?)['"]?\)/i, "$1");
+}
+
+var image = document.createElement('img');
+image.src = getBgUrl(document.getElementById('logos'));
+image.onload = function () {
   $.getScript('css/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
     $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
       $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
@@ -26,6 +41,7 @@ function loading() {
         });
       });
     });
+};
 }
 
 function topFunction() {
@@ -219,7 +235,6 @@ $(document).ready(function() {
   if (window.location.hash) {
     $(window).trigger('hashchange')
   }
-
 
 });
 $(window).scroll(function(e) {

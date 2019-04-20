@@ -1,17 +1,31 @@
 <html>
 
 <head>
+  <meta name="title" content="Udaya Resume">
+  <meta name="description" content="This is a website which says about my life works and all my bio data">
+  <meta name="keywords" content="resume,udaya,charan,udayacharan,licet,mvm,restriteck,">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="google-site-verification" content="GbXGhtn5vb5czETCvsrYnF533PQ5A-R4PzHimrAcpgg" />
+  <title>Uday</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script id="skr" src="JavaScript/scrollr.js"></script>
   <link rel="stylesheet" href="css/home.css?v=3.4.2">
   <link rel="stylesheet" href="css/bootstrap.css?v=3.4.2">
   <style media="screen">
+  .js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     cursor: default;
   }
+
   ::-webkit-scrollbar {
     display: none
   }
@@ -25,7 +39,7 @@
       $(document).ready(function() {
         var s = skrollr.init({
           render: function(data) {
-            if ($("#overlay").css("opacity") == 0) {
+            if ($("#overlay").css("opacity") < 0.1) {
               window.location.replace("desk.html#home");
             }
           }
@@ -49,14 +63,20 @@
       else
         return false;
     }
+    document.body.classList.add('js-loading');
+    window.addEventListener("load", showPage, false);
+
+    function showPage() {
+      document.body.classList.remove('js-loading');
+    }
   </script>
 </head>
 
 <body>
-  <div id="img1" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
-  <div id="img2" data-0="background-size:18%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:18%;z-index:1;" data-501="opacity:0;"></div>
-  <div id="img3" data-0="background-size:35%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:0;"></div>
-  <div id="overlay" data-0="opacity:0.1" data-250="opacity:0.5;" data-500="opacity:1;" data-501="opacity:0;"></div>
+  <div class="js-loading" id="img1" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
+  <div class="js-loading" id="img2" data-0="background-size:18%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:18%;z-index:1;" data-501="opacity:0;"></div>
+  <div class="js-loading" id="img3" data-0="background-size:35%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:0;"></div>
+  <div class="js-loading" id="overlay" data-0="opacity:0.1" data-250="opacity:0.5;" data-500="opacity:1;" data-501="opacity:0;"></div>
 </body>
 
 </html>
