@@ -7,22 +7,43 @@ $(document).ready(function(){
   });
   var w = $(window).width();
   var h =$(window).height();
+  $(window).resize(function(){
+  if(w<880 || h < 470)
+    {
+      $("#myContainer").css("visibility","hidden");
+      $("#screen").css("visibility","visible");
+      $("#menu").css("visibility","hidden");
+    }
+    else{
+      $("#myContainer").css("visibility","visible");
+      $("#screen").css("visibility","hidden");
+      $("#menu").css("visibility","visible");
+    }
+});
 if (!detectmob()) {
   if(w<880 || h < 470)
   {
-    window.location.replace("mob.html");
+    $("#myContainer").css("visibility","hidden");
+    $("#screen").css("visibility","visible");
+    $("#menu").css("visibility","hidden");
   }
-  var image = document.createElement('img');
-  var i=0;
-  for(i=1;i<=3;i++){
-    var name="img";
-    image.src = getBgUrl(document.getElementById(name+i));
-    image.onload = function () {
-      if(i==3){
-          showPage();
+  else{
+    $("#myContainer").css("visibility","visible");
+    $("#screen").css("visibility","hidden");
+    $("#menu").css("visibility","visible");
+    var image = document.createElement('img');
+    var i=0;
+    for(i=1;i<=3;i++){
+      var name="img";
+      image.src = getBgUrl(document.getElementById(name+i));
+      image.onload = function () {
+        if(i==3){
+            setTimeout(showPage,500);
+        }
       }
     }
   }
+
     var s = skrollr.init({
       render: function(data) {
         if ($("#overlay").css("opacity") > 0.9) {
