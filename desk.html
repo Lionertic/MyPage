@@ -11,49 +11,45 @@
   <meta name="google-site-verification" content="GbXGhtn5vb5czETCvsrYnF533PQ5A-R4PzHimrAcpgg" />
   <title>Uday</title>
   <!-- CSS -->
-  <link rel="stylesheet" href="css/home.css?v=3.4.2">
+  <link rel="stylesheet" href="css/desk.css?v=3.4.2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?v=3.4.2">
   <link rel="stylesheet" href="css/bootstrap.css?v=3.4.2">
 
   <!-- JAVASCRIPT -->
   <script src="JavaScript/jquery.js"></script>
-  <script src="JavaScript/custom.js"></script>
+  <script src="JavaScript/desk.js"></script>
   <script src="JavaScript/tilt.js"></script>
 
   <style media="screen">
-    * {
-    	padding: 0;
-    	margin: 0;
-    	box-sizing: border-box;
-    	cursor: none;
+  * {
+  	padding: 0;
+  	margin: 0;
+  	box-sizing: border-box;
+  	cursor: none;
+  }
+  ::-webkit-scrollbar {
+  	display: none;
+  }
+  body {
+  	background-color: #1f1f1f;
+  	color: #fff;
+  	font-size: 62.5%;
+  	font-family: 'Lato', sans-serif;
+  	font-weight: 300;
+  	overflow: hidden;
+  }
 
-    }
-    ::-webkit-scrollbar {
-    	display: none;
-    }
-    body {
-      background-color: #1f1f1f;
-    	color: #fff;
-    	font-size: 62.5%;
-    	font-family: 'Lato', sans-serif;
-    	font-weight: 300;
-      overflow: hidden;
-    }
-    .homed{
-    	position: absolute;
-    	text-align: center;
-    	margin-top: 40%;
-    	font-size: 3vh;
-    }
-    #myContainer{
-      visibility: hidden;
-    }
-    </style>
+  .homed{
+  	position: absolute;
+  	text-align: center;
+  	margin-top: 40%;
+  	font-size: 3vh;
+  }
+  </style>
 </head>
 
 <body>
   <div class="lds-hourglass"></div>
-
   <div id="target" style="font-family:Josefin Sans">
     <ul id="menu">
       <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
@@ -299,42 +295,16 @@
       </div>
     </div>
   </div>
+  <div id="screen">
+      <p>Screen size small.Increase screen size or else switch to mobile site.</p>
+  </div>
+
   <script type="text/javascript" src="JavaScript/home.js" />
   </script>
 </body>
 
 <!-- PARALLAX-EFFECT -->
 <script>
-  desk();
-  $(".proj").hover(function(){
-      $(this).css("color","black");
-    },
-    function() {
-      $(this).css("color","white");
-    }
-  );
-
-  $(document).ready(function(){
-    $(window).resize(function(){
-      if(detectmob()){
-        $(document).ready(function() {
-          window.location.replace("https://udayacharan.me/mob.html");
-        });
-      }
-  });
-});
-    function detectmob() {
-      if (navigator.userAgent.match(/Android/i) ||
-        navigator.userAgent.match(/webOS/i) ||
-        navigator.userAgent.match(/iPhone/i) ||
-        navigator.userAgent.match(/iPad/i) ||
-        navigator.userAgent.match(/iPod/i) ||
-        navigator.userAgent.match(/BlackBerry/i) ||
-        navigator.userAgent.match(/Windows Phone/i))
-        return true;
-      else
-        return false;
-    }
 
 </script>
 </html>

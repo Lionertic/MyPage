@@ -1,5 +1,4 @@
 <html>
-
 <head>
   <meta name="title" content="Udaya Resume">
   <meta name="description" content="This is a website which says about my life works and all my bio data">
@@ -11,74 +10,14 @@
   <title>Uday</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script id="skr" src="JavaScript/scrollr.js"></script>
-  <link rel="stylesheet" href="css/home.css?v=3.4.2">
+  <script id="skr" src="JavaScript/index.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css?v=3.4.2">
-  
+  <link rel="stylesheet" href="css/index.css">
 </head>
-
 <body>
   <div class="js-loading" id="img1" data-0="background-size:100%;z-index:3;opacity:1;" data-500="opacity:0.5;background-size:120%;z-index:1;" data-501="opacity:0;"></div>
   <div class="js-loading" id="img2" data-0="background-size:18%;z-index:3;opacity:1" data-500="opacity:0.5;background-size:18%;z-index:1;" data-501="opacity:0;"></div>
   <div class="js-loading" id="img3" data-0="background-size:35%;z-index:3;opacity:1" data-500="opacity:1;background-size:50%;z-index:1;" data-501="opacity:0;"></div>
   <div class="js-loading" id="overlay" data-0="opacity:0.1" data-250="opacity:0.5;" data-500="opacity:1;" data-501="opacity:0;"></div>
-  
-  <style media="screen">
-  .js-loading *,
-.js-loading *:before,
-.js-loading *:after {
-  animation-play-state: paused !important;
-}
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    cursor: default;
-  }
-
-  ::-webkit-scrollbar {
-    display: none
-  }
-  body {
-    background-color: #1f1f1f;
-    color: #fff;
-  }
-  </style>
-  <script>
-    if (!detectmob()) {
-      $(document).ready(function() {
-        var s = skrollr.init({
-          render: function(data) {
-            if ($("#overlay").css("opacity") > 0.9) {
-              window.location.replace("desk.html#home");
-            }
-          }
-        });
-      });
-    } else {
-      $(document).ready(function() {
-        window.location.replace("https://udayacharan.me/mob.html");
-      });
-    }
-
-    function detectmob() {
-      if (navigator.userAgent.match(/Android/i) ||
-        navigator.userAgent.match(/webOS/i) ||
-        navigator.userAgent.match(/iPhone/i) ||
-        navigator.userAgent.match(/iPad/i) ||
-        navigator.userAgent.match(/iPod/i) ||
-        navigator.userAgent.match(/BlackBerry/i) ||
-        navigator.userAgent.match(/Windows Phone/i))
-        return true;
-      else
-        return false;
-    }
-    document.body.classList.add('js-loading');
-    window.addEventListener("load", showPage, false);
-
-    function showPage() {
-      document.body.classList.remove('js-loading');
-    }
-  </script>
 </body>
-
 </html>
