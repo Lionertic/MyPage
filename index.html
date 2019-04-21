@@ -48,7 +48,7 @@
       $(document).ready(function() {
         var s = skrollr.init({
           render: function(data) {
-            if ($("#overlay").css("opacity") < 0.1) {
+            if ($("#overlay").css("opacity") > 0.9) {
               window.location.replace("desk.html#home");
             }
           }
