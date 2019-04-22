@@ -521,7 +521,7 @@ form .field textarea {
 
 form .field input[type="text"]#msg,
 form .field textarea#msg {
-	height: 57px;
+	height: 9vh;
 	resize: none;
 	-webkit-transition: all 333ms ease-in-out;
 	-moz-transition: all 333ms ease-in-out;
@@ -534,8 +534,8 @@ form .field input[type="text"]:focus,
 form .field input[type="text"].focused,
 form .field textarea:focus,
 form .field textarea.focused {
-	outline: none;
-	overflow:auto;
+	outline:none;
+	overflow:none;
 }
 
 form .field input[type="text"]:focus#msg,
@@ -552,14 +552,14 @@ form .field textarea:focus+label,
 form .field textarea.focused+label {
 	width: 18%;
 	background: #ff8080;
-	overflow:auto;
+	overflow:none;
 	color: #1f1f1f;
 }
 
 form .field input[type="text"].focused+label,
 form .field textarea.focused+label {
 	color: #fff;
-	overflow:auto;
+	overflow:none;
 }
 
 form .field:hover label {
