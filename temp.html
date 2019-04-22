@@ -1,0 +1,231 @@
+<script type="text/javascript" src="JavaScript/jquery.js">
+
+</script>
+<section id='section1'><span class="section1">Udaya Charan</span><label>
+<div id="bar">
+  <input type='checkbox'>
+  <span class='menu'>
+    <span class='hamburger'></span>
+  </span>
+  <ul>
+    <li>
+      <a href='#'>Home</a>
+    </li>
+    <li>
+      <a href='#'>About</a>
+    </li>
+    <li>
+      <a href='#'>Work</a>
+    </li>
+  </ul>
+</label></section>
+</div>
+
+<div id='section2'>Section 2</div>
+<section id='section3'>Section 3</section>
+<section id='section4'>Section 4</section>
+<style media="screen">
+  header, nav, section {
+    display: block;
+  }
+
+  body {
+    line-height: 1;
+  }
+
+  /* Border Box Reset --------------------- */
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /* GLOBAL ------------------------------- */
+  body {
+    font-family: sans-serif;
+  }
+
+  nav, section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .displayNav {
+    top: 0px;
+    transition: 0.3s;
+    opacity: 1;
+    background-color: #FFF;
+    color: #1f1f1f;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    text-align:center;
+    font-size:3vh;
+    line-height:150px;
+  }
+
+  section {
+    min-height: 100%;
+    flex-flow: column;
+  }
+  section h1 {
+    font-size: 5em;
+  }
+  section p {
+    font-size: 1em;
+  }
+#section1{
+  font-size:5vh;
+}
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Cutive Mono", serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+  background: #CCC;
+  overflow-x: hidden;
+}
+
+label .menu {
+  position: fixed;
+  right: -100px;
+  top: -100px;
+  z-index: 100;
+  width: 250px;
+  height: 250px;
+  background: #FFF;
+  border-radius: 50% 50% 50% 50%;
+  transition: .5s ease-in-out;
+  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+  cursor: pointer;
+  border:1px solid #1f1f1f;
+}
+label .hamburger {
+  position: absolute;
+  top: 160px;
+  left: 70px;
+  width: 30px;
+  height: 2px;
+  background: #000;
+  display: block;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  transition: .5s ease-in-out;
+}
+label .hamburger:after, label .hamburger:before {
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+label .hamburger:before {
+  top: -10px;
+}
+label .hamburger:after {
+  bottom: -10px;
+}
+label input {
+  display: none;
+}
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  border-radius: 0;
+}
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  bottom: 0;
+}
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 0;
+}
+label input:checked + .menu + ul {
+  opacity: 1;
+}
+label ul {
+  z-index: 200;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .25s 0s ease-in-out;
+}
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+}
+#bar{
+  visibility:hidden;
+}
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+  // .scroll() creates an event when the user scrolls
+  var real=parseFloat($("#section1").css("font-size"));
+  var flag =0;
+  $(document).scroll(function() {
+    // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
+    var scroll = $(window).scrollTop();
+    var objectPosition = ($(window).height())/10;
+
+
+    // .offset() retrieves current position of element relative to document
+    console.log(objectPosition+" "+ scroll);
+
+    if (scroll > objectPosition) {
+      $('.section1').addClass('displayNav');
+      $("#bar").css("visibility","visible");
+      if (flag==0)
+      {
+        $('html, body').animate({
+        'scrollTop' : $("#section2").position().top-170
+      });
+      flag=1;
+    }
+    } else {
+      flag =0;
+      var size=real-(scroll/20);
+      $("#bar").css("visibility","hidden");
+      $("#section1").css("font-size",size)
+      $('.section1').removeClass('displayNav');
+    }
+  });
+});
+</script>

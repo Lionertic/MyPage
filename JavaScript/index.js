@@ -10,31 +10,34 @@ $(document).ready(function(){
   $(window).resize(function(){
     var w = $(window).width();
     var h =$(window).height();
-    if(w<880 || h < 470){
-      console.log("jjj");
+    if ((w<h)||(w<880 || h < 470)){
       $("#img1").css("visibility","hidden");
       $("#img2").css("visibility","hidden");
       $("#img3").css("visibility","hidden");
       $("#screen").css("visibility","visible");
-    }else{
-      console.log("ddd");
+      $("body").css("overflow","hidden");
+    } else{
       $("#screen").css("visibility","hidden");
       $("#img1").css("visibility","visible");
       $("#img2").css("visibility","visible");
       $("#img3").css("visibility","visible");
+      $("body").css("overflow","auto");
     }
 });
 if (!detectmob()) {
-  if(w<880 || h < 470)
-  {
-    $("#myContainer").css("visibility","hidden");
+  if ((w<h)||(w<880 || h < 470)){
+    $("#img1").css("visibility","hidden");
+    $("#img2").css("visibility","hidden");
+    $("#img3").css("visibility","hidden");
     $("#screen").css("visibility","visible");
-    $("#menu").css("visibility","hidden");
+    $("body").css("overflow","hidden");
   }
   else{
-    $("#myContainer").css("visibility","visible");
     $("#screen").css("visibility","hidden");
-    $("#menu").css("visibility","visible");
+    $("#img1").css("visibility","visible");
+    $("#img2").css("visibility","visible");
+    $("#img3").css("visibility","visible");
+    $("body").css("overflow","auto");
     var image = document.createElement('img');
     var i=0;
     for(i=1;i<=3;i++){
@@ -50,7 +53,9 @@ if (!detectmob()) {
 
     var s = skrollr.init({
       render: function(data) {
-        if ($("#overlay").css("opacity") > 0.85) {
+        console.log($("#overlay").css("opacity"));
+        if (($("#overlay").css("opacity") > 0.8)||($("#overlay").css("opacity") == 0)) {
+
           window.location.replace("desk.html#home");
         }
       }
@@ -85,5 +90,5 @@ if (el.currentStyle) { // IE
 return bg.replace(/url\(['"]?(.*?)['"]?\)/i, "$1");
 }
 function showPage() {
-  document.body.classList.remove('js-loading');
+  // document.body.classList.remove('js-loading');
 }
