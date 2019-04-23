@@ -196,10 +196,51 @@ h1 {
 </style>
 <script type="text/javascript">
   $(document).ready(function() {
+    var flag =0;
+
+    $( window ).on( "orientationchange", function( event ) {
+      if($(window).height()<2000){
+        $("#section1").css("font-size","10vh");
+        $('.displayNav').css("font-size","6vh");
+        $('.displayNav').css("height","100px");
+        $('.displayNav').css("line-height","100px");
+        $("label .menu").css("right","-100px");
+        $("label .menu").css("top","-100px");
+        $("label .menu").css("width","200px");
+        $("label .menu").css("height","200px");
+        $("label .hamburger").css("top","135px");
+        $("label .hamburger").css("left","35px");
+        if (flag==0)
+        {
+          $('html, body').animate({
+            'scrollTop' : $("#section2").position().top-120
+          });
+        }
+      }
+      else{
+        $("#section1").css("font-size","5vh");
+        $('.displayNav').css("font-size","3vh");
+        $('.displayNav').css("height","150px");
+        $('.displayNav').css("line-height","150px");
+        $("label .menu").css("right","-100px");
+        $("label .menu").css("top","-100px");
+        $("label .menu").css("width","250px");
+        $("label .menu").css("height","250px");
+        $("label .hamburger").css("top","160px");
+        $("label .hamburger").css("left","70px");
+        if (flag==0)
+        {
+          $('html, body').animate({
+          'scrollTop' : $("#section2").position().top-170
+        });
+      }
+      }
+
+      flag=1;
+});
 
   // .scroll() creates an event when the user scrolls
   var real=parseFloat($("#section1").css("font-size"));
-  var flag =0;
   $(document).scroll(function() {
     // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
     var scroll = $(window).scrollTop();
@@ -207,18 +248,48 @@ h1 {
 
 
     // .offset() retrieves current position of element relative to document
-    console.log(objectPosition+" "+ scroll);
 
     if (scroll > objectPosition) {
       $('.section1').addClass('displayNav');
       $("#bar").css("visibility","visible");
-      if (flag==0)
-      {
-        $('html, body').animate({
-        'scrollTop' : $("#section2").position().top-170
-      });
+      if($(window).height()<2000){
+        $("#section1").css("font-size","10vh");
+        $('.displayNav').css("font-size","6vh");
+        $('.displayNav').css("height","100px");
+        $('.displayNav').css("line-height","100px");
+        $("label .menu").css("right","-100px");
+        $("label .menu").css("top","-100px");
+        $("label .menu").css("width","200px");
+        $("label .menu").css("height","200px");
+        $("label .hamburger").css("top","135px");
+        $("label .hamburger").css("left","35px");
+        if (flag==0)
+        {
+          $('html, body').animate({
+            'scrollTop' : $("#section2").position().top-120
+          });
+        }
+      }
+      else{
+        $("#section1").css("font-size","5vh");
+        $('.displayNav').css("font-size","3vh");
+        $('.displayNav').css("height","150px");
+        $('.displayNav').css("line-height","150px");
+        $("label .menu").css("right","-100px");
+        $("label .menu").css("top","-100px");
+        $("label .menu").css("width","250px");
+        $("label .menu").css("height","250px");
+        $("label .hamburger").css("top","160px");
+        $("label .hamburger").css("left","70px");
+        if (flag==0)
+        {
+          $('html, body').animate({
+          'scrollTop' : $("#section2").position().top-170
+        });
+      }
+      }
+
       flag=1;
-    }
     } else {
       flag =0;
       var size=real-(scroll/20);
