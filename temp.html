@@ -1,7 +1,9 @@
 <script type="text/javascript" src="JavaScript/jquery.js">
 
 </script>
-<section id='section1'><span class="section1">Udaya Charan</span><label>
+<section id='section1'>
+  <span class="section1">Udaya Charan</span>
+<label>
 <div id="bar">
   <input type='checkbox'>
   <span class='menu'>
@@ -12,41 +14,25 @@
       <a href='#'>Home</a>
     </li>
     <li>
-      <a href='#'>About</a>
+      <a href='#'>Skills</a>
     </li>
     <li>
       <a href='#'>Work</a>
     </li>
+    <li>
+      <a href='#'>Contact</a>
+    </li>
   </ul>
-</label></section>
-</div>
+</label>
+</section>
 
-<div id='section2'>Section 2</div>
+<section id='section2'>Section 2</section>
 <section id='section3'>Section 3</section>
 <section id='section4'>Section 4</section>
 <style media="screen">
-  header, nav, section {
+  /* header, nav, section {
     display: block;
-  }
-
-  body {
-    line-height: 1;
-  }
-
-  /* Border Box Reset --------------------- */
-  html {
-    box-sizing: border-box;
-  }
-
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-  /* GLOBAL ------------------------------- */
-  body {
-    font-family: sans-serif;
-  }
-
+  } */
   nav, section {
     display: flex;
     justify-content: center;
@@ -68,24 +54,12 @@
   }
 
   section {
-    min-height: 100%;
-    flex-flow: column;
+    height: 100%;
   }
-  section h1 {
-    font-size: 5em;
+  #section1{
+    font-size:5vh;
   }
-  section p {
-    font-size: 1em;
-  }
-#section1{
-  font-size:5vh;
-}
 @import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
 
 html {
   font-size: 18px;
@@ -181,15 +155,6 @@ label a {
   text-decoration: none;
 }
 
-h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 80%;
-  text-align: center;
-}
 #bar{
   visibility:hidden;
 }
@@ -241,6 +206,8 @@ h1 {
 
   // .scroll() creates an event when the user scrolls
   var real=parseFloat($("#section1").css("font-size"));
+  var dummy=0;
+  var lastScroll=0;
   $(document).scroll(function() {
     // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
     var scroll = $(window).scrollTop();
@@ -254,8 +221,8 @@ h1 {
       $("#bar").css("visibility","visible");
       if($(window).height()<2000){
         $("#section1").css("font-size","10vh");
-        $('.displayNav').css("font-size","6vh");
         $('.displayNav').css("height","100px");
+        $('.displayNav').css("font-size","6vh");
         $('.displayNav').css("line-height","100px");
         $("label .menu").css("right","-100px");
         $("label .menu").css("top","-100px");
@@ -291,10 +258,19 @@ h1 {
 
       flag=1;
     } else {
+      var size=0;
+      if(lastScroll>scroll){
+        size =dummy+(objectPosition/20-(scroll/20));
+      }
+      else {
+        size =real-(scroll/20);
+        dummy=size;
+      }
+      console.log(size);
+      $(".section1").css("font-size",size)
       flag =0;
-      var size=real-(scroll/20);
+      lastScroll=scroll;
       $("#bar").css("visibility","hidden");
-      $("#section1").css("font-size",size)
       $('.section1').removeClass('displayNav');
     }
   });
