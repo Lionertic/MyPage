@@ -1,44 +1,38 @@
 <script type="text/javascript" src="JavaScript/jquery.js">
-
 </script>
 <section id='section1'>
   <span class="section1">Udaya Charan</span>
 <label>
 <div id="bar">
-  <input type='checkbox'>
+  <input class="dis" type='checkbox'>
   <span class='menu'>
     <span class='hamburger'></span>
   </span>
   <ul>
     <li>
-      <a href='#'>Home</a>
+      <a href='#section1'>Home</a>
     </li>
     <li>
-      <a href='#'>Skills</a>
+      <a href='#section2'>Skills</a>
     </li>
     <li>
-      <a href='#'>Work</a>
+      <a href='#section3'>Work</a>
     </li>
     <li>
-      <a href='#'>Contact</a>
+      <a href='#section4'>Contact</a>
     </li>
   </ul>
 </label>
 </section>
-
 <section id='section2'>Section 2</section>
 <section id='section3'>Section 3</section>
 <section id='section4'>Section 4</section>
 <style media="screen">
-  /* header, nav, section {
-    display: block;
-  } */
   nav, section {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
   .displayNav {
     top: 0px;
     transition: 0.3s;
@@ -52,7 +46,6 @@
     font-size:3vh;
     line-height:150px;
   }
-
   section {
     height: 100%;
   }
@@ -60,19 +53,17 @@
     font-size:5vh;
   }
 @import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
-
 html {
   font-size: 18px;
 }
-
 body {
   font-family: "Cutive Mono", serif;
   font-size: 1.2em;
   line-height: 1.6;
   background: #CCC;
   overflow-x: hidden;
+  /* overflow:hidden; */
 }
-
 label .menu {
   position: fixed;
   right: -100px;
@@ -118,21 +109,26 @@ label input {
   display: none;
 }
 label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  box-shadow: 0 0 0 100vw #1F1F1F, 0 0 0 100vh #1F1F1F;
   border-radius: 0;
+  border:1px solid #fff;
+  background: #1F1F1F;
 }
 label input:checked + .menu .hamburger {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+          background: #FFF;
 }
 label input:checked + .menu .hamburger:after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+          background: #FFF;
   bottom: 0;
 }
 label input:checked + .menu .hamburger:before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+          background: #FFF;
   top: 0;
 }
 label input:checked + .menu + ul {
@@ -146,12 +142,14 @@ label ul {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
+  color:#fff;
   transition: .25s 0s ease-in-out;
 }
 label a {
+  font-size:3vh;
   margin-bottom: 1em;
   display: block;
-  color: #000;
+  color:#fff;
   text-decoration: none;
 }
 
@@ -163,6 +161,20 @@ label a {
   $(document).ready(function() {
     var flag =0;
 
+    $(".menu").click(function(){
+      var rad=parseFloat($(this).css("border-radius"));
+      if(rad==50){
+        $("body").css("overflow","hidden");
+      }
+      else{
+      }
+      $("body").css("overflow","visible");
+    });
+    $("label ul").click(function(){
+      $("body").css("overflow","visible");
+      $(".dis").prop("checked",false);
+      console.log($(".dis").prop("checked"));
+    });
     $( window ).on( "orientationchange", function( event ) {
       if($(window).height()<2000){
         $("#section1").css("font-size","10vh");
@@ -186,7 +198,7 @@ label a {
         $("#section1").css("font-size","5vh");
         $('.displayNav').css("font-size","3vh");
         $('.displayNav').css("height","150px");
-        $('.displayNav').css("line-height","150px");
+        $('.displayNav').css("line-height","200px");
         $("label .menu").css("right","-100px");
         $("label .menu").css("top","-100px");
         $("label .menu").css("width","250px");
@@ -255,7 +267,6 @@ label a {
         });
       }
       }
-
       flag=1;
     } else {
       var size=0;
