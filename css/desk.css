@@ -521,7 +521,7 @@ form .field textarea {
 
 form .field input[type="text"]#msg,
 form .field textarea#msg {
-	height: 9vh;
+	height: 7vh;
 	resize: none;
 	-webkit-transition: all 333ms ease-in-out;
 	-moz-transition: all 333ms ease-in-out;

@@ -1,77 +1,6 @@
-function desk() {
-  $(".lds-hourglass").css("top", "45%");
-  loading();
-}
-
-function getBgUrl(el) {
-var bg = "";
-if (el.currentStyle) { // IE
-  bg = el.currentStyle.backgroundImage;
-} else if (document.defaultView && document.defaultView.getComputedStyle) { // Firefox
-  bg = document.defaultView.getComputedStyle(el, "").backgroundImage;
-} else { // try and get inline style
-  bg = el.style.backgroundImage;
-}
-return bg.replace(/url\(['"]?(.*?)['"]?\)/i, "$1");
-}
-
-function loading() {
-  topFunction();
-var image = document.createElement('img');
-image.src = getBgUrl(document.getElementById('logos'));
-image.onload = function () {
-  $.getScript('css/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
-    $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
-      $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
-          topFunction();
-          $("#myContainer").css("visibility", "visible");
-          $(".lds-hourglass").css("top", "-45%");
-          $("#overlay").remove();
-          $("#target").css("z-index", 6);
-          $("#target").css("opacity", 1);
-          topFunction();
-          const element = document.querySelector(".js-tilt");
-          VanillaTilt.init(element);
-          $('#myContainer').multiscroll({
-            sectionsColor: ['#291D35', '#584B4F', '#664b00', '#293d3d'],
-            anchors: ['home', 'about', 'works', 'contact'],
-            menu: '#menu',
-            easing: 'easeOutBack'
-          });
-        });
-      });
-    });
-};
-}
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-  $("html").css("overflow", "hidden");
-}
-function ValidateEmail() {
-  var name = document.forms["myForm"]["NAME"].value;
-  var msg = document.forms["myForm"]["MSG"].value;
-  var mail = document.forms["myForm"]["EMAIL"].value;
-
-  if (name == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-    return (true)
-  } else {
-    alert("You have entered an invalid email address!")
-    return (false)
-  }
-  if (msg == "") {
-    alert("message must be filled out");
-    return false;
-  }
-}
-
-$(document).ready(function() {
+$(function() {
   desk();
+  $("#contact_form").validationEngine('attach',{ scroll: false });
   $(".lds-hourglass").css("top", "45%");
   // Input Lock
   $('textarea').blur(function() {
@@ -130,13 +59,16 @@ $(document).ready(function() {
       }
     });
   });
-  $(window).resize(function(){
+
+  
+  $(window).resize( () =>{
     var w = $(window).width();
-    var h =$(window).height();
+    var h = $(window).height();
+
     if(detectmob()){
         window.location.replace("mob.html");
     }
-    else if(w<880 || h < 470)
+    else if(screenCheck(w,h))
     {
       // window.location.replace("mob.html");
       $("#myContainer").css("visibility","hidden");
@@ -150,7 +82,7 @@ $(document).ready(function() {
     }
 });
   $(window).on('hashchange', function () {
-    var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+    var hash = window.location.hash.substring(1);
     if(hash.localeCompare("about")==0){
       $('.skillbar').each(function(){
         $(this).find('.skillbar-bar').animate({
@@ -171,15 +103,69 @@ $(document).ready(function() {
   }
 
 });
-  function detectmob() {
-    if (navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/webOS/i) ||
-      navigator.userAgent.match(/iPhone/i) ||
-      navigator.userAgent.match(/iPad/i) ||
-      navigator.userAgent.match(/iPod/i) ||
-      navigator.userAgent.match(/BlackBerry/i) ||
-      navigator.userAgent.match(/Windows Phone/i))
-      return true;
-    else
-      return false;
+
+function detectmob() {
+  if (navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/Windows Phone/i))
+    return true;
+  else
+    return false;
+}
+
+function desk() {
+  $(".lds-hourglass").css("top", "45%");
+  topFunction();
+  var image = document.createElement('img');
+  image.src = getBgUrl(document.getElementById('logos'));
+  image.onload = function () {
+    $.getScript('css/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
+      $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
+        $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
+          topFunction();
+          $("#myContainer").css("visibility", "visible");
+          $(".lds-hourglass").css("top", "-45%");
+          $("#overlay").remove();
+          $("#target").css("z-index", 6);
+          $("#target").css("opacity", 1);
+          topFunction();
+          const element = document.querySelector(".js-tilt");
+          VanillaTilt.init(element);
+          $('#myContainer').multiscroll({
+            sectionsColor: ['#291D35', '#584B4F', '#664b00', '#293d3d'],
+            anchors: ['home', 'about', 'works', 'contact'],
+            menu: '#menu',
+            easing: 'easeOutBack'
+          });
+        });
+      });
+    });
+  };
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  $("html").css("overflow", "hidden");
+}
+
+function screenCheck(w,h){
+  var ratio = w / h;
+  return ( Math.abs( ratio - 4/3 ) < Math.abs( ratio - 16/9 )) ? true : false || ( w < 880 || h < 470 )
+}
+function getBgUrl(el) {
+  var bg = "";
+  if (el.currentStyle) { // IE
+    bg = el.currentStyle.backgroundImage;
+  } else if (document.defaultView && document.defaultView.getComputedStyle) { // Firefox
+    bg = document.defaultView.getComputedStyle(el, "").backgroundImage;
+  } else { // try and get inline style
+    bg = el.style.backgroundImage;
   }
+  return bg.replace(/url\(['"]?(.*?)['"]?\)/i, "$1");
+}
+

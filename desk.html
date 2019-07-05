@@ -10,15 +10,19 @@
   <meta name="language" content="English">
   <meta name="google-site-verification" content="GbXGhtn5vb5czETCvsrYnF533PQ5A-R4PzHimrAcpgg" />
   <title>Uday</title>
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/desk.css?v=3.4.2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?v=3.4.2">
   <link rel="stylesheet" href="css/bootstrap.css?v=3.4.2">
+  <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 
   <!-- JAVASCRIPT -->
   <script src="JavaScript/jquery.js"></script>
   <script src="JavaScript/desk.js"></script>
   <script src="JavaScript/tilt.js"></script>
+  <script src="JavaScript/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="JavaScript/jquery.validationEngine.min.js" type="text/javascript" charset="utf-8"></script>
 
   <style media="screen">
   * {
@@ -146,26 +150,26 @@
             </div>
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10" id="hire">
               <h1>Contact Me</h1>
-              <form onsubmit="return ValidateEmail()" name="myForm" action="https://formcarry.com/s/CEMhKfd2eA0" method="POST" accept-charset="UTF-8">
+              <form id="contact_form" name="myForm" action="https://formcarry.com/s/CEMhKfd2eA0" method="POST" accept-charset="UTF-8">
                 <div class="field name-box">
-                  <input type="text" id="name" name="NAME" placeholder="Who Are You?" />
+                  <input type="text" id="name" class="validate[required]"name="NAME" placeholder="Who Are You?" />
                   <label for="name">Name</label>
                   <span class="ss-icon"></span>
                 </div>
 
                 <div class="field email-box">
-                  <input type="text" id="email" name="EMAIL" placeholder="name@email.com" />
+                  <input type="text" id="email" class="validate[required,custom[email]]" name="EMAIL" placeholder="name@email.com" />
                   <label for="email">Email</label>
                   <span class="ss-icon"></span>
                 </div>
 
                 <div class="field msg-box">
-                  <textarea id="msg" rows="4" name="MSG" placeholder="Your message goes here..." /></textarea>
+                  <textarea id="msg" class="validate[required]" rows="4" name="MSG" placeholder="Your message goes here..." /></textarea>
                   <label for="msg">Msg</label>
                   <span class="ss-icon"></span>
                 </div>
                 <input type="hidden" name="_gotcha">
-                <input class="button" type="submit" value="Send" />
+                <input id='submit' class="button" type="submit" value="Send" />
               </form>
             </div>
           </div>
@@ -295,16 +299,13 @@
       </div>
     </div>
   </div>
-  <div id="screen">
-      <p>Screen size small.Increase screen size or else switch to mobile site.</p>
+  <div id="screen" class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12	col-sm-12	col-md-12 col-lg-12">
+        <p>Screen size small. Increase screen size or else switch to mobile site.</p>
+      </div>
+    </div>
   </div>
-
-  <script type="text/javascript" src="JavaScript/home.js" />
-  </script>
+  <script type="text/javascript" src="JavaScript/home.js"></script>
 </body>
-
-<!-- PARALLAX-EFFECT -->
-<script>
-
-</script>
 </html>
