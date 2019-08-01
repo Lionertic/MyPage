@@ -1,5 +1,7 @@
 $(() => {
   desk();
+  changeTextAreaSize();
+
   $("#contact_form").validationEngine('attach',{ scroll: false });
   $(".lds-hourglass").css("top", "45%");
   // Input Lock
@@ -36,6 +38,11 @@ $(() => {
       }
     });
   });
+  $('#msg').blur(() => {
+    if ($('#msg').val() == '') {
+      changeTextAreaSize()
+    }
+  });
   $(".proj").hover(function(){
       $(this).css("color","black");
     },
@@ -59,9 +66,10 @@ $(() => {
       }
     });
   });
+  $('#msg').autoResize();
 
-  
   $(window).resize( () =>{
+    changeTextAreaSize();
     var w = $(window).width();
     var h = $(window).height();
 
@@ -169,3 +177,15 @@ function getBgUrl(el) {
   return bg.replace(/url\(['"]?(.*?)['"]?\)/i, "$1");
 }
 
+function changeTextAreaSize() {
+  if ($(window).height() > 900)
+    $('#msg').css('height', $(window).height() / 15);
+  else if ($(window).height() > 800)
+    $('#msg').css('height', $(window).height() / 14);
+  else if ($(window).height() > 700)
+    $('#msg').css('height', $(window).height() / 13);
+  else if ($(window).height() > 600)
+    $('#msg').css('height', $(window).height() / 12);
+  else if ($(window).height() > 500)
+    $('#msg').css('height', $(window).height() / 11);
+}

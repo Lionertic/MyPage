@@ -24,6 +24,8 @@
   <script src="JavaScript/tilt.js"></script>
   <script src="JavaScript/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="JavaScript/jquery.validationEngine.min.js" type="text/javascript" charset="utf-8"></script>
+  <script charset="utf-8" src="JavaScript/additionalFunctions.js" type="text/javascript"></script>
+
 
   <style media="screen">
   * {
@@ -168,7 +170,7 @@
                 <div class="field msg-box">
                   <textarea id="msg" class="validate[required]" rows="4" name="MSG" placeholder="Your message goes here..." /></textarea>
                   <label for="msg">Msg</label>
-                  <span class="ss-icon"></span>
+                  <span class="ss-icon" id="msg_label"></span>
                 </div>
                 <input type="hidden" name="_gotcha">
                 <input id='submit' class="button" type="submit" value="Send" />
