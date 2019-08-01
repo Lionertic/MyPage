@@ -14,6 +14,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/desk.css?v=3.4.2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?v=3.4.2">
+  <link href="css/fonts.css?v=3.4.2" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css?v=3.4.2">
   <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 
@@ -48,16 +49,17 @@
   	text-align: center;
   	margin-top: 40%;
   	font-size: 3vh;
+    font-family: 'Grenze', serif;
   }
   </style>
 </head>
 
 <body>
   <div class="lds-hourglass"></div>
-  <div id="target" style="font-family:Josefin Sans">
+  <div id="target" style="font-family: 'Saira Stencil One', cursive;">
     <ul id="menu">
       <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
-      <li data-menuanchor="about"><a id="aboutbar" href="#about">About</a></li>
+      <li data-menuanchor="skills"><a href="#skills">Skills</a></li>
       <li data-menuanchor="works"><a href="#works">Works</a></li>
       <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
     </ul>
@@ -114,7 +116,7 @@
       <div class="ms-section">
         <div class="container-fluid">
           <div class="worksd1 row">
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
             </div>
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
               <a class="proj" style="text-decoration:none;color:white;" href="https://github.com/lionertic/restriteck" target="_blank">
@@ -145,7 +147,7 @@
 
       <div class="ms-section">
         <div class="container-fluid">
-          <div class=" contactdl row">
+          <div class="contactdl row">
             <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
             </div>
             <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10" id="hire">
@@ -182,10 +184,11 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-xs-12	col-sm-12	col-md-5 col-lg-5">
-            </div>
-            <div style="left:30%;" class="homed col-xs-6	col-sm-6	col-md-3 col-lg-3">
-              <div id="logos" class="c-logo js-tilt" data-tilt-glare="false" data-tilt-speed="400" data-tilt-scale="1.1" data-tilt-maxtilt="50" data-tilt-perspective="500">
-                <span class="me">This is me..</span>
+              <div class="homed col-xs-6	col-sm-6	col-md-3 col-lg-3" style="left:50%;">
+                <div class="c-logo js-tilt" data-tilt-glare="false" data-tilt-maxtilt="50" data-tilt-perspective="500"
+                     data-tilt-scale="1.1" data-tilt-speed="400" id="logos">
+                  <span class="me">This is me..</span>
+                </div>
               </div>
             </div>
           </div>
@@ -195,48 +198,52 @@
       <div class="ms-section">
         <div class="aboutr container-fluid">
           <div class="row">
-            <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
-              <div class="containerskill">
-                <div class="skillbar clearfix " data-percent="80%">
-  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>HTML & CSS </span></div>
-  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
-  	               <div class="skill-bar-percent">80%</div>
+            <div class="containerskill">
+              <div class="row" style="padding-left: 10%;">
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" src="img/angular.svg" width="100">
                 </div>
-
-                <div class="skillbar clearfix " data-percent="85%">
-  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>C & C++</span></div>
-  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
-  	               <div class="skill-bar-percent">85%</div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/firebase.png" width="100">
                 </div>
-
-                <div class="skillbar clearfix " data-percent="70%">
-  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>Server (PHP , DJANGO)</span></div>
-  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
-  	               <div class="skill-bar-percent">70%</div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/nodejs.png" width="100">
                 </div>
-
-                <div class="skillbar clearfix " data-percent="80%">
-  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>App Development (IOS , Android)</span></div>
-  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
-  	               <div class="skill-bar-percent">80%</div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/vue.png" width="110">
                 </div>
-
-                <div class="skillbar clearfix " data-percent="90%">
-  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>Database (MySql , Maria DB)</span></div>
-  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
-  	               <div class="skill-bar-percent">90%</div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" src="img/laravel.svg" width="100">
                 </div>
-
-                <div class="skillbar clearfix " data-percent="75%">
-  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>Java & Python</span></div>
-  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
-  	               <div class="skill-bar-percent">75%</div>
+              </div>
+              <div class="row" style="padding-left: 10%;margin-top: 5%;margin-left: -1%">
+                <div class="col-md-2 col-lg-2"></div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/mongo.png" width="100">
                 </div>
-
-                <div class="skillbar clearfix " data-percent="85%">
-  	               <div class="skillbar-title" style="background: #1f1f1f;"><span>Javascript</span></div>
-  	               <div class="skillbar-bar" style="background: #1f1f1f;"></div>
-  	               <div class="skill-bar-percent">85%</div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/mysql.png" width="100">
+                </div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/maria.png" width="130">
+                </div>
+              </div>
+              <div class="row" style="padding-left: 10%;margin-top: 5%;">
+                <div class="col-md-3 col-lg-3"></div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" src="img/python.png" width="100">
+                </div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/java.png" width="100">
+                </div>
+              </div>
+              <div class="row" style="padding-left: 10%;margin-top: 5%;">
+                <div class="col-md-3 col-lg-3"></div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/docker.png" width="110">
+                </div>
+                <div class="col-md-2 col-lg-2">
+                  <img class="img-fluid" height="100" src="img/android.png" width="100">
                 </div>
               </div>
             </div>

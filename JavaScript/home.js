@@ -130,4 +130,4 @@ const run = () => {
     requestAnimationFrame(run);
     controler.render()
 };
-run()
+run();

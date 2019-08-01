@@ -1,4 +1,4 @@
-$(function() {
+$(() => {
   desk();
   $("#contact_form").validationEngine('attach',{ scroll: false });
   $(".lds-hourglass").css("top", "45%");
@@ -83,20 +83,20 @@ $(function() {
 });
   $(window).on('hashchange', function () {
     var hash = window.location.hash.substring(1);
-    if(hash.localeCompare("about")==0){
-      $('.skillbar').each(function(){
-        $(this).find('.skillbar-bar').animate({
-          width:$(this).attr('data-percent')
-        },2000);
-      });
-    }
-    else {
-      $('.skillbar').each(function() {
-        $(this).find('.skillbar-bar').animate({
-        width: 0
-      }, 200);
-      });
-    }
+    // if(hash.localeCompare("about")==0){
+    //   $('.skillbar').each(function(){
+    //     $(this).find('.skillbar-bar').animate({
+    //       width:$(this).attr('data-percent')
+    //     },2000);
+    //   });
+    // }
+    // else {
+    //   $('.skillbar').each(function() {
+    //     $(this).find('.skillbar-bar').animate({
+    //     width: 0
+    //   }, 200);
+    //   });
+    // }
   });
   if (window.location.hash) {
     $(window).trigger('hashchange')
@@ -137,7 +137,7 @@ function desk() {
           VanillaTilt.init(element);
           $('#myContainer').multiscroll({
             sectionsColor: ['#291D35', '#584B4F', '#664b00', '#293d3d'],
-            anchors: ['home', 'about', 'works', 'contact'],
+            anchors: ['home', 'skills', 'works', 'contact'],
             menu: '#menu',
             easing: 'easeOutBack'
           });
