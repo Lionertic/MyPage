@@ -68,18 +68,18 @@ $(() => {
     if(detectmob()){
         window.location.replace("mob.html");
     }
-    else if(screenCheck(w,h))
-    {
-      // window.location.replace("mob.html");
-      $("#myContainer").css("visibility","hidden");
-      $("#screen").css("visibility","visible");
-      $("#menu").css("visibility","hidden");
-    }
-    else{
-      $("#myContainer").css("visibility","visible");
-      $("#screen").css("visibility","hidden");
-      $("#menu").css("visibility","visible");
-    }
+    // else if(screenCheck(w,h))
+    // {
+    //   // window.location.replace("mob.html");
+    //   $("#myContainer").css("visibility","hidden");
+    //   $("#screen").css("visibility","visible");
+    //   $("#menu").css("visibility","hidden");
+    // }
+    // else{
+    //   $("#myContainer").css("visibility","visible");
+    //   $("#screen").css("visibility","hidden");
+    //   $("#menu").css("visibility","visible");
+    // }
 });
   $(window).on('hashchange', function () {
     var hash = window.location.hash.substring(1);
