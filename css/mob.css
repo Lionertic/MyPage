@@ -1,0 +1,148 @@
+nav, section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayNav {
+    top: 0px;
+    transition: 0.3s;
+    opacity: 1;
+    background-color: #FFF;
+    color: #1f1f1f;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    text-align: center;
+    font-size: 3vh;
+    line-height: 150px;
+}
+
+section {
+    height: 100%;
+}
+
+#section1 {
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name {
+    /*position: absolute;*/
+}
+
+/*@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");*/
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: "Cutive Mono", serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/*HamBurger Menu*/
+label .menu {
+    position: fixed;
+    right: -100px;
+    top: -100px;
+    z-index: 100;
+    width: 250px;
+    height: 250px;
+    background: #FFF;
+    border-radius: 50% 50% 50% 50%;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    cursor: pointer;
+    border: 1px solid #1f1f1f;
+}
+
+label .hamburger {
+    position: absolute;
+    top: 160px;
+    left: 70px;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+}
+
+label .hamburger:after, label .hamburger:before {
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+label .hamburger:before {
+    top: -10px;
+}
+
+label .hamburger:after {
+    bottom: -10px;
+}
+
+label input {
+    display: none;
+}
+
+label input:checked + .menu {
+    box-shadow: 0 0 0 100vw #1F1F1F, 0 0 0 100vh #1F1F1F;
+    border-radius: 0;
+    border: 1px solid #fff;
+    background: #1F1F1F;
+}
+
+label input:checked + .menu .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #FFF;
+}
+
+label input:checked + .menu .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background: #FFF;
+    bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background: #FFF;
+    top: 0;
+}
+
+label input:checked + .menu + ul {
+    opacity: 1;
+}
+
+label ul {
+    z-index: 200;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: #fff;
+    transition: .25s 0s ease-in-out;
+}
+
+label a {
+    font-size: 3vh;
+    margin-bottom: 1em;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}

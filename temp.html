@@ -1,289 +1,59 @@
-<script type="text/javascript" src="JavaScript/jquery.js">
-</script>
-<section id='section1'>
-  <span class="section1">Udaya Charan</span>
+<!--<!DOCTYPE html>-->
+<html dir="ltr" lang="en">
+
+<head>
+
+  <meta content="Udaya Resume" name="title">
+  <meta content="This is a website which says about my life works and all my bio data" name="description">
+  <meta content="resume,udaya,charan,udayacharan,licet,mvm,restriteck," name="keywords">
+  <meta content="index, follow" name="robots">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta content="English" name="language">
+  <meta content="GbXGhtn5vb5czETCvsrYnF533PQ5A-R4PzHimrAcpgg" name="google-site-verification"/>
+  <title>Uday</title>
+
+  <!-- CSS -->
+  <link href="css/mob.css" rel="stylesheet" type="text/css"/>
+  <link href="css/fonts.css?v=3.4.2" rel="stylesheet" type="text/css"/>
+  <link href="css/bootstrap.css?v=3.4.2" rel="stylesheet" type="text/css"/>
+  <link href="css/validationEngine.jquery.css" rel="stylesheet" type="text/css"/>
+
+  <!-- JAVASCRIPT -->
+  <script charset="utf-8" src="JavaScript/jquery.js" type="text/javascript"></script>
+  <script charset="utf-8" src="JavaScript/mob.js" type="text/javascript"></script>
+  <script charset="utf-8" src="JavaScript/jquery.validate.min.js" type="text/javascript"></script>
+  <script charset="utf-8" src="JavaScript/jquery.validationEngine.min.js" type="text/javascript"></script>
+  <script charset="utf-8" src="JavaScript/additionalFunctions.js" type="text/javascript"></script>
+
+  <!-- FONTS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?v=3.4.2"
+        rel="stylesheet">
+
+</head>
+
+<body style="background-color: #cccccc">
 <label>
-<div id="bar">
-  <input class="dis" type='checkbox'>
-  <span class='menu'>
-    <span class='hamburger'></span>
-  </span>
-  <ul>
-    <li>
-      <a href='#section1'>Home</a>
-    </li>
-    <li>
-      <a href='#section2'>Skills</a>
-    </li>
-    <li>
-      <a href='#section3'>Work</a>
-    </li>
-    <li>
-      <a href='#section4'>Contact</a>
-    </li>
-  </ul>
+  <div id="bar">
+    <input class="dis" type='checkbox'>
+    <span class='menu'>
+          <span class='hamburger'></span>
+        </span>
+    <ul>
+      <li><a href='#section1'>Home</a></li>
+      <li><a href='#section2'>Skills</a></li>
+      <li><a href='#section3'>Work</a></li>
+      <li><a href='#section4'>Contact</a></li>
+    </ul>
+  </div>
 </label>
+
+<section class="d-flex" id='section1'>
+  <span id="name">Udaya Charan</span>
 </section>
+
 <section id='section2'>Section 2</section>
 <section id='section3'>Section 3</section>
 <section id='section4'>Section 4</section>
-<style media="screen">
-  nav, section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .displayNav {
-    top: 0px;
-    transition: 0.3s;
-    opacity: 1;
-    background-color: #FFF;
-    color: #1f1f1f;
-    width: 100%;
-    height: 150px;
-    position: fixed;
-    text-align:center;
-    font-size:3vh;
-    line-height:150px;
-  }
-  section {
-    height: 100%;
-  }
-  #section1{
-    font-size:5vh;
-  }
-@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
-html {
-  font-size: 18px;
-}
-body {
-  font-family: "Cutive Mono", serif;
-  font-size: 1.2em;
-  line-height: 1.6;
-  background: #CCC;
-  overflow-x: hidden;
-  /* overflow:hidden; */
-}
-label .menu {
-  position: fixed;
-  right: -100px;
-  top: -100px;
-  z-index: 100;
-  width: 250px;
-  height: 250px;
-  background: #FFF;
-  border-radius: 50% 50% 50% 50%;
-  transition: .5s ease-in-out;
-  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
-  cursor: pointer;
-  border:1px solid #1f1f1f;
-}
-label .hamburger {
-  position: absolute;
-  top: 160px;
-  left: 70px;
-  width: 30px;
-  height: 2px;
-  background: #000;
-  display: block;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  transition: .5s ease-in-out;
-}
-label .hamburger:after, label .hamburger:before {
-  transition: .5s ease-in-out;
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #000;
-}
-label .hamburger:before {
-  top: -10px;
-}
-label .hamburger:after {
-  bottom: -10px;
-}
-label input {
-  display: none;
-}
-label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #1F1F1F, 0 0 0 100vh #1F1F1F;
-  border-radius: 0;
-  border:1px solid #fff;
-  background: #1F1F1F;
-}
-label input:checked + .menu .hamburger {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-          background: #FFF;
-}
-label input:checked + .menu .hamburger:after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-          background: #FFF;
-  bottom: 0;
-}
-label input:checked + .menu .hamburger:before {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-          background: #FFF;
-  top: 0;
-}
-label input:checked + .menu + ul {
-  opacity: 1;
-}
-label ul {
-  z-index: 200;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  color:#fff;
-  transition: .25s 0s ease-in-out;
-}
-label a {
-  font-size:3vh;
-  margin-bottom: 1em;
-  display: block;
-  color:#fff;
-  text-decoration: none;
-}
+</body>
 
-#bar{
-  visibility:hidden;
-}
-</style>
-<script type="text/javascript">
-  $(document).ready(function() {
-    var flag =0;
-
-    $(".menu").click(function(){
-      var rad=parseFloat($(this).css("border-radius"));
-      if(rad==50){
-        $("body").css("overflow","hidden");
-      }
-      else{
-      }
-      $("body").css("overflow","visible");
-    });
-    $("label ul").click(function(){
-      $("body").css("overflow","visible");
-      $(".dis").prop("checked",false);
-      console.log($(".dis").prop("checked"));
-    });
-    $( window ).on( "orientationchange", function( event ) {
-      if($(window).height()<2000){
-        $("#section1").css("font-size","10vh");
-        $('.displayNav').css("font-size","6vh");
-        $('.displayNav').css("height","100px");
-        $('.displayNav').css("line-height","100px");
-        $("label .menu").css("right","-100px");
-        $("label .menu").css("top","-100px");
-        $("label .menu").css("width","200px");
-        $("label .menu").css("height","200px");
-        $("label .hamburger").css("top","135px");
-        $("label .hamburger").css("left","35px");
-        if (flag==0)
-        {
-          $('html, body').animate({
-            'scrollTop' : $("#section2").position().top-120
-          });
-        }
-      }
-      else{
-        $("#section1").css("font-size","5vh");
-        $('.displayNav').css("font-size","3vh");
-        $('.displayNav').css("height","150px");
-        $('.displayNav').css("line-height","200px");
-        $("label .menu").css("right","-100px");
-        $("label .menu").css("top","-100px");
-        $("label .menu").css("width","250px");
-        $("label .menu").css("height","250px");
-        $("label .hamburger").css("top","160px");
-        $("label .hamburger").css("left","70px");
-        if (flag==0)
-        {
-          $('html, body').animate({
-          'scrollTop' : $("#section2").position().top-170
-        });
-      }
-      }
-
-      flag=1;
-});
-
-  // .scroll() creates an event when the user scrolls
-  var real=parseFloat($("#section1").css("font-size"));
-  var dummy=0;
-  var lastScroll=0;
-  $(document).scroll(function() {
-    // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
-    var scroll = $(window).scrollTop();
-    var objectPosition = ($(window).height())/10;
-
-
-    // .offset() retrieves current position of element relative to document
-
-    if (scroll > objectPosition) {
-      $('.section1').addClass('displayNav');
-      $("#bar").css("visibility","visible");
-      if($(window).height()<2000){
-        $("#section1").css("font-size","10vh");
-        $('.displayNav').css("height","100px");
-        $('.displayNav').css("font-size","6vh");
-        $('.displayNav').css("line-height","100px");
-        $("label .menu").css("right","-100px");
-        $("label .menu").css("top","-100px");
-        $("label .menu").css("width","200px");
-        $("label .menu").css("height","200px");
-        $("label .hamburger").css("top","135px");
-        $("label .hamburger").css("left","35px");
-        if (flag==0)
-        {
-          $('html, body').animate({
-            'scrollTop' : $("#section2").position().top-120
-          });
-        }
-      }
-      else{
-        $("#section1").css("font-size","5vh");
-        $('.displayNav').css("font-size","3vh");
-        $('.displayNav').css("height","150px");
-        $('.displayNav').css("line-height","150px");
-        $("label .menu").css("right","-100px");
-        $("label .menu").css("top","-100px");
-        $("label .menu").css("width","250px");
-        $("label .menu").css("height","250px");
-        $("label .hamburger").css("top","160px");
-        $("label .hamburger").css("left","70px");
-        if (flag==0)
-        {
-          $('html, body').animate({
-          'scrollTop' : $("#section2").position().top-170
-        });
-      }
-      }
-      flag=1;
-    } else {
-      var size=0;
-      if(lastScroll>scroll){
-        size =dummy+(objectPosition/20-(scroll/20));
-      }
-      else {
-        size =real-(scroll/20);
-        dummy=size;
-      }
-      console.log(size);
-      $(".section1").css("font-size",size)
-      flag =0;
-      lastScroll=scroll;
-      $("#bar").css("visibility","hidden");
-      $('.section1').removeClass('displayNav');
-    }
-  });
-});
-</script>
+</html>
