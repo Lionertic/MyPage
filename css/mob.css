@@ -1,11 +1,10 @@
 nav, section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;*/
+    /*align-items: center;*/
 }
 
 .displayNav {
-    top: 0px;
+    top: 0;
     transition: 0.3s;
     opacity: 1;
     background-color: #FFF;
@@ -16,23 +15,30 @@ nav, section {
     text-align: center;
     font-size: 3vh;
     line-height: 150px;
+    z-index: 10;
 }
 
-section {
-    height: 100%;
+.more {
+    text-align: center;
 }
 
 #section1 {
+    height: 100%;
+    width: 100%;
     font-size: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#name {
-    /*position: absolute;*/
+#home {
+    height: 100%;
+    width: 100%;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 /*@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");*/
 html {
     font-size: 18px;

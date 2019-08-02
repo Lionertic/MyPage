@@ -76,105 +76,40 @@
 // }
 
 $(() => {
-  var flag = 0;
+  let flag = 0;
 
   $(".menu").click(function () {
-    var rad = parseFloat($(this).css("border-radius"));
-    if (rad == 50) {
+    let rad = parseFloat($(this).css("border-radius"));
+    if (rad === 50) {
       $("body").css("overflow", "hidden");
     } else {
+      $("body").css("overflow", "visible");
     }
-    $("body").css("overflow", "visible");
   });
-  $("label ul").click(function () {
+  $("label ul").click(() => {
     $("body").css("overflow", "visible");
     $(".dis").prop("checked", false);
   });
   $(window).on("orientationchange", function (event) {
-    if ($(window).height() < 2000) {
-      $("#section1").css("font-size", "10vh");
-      $('.displayNav').css("font-size", "6vh");
-      $('.displayNav').css("height", "100px");
-      $('.displayNav').css("line-height", "100px");
-      $("label .menu").css("right", "-100px");
-      $("label .menu").css("top", "-100px");
-      $("label .menu").css("width", "200px");
-      $("label .menu").css("height", "200px");
-      $("label .hamburger").css("top", "135px");
-      $("label .hamburger").css("left", "35px");
-      if (flag == 0) {
-        $('html, body').animate({
-          'scrollTop': $("#section2").position().top - 120
-        });
-      }
-    } else {
-      $("#section1").css("font-size", "5vh");
-      $('.displayNav').css("font-size", "3vh");
-      $('.displayNav').css("height", "150px");
-      $('.displayNav').css("line-height", "200px");
-      $("label .menu").css("right", "-100px");
-      $("label .menu").css("top", "-100px");
-      $("label .menu").css("width", "250px");
-      $("label .menu").css("height", "250px");
-      $("label .hamburger").css("top", "160px");
-      $("label .hamburger").css("left", "70px");
-      if (flag == 0) {
-        $('html, body').animate({
-          'scrollTop': $("#section2").position().top - 170
-        });
-      }
-    }
-
+    changeUI(flag);
     flag = 1;
   });
 
-  var real = parseFloat($("#section1").css("font-size"));
-  var dummy = 0;
-  var lastScroll = 0;
+  const real = parseFloat($("#section1").css("font-size"));
+  let dummy = 0;
+  let lastScroll = 0;
   $(document).scroll(function () {
 
-    var scroll = $(window).scrollTop();
-    var objectPosition = ($(window).height()) / 10;
+    const scroll = $(window).scrollTop();
+    const objectPosition = ($(window).height()) / 10;
 
     if (scroll > objectPosition) {
       $('#name').addClass('displayNav');
       $("#bar").css("visibility", "visible");
-      if ($(window).height() < 2000) {
-        $("#section1").css("font-size", "10vh");
-        $('.displayNav').css("height", "100px");
-        $('.displayNav').css("font-size", "6vh");
-        $('.displayNav').css("line-height", "100px");
-        $("label .menu").css("right", "-100px");
-        $("label .menu").css("top", "-100px");
-        $("label .menu").css("width", "200px");
-        $("label .menu").css("height", "200px");
-        $("label .hamburger").css("top", "135px");
-        $("label .hamburger").css("left", "35px");
-        if (flag == 0) {
-          $('html, body').animate({
-            'scrollTop': $("#section2").position().top - 120
-          });
-        }
-      } else {
-        $("#section1").css("font-size", "5vh");
-        $('.displayNav').css("font-size", "3vh");
-        $('.displayNav').css("height", "150px");
-        $('.displayNav').css("line-height", "150px");
-        $("label .menu").css("right", "-100px");
-        $("label .menu").css("top", "-100px");
-        $("label .menu").css("width", "250px");
-        $("label .menu").css("height", "250px");
-        $("label .hamburger").css("top", "160px");
-        $("label .hamburger").css("left", "70px");
-        if (flag == 0) {
-          $('html, body').animate({
-            'scrollTop': $("#section2").position().top - 170
-          });
-        }
-      }
+      changeUI(flag);
       flag = 1;
     } else {
-      var size = 0;
+      let size = 0;
       if (lastScroll > scroll) {
         size = dummy + (objectPosition / 20 - (scroll / 20));
       } else {
@@ -189,3 +124,56 @@ $(() => {
     }
   });
 });
+
+
+const changeUI = (flag) => {
+  const displayNav = $('.displayNav');
+  if ($(window).height() < 2000) {
+    $("#section1").css("font-size", "10vh");
+    displayNav.css({
+      "font-size": "6vh",
+      "height": "100px",
+      "line-height": "100px"
+    });
+    $('.filler').css('height', displayNav.css('height'));
+    $("label .menu").css({
+      "right": "-100px",
+      "top": "-100px",
+      "width": "200px",
+      "height": "200px"
+    });
+    $("label .hamburger").css({
+      "top": "135px",
+      "left": "35px"
+    });
+    if (flag === 0) {
+      $('html, body').animate({
+        'scrollTop': $("#home").position().top - 120
+      });
+    }
+  } else {
+    $("#section1").css("font-size", "5vh");
+    displayNav.css({
+      "font-size": "3vh",
+      "height": "150px",
+      "line-height": "150px"
+    });
+    $('.filler').css('height', displayNav.css('height'));
+    $("label .menu").css({
+      "right": "-100px",
+      "top": "-100px",
+      "width": "250px",
+      "height": "250px"
+    });
+    $("label .hamburger").css({
+      "top": "160px",
+      "left": "70px"
+    });
+    if (flag === 0) {
+      $('html, body').animate({
+        'scrollTop': $("#home").position().top - 170
+      });
+    }
+  }
+};
+
