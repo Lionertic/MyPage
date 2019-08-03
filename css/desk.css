@@ -452,8 +452,7 @@ form .field textarea {
 	background: #E8E9EA;
 	width: 100%;
 	margin: 0;
-	padding: 18px 0;
-	padding-left: 19.5%;
+	padding: 18px 0 18px 19.5%;
 	color: #1f1f1f;
 	font-size: 2.4vh;
 	letter-spacing: 0.05vh;

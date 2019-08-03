@@ -1,8 +1,28 @@
-nav, section {
-    /*justify-content: center;*/
-    /*align-items: center;*/
+/*TOTAL*/
+* {
+    font-family: 'Grenze', serif;
 }
 
+body {
+    font-size: 1.2em;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #cccccc !important;
+}
+
+span {
+    font-family: 'Saira Stencil One', cursive;
+}
+
+/*INTRO*/
+#intro {
+    height: 100%;
+    width: 100%;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .displayNav {
     top: 0;
     transition: 0.3s;
@@ -17,43 +37,23 @@ nav, section {
     line-height: 150px;
     z-index: 10;
 }
-.more {
-    text-align: center;
-}
 
-#section1 {
-    height: 100%;
-    width: 100%;
-    font-size: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/*HOME*/
 #home {
     height: 100%;
     width: 100%;
-    font-size: 2vh;
+    font-size: 3vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-#skills {
-    height: 100%;
-    width: 100%;
-    font-size: 2vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .down {
     border: solid black;
     border-width: 0 1vh 1vh 0;
     display: inline-block;
-    margin-top: 60%;
+    margin-top: 30%;
     padding: 1vh;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -64,25 +64,55 @@ nav, section {
 
 @keyframes arrow {
     0% {
-        margin-top: 60%;
+        margin-top: 30%;
     }
     50% {
-        margin-top: 65%;
+        margin-top: 35%;
     }
     100% {
-        margin-top: 60%;
+        margin-top: 30%;
     }
 }
-/*@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");*/
-html {
-    font-size: 18px;
+
+/*SKILLS*/
+#skills {
+    height: 100%;
+    width: 100%;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body {
-    font-family: "Cutive Mono", serif;
-    font-size: 1.2em;
-    line-height: 1.6;
-    overflow-x: hidden;
+#skill-name {
+    font-size: 8vh;
+}
+
+.jumbotron {
+    background: #cccccc !important;
+}
+.more {
+    text-align: center;
+}
+
+/*WORKS*/
+#works {
+    height: 100%;
+    width: 100%;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*CONTACT*/
+#contact {
+    height: 100%;
+    width: 100%;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*HamBurger Menu*/

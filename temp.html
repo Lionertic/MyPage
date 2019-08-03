@@ -21,7 +21,6 @@
 
   <!-- JAVASCRIPT -->
   <script charset="utf-8" src="JavaScript/jquery.js" type="text/javascript"></script>
-  <script charset="utf-8" src="JavaScript/mob.js" type="text/javascript"></script>
   <script charset="utf-8" src="JavaScript/jquery.validate.min.js" type="text/javascript"></script>
   <script charset="utf-8" src="JavaScript/jquery.validationEngine.min.js" type="text/javascript"></script>
   <script charset="utf-8" src="JavaScript/additionalFunctions.js" type="text/javascript"></script>
@@ -30,15 +29,11 @@
   <!-- FONTS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?v=3.4.2"
         rel="stylesheet">
+    <link href="css/fonts.css" rel="stylesheet">
 
 </head>
-<style>
-  .jumbotron {
-    background: #cccccc;
-  }
-</style>
 
-<body style="background-color: #cccccc">
+<body>
 <label>
   <div id="bar">
     <input class="dis" type='checkbox'>
@@ -54,12 +49,18 @@
   </div>
 </label>
 
-<section class="d-flex" id='section1'>
+<section class="d-flex" id='intro'>
   <span id="name" onclick="slowScroll('body')">Udaya Charan</span>
 </section>
 
 <section id='home'>
   <div class="container">
+      <div class="jumbotron row">
+          <div class="col-sm-12">
+              <img data-aos="zoom-in" data-aos-anchor="#home" data-aos-duration="1000" height="300"
+                   src="img/face-min-ConvertImage.jpg" style="border-radius: 45%" width="300"/>
+          </div>
+      </div>
     <div class="row">
       <div class="col-xs-12	col-sm-12	col-md-10 col-lg-10">
         <p>
@@ -68,91 +69,111 @@
           speak english, tamil, telugu and a little of french. I did a month
           summer program in france .
         </p>
-        <i class="arrow down" onclick="slowScroll('#skills')"></i>
       </div>
     </div>
+      <div class=" jumbotron row">
+          <div class="col-sm-12">
+              <i class="arrow down" onclick="slowScroll('#skills')"></i>
+          </div>
+      </div>
   </div>
 </section>
 
 <section id='skills'>
   <div class="skills container-fluid" style="text-align: center">
-    <span id="skill-name">Skills</span>
+      <div class="row">
+          <div class="col-sm-12">
+              <span id="skill-name">Skills</span>
+          </div>
+      </div>
     <div class="row">
       <div class="col-md-3 col-sm-4">
         <div class="jumbotron" data-aos="fade-up"
-             data-aos-anchor-placement="top-bottom" id="myBtn">
+             data-aos-anchor-placement="top-bottom"
+             data-aos-duration="1000" id="myBtn">
           <p class="more"><img src="img/laravel.svg" width="100"></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron " data-aos="fade-down-left" data-aos-anchor-placement="top-bottom"
-             id="myBtn1">
+          <div class="jumbotron " data-aos="fade-down-left"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn1">
           <p class="more"><img height="100" src="img/firebase.png" width="100"></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron " data-aos="fade-right" data-aos-anchor-placement="top-bottom"
-             id="myBtn2">
+          <div class="jumbotron " data-aos="fade-right"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn2">
           <p class="more"><img class="img-fluid" src="img/angular.svg" width="100"></p>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron " data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-             id="myBtn3">
+          <div class="jumbotron " data-aos="fade-up"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn3">
           <p class="more"><img class="img-fluid" height="100" src="img/nodejs.png" width="100"></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron " data-aos="fade-down" data-aos-anchor-placement="top-bottom"
-             id="myBtn4">
+          <div class="jumbotron " data-aos="fade-down"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn4">
           <p class="more"><img height="100" src="img/vue.png" width="110"></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron" data-aos="flip-left" data-aos-anchor-placement="top-bottom"
-             id="myBtn5">
+          <div class="jumbotron" data-aos="flip-left"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn5">
           <p class="more"><img height="100" src="img/maria.png" width="130"></p>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron" data-aos="flip-right" data-aos-anchor-placement="top-bottom"
-             id="myBtn6">
+          <div class="jumbotron" data-aos="flip-right"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn6">
           <p class="more"><img height="100" src="img/mysql.png" width="100"></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-             id="myBtn7">
+          <div class="jumbotron" data-aos="fade-up"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn7">
           <p class="more"><img height="100" src="img/java.png" width="100"></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron " data-aos="flip-up" data-aos-anchor-placement="top-bottom"
-             id="myBtn8">
+          <div class="jumbotron " data-aos="flip-up"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn8">
           <p class="more"><img class="img-fluid" height="100" src="img/mongo.png" width="100"></p>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron" data-aos="flip-down" data-aos-anchor-placement="top-bottom"
-             id="myBtn9">
+          <div class="jumbotron" data-aos="flip-down"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn9">
           <p class="more"><img src="img/python.png" width="100"></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron" data-aos="zoom-in" data-aos-anchor-placement="top-bottom"
-             id="myBtn10">
+          <div class="jumbotron" data-aos="zoom-in"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn10">
           <p class="more"><img class="img-fluid" height="100" src="img/docker.png" width="110"></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-4">
-        <div class="jumbotron " data-aos="zoom-in-up" data-aos-anchor-placement="top-bottom"
-             id="myBtn11">
+          <div class="jumbotron " data-aos="zoom-in-up"
+               data-aos-anchor-placement="top-bottom"
+               data-aos-duration="1000" id="myBtn11">
           <p class="more"><img class="img-fluid" height="100" src="img/android.png" width="100"></p>
         </div>
       </div>
@@ -162,13 +183,15 @@
 <section id='works'>Works</section>
 <section id='contact'>Contact</section>
 </body>
+
 <script>
   const slowScroll = (el) => {
     $('html, body').animate(
-            {'scrollTop': $(el).position().top},
-            1000
+        {'scrollTop': $(el).position().top},
+        1000
     );
   };
   AOS.init();
 </script>
+<script charset="utf-8" src="JavaScript/mob.js" type="text/javascript"></script>
 </html>
