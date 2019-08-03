@@ -1,4 +1,5 @@
 $(() => {
+    $("label").css('visibility', 'hidden');
   let flag = 0;
   $(".menu").click(function () {
     let rad = parseFloat($(this).css("border-radius"));
@@ -25,8 +26,8 @@ $(() => {
 
     $(document).scroll(() => {
         let scroll = $(window).scrollTop();
-        let objectPosition = ($(window).height()) / 10;
-        let homePosition = $("#home").position().top;
+        let objectPosition = ($(window).height()) / 20;
+        // let homePosition = $("#home").position().top;
     if (scroll > objectPosition) {
       $('#name').addClass('displayNav');
       $("#bar").css("visibility", "visible");
@@ -47,9 +48,7 @@ $(() => {
       $('#name').removeClass('displayNav');
     }
   });
-
 });
-
 
 const changeUI = (flag) => {
   const displayNav = $('.displayNav');
