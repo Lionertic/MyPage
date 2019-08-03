@@ -32,6 +32,11 @@
         rel="stylesheet">
 
 </head>
+<style>
+  .jumbotron {
+    background: #cccccc;
+  }
+</style>
 
 <body style="background-color: #cccccc">
 <label>
@@ -50,7 +55,7 @@
 </label>
 
 <section class="d-flex" id='section1'>
-  <span id="name" onclick="slowTop()">Udaya Charan</span>
+  <span id="name" onclick="slowScroll('body')">Udaya Charan</span>
 </section>
 
 <section id='home'>
@@ -63,100 +68,91 @@
           speak english, tamil, telugu and a little of french. I did a month
           summer program in france .
         </p>
+        <i class="arrow down" onclick="slowScroll('#skills')"></i>
       </div>
     </div>
   </div>
 </section>
 
 <section id='skills'>
-  <div class="filler"></div>
-  <div class="skills container-fluid">
+  <div class="skills container-fluid" style="text-align: center">
+    <span id="skill-name">Skills</span>
     <div class="row">
-      <div class="col-xs-3 col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron" data-aos="fade-up"
              data-aos-anchor-placement="top-bottom" id="myBtn">
-          <h2 class="heading">Laravel</h2>
           <p class="more"><img src="img/laravel.svg" width="100"></p>
         </div>
       </div>
-      <div class="col-xs-3 col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron " data-aos="fade-down-left" data-aos-anchor-placement="top-bottom"
              id="myBtn1">
-          <h2 class="heading">Firebase</h2>
           <p class="more"><img height="100" src="img/firebase.png" width="100"></p>
         </div>
       </div>
-      <div class="col-xs-3 col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron " data-aos="fade-right" data-aos-anchor-placement="top-bottom"
              id="myBtn2">
-          <h2 class="heading">Angular</h2>
           <p class="more"><img class="img-fluid" src="img/angular.svg" width="100"></p>
         </div>
       </div>
-      <div class="col-xs-3 col-md-3 col-sm-6">
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron " data-aos="fade-up" data-aos-anchor-placement="top-bottom"
              id="myBtn3">
-          <h2 class="heading" style="font-size: 20pt;">NodeJS</h2>
           <p class="more"><img class="img-fluid" height="100" src="img/nodejs.png" width="100"></p>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron " data-aos="fade-down" data-aos-anchor-placement="top-bottom"
              id="myBtn4">
-          <h2 class="heading">Vue</h2>
           <p class="more"><img height="100" src="img/vue.png" width="110"></p>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron" data-aos="flip-left" data-aos-anchor-placement="top-bottom"
              id="myBtn5">
-          <h2 class="heading">Maria DB</h2>
           <p class="more"><img height="100" src="img/maria.png" width="130"></p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="jumbotron" data-aos="flip-right" data-aos-anchor-placement="top-bottom"
-             id="myBtn6">
-          <h2 class="heading">Mysql</h2>
-          <p class="more"><img height="100" src="img/mysql.png" width="100"></p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="jumbotron" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
-             id="myBtn7">
-          <h2 class="heading">Java</h2>
-          <p class="more"><img height="100" src="img/java.png" width="100"></p>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
+        <div class="jumbotron" data-aos="flip-right" data-aos-anchor-placement="top-bottom"
+             id="myBtn6">
+          <p class="more"><img height="100" src="img/mysql.png" width="100"></p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
+        <div class="jumbotron" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+             id="myBtn7">
+          <p class="more"><img height="100" src="img/java.png" width="100"></p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron " data-aos="flip-up" data-aos-anchor-placement="top-bottom"
              id="myBtn8">
-          <h2 class="heading">MongoDB</h2>
           <p class="more"><img class="img-fluid" height="100" src="img/mongo.png" width="100"></p>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6">
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron" data-aos="flip-down" data-aos-anchor-placement="top-bottom"
              id="myBtn9">
-          <h2 class="heading">Python</h2>
           <p class="more"><img src="img/python.png" width="100"></p>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron" data-aos="zoom-in" data-aos-anchor-placement="top-bottom"
              id="myBtn10">
-          <h2 class="heading">Docker</h2>
           <p class="more"><img class="img-fluid" height="100" src="img/docker.png" width="110"></p>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="jumbotron " data-aos="zoom-in-up" data-aos-anchor-placement="top-bottom"
              id="myBtn11">
-          <h2 class="heading">Android</h2>
           <p class="more"><img class="img-fluid" height="100" src="img/android.png" width="100"></p>
         </div>
       </div>
@@ -167,12 +163,12 @@
 <section id='contact'>Contact</section>
 </body>
 <script>
-  function slowTop() {
-    $('html, body').animate({
-      'scrollTop': $('body').position().top
-    });
-  }
-
+  const slowScroll = (el) => {
+    $('html, body').animate(
+            {'scrollTop': $(el).position().top},
+            1000
+    );
+  };
   AOS.init();
 </script>
 </html>
