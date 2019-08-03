@@ -2,11 +2,11 @@ $(() => {
   desk();
   changeTextAreaSize();
 
-  $("#contact_form").validationEngine('attach',{ scroll: false });
+  $("#contact_form").validationEngine('attach', {scroll: false});
   $(".lds-hourglass").css("top", "45%");
   // Input Lock
-  $('textarea').blur(function() {
-    $('#hire textarea').each(function() {
+  $('textarea').blur(function () {
+    $('#hire textarea').each(function () {
       $this = $(this);
       if (this.value != '') {
         $this.addClass('focused');
@@ -22,8 +22,8 @@ $(() => {
     });
   });
 
-  $('#hire .field:first-child input').blur(function() {
-    $('#hire .field:first-child input').each(function() {
+  $('#hire .field:first-child input').blur(function () {
+    $('#hire .field:first-child input').each(function () {
       $this = $(this);
       if (this.value !== '') {
         $this.addClass('focused');
@@ -43,15 +43,15 @@ $(() => {
       changeTextAreaSize()
     }
   });
-  $(".proj").hover(function(){
-      $(this).css("color","black");
-    },
-    function() {
-      $(this).css("color","white");
-    }
+  $(".proj").hover(function () {
+        $(this).css("color", "black");
+      },
+      function () {
+        $(this).css("color", "white");
+      }
   );
-  $('#hire .field:nth-child(2) input').blur(function() {
-    $('#hire .field:nth-child(2) input').each(function() {
+  $('#hire .field:nth-child(2) input').blur(function () {
+    $('#hire .field:nth-child(2) input').each(function () {
       $this = $(this);
       if (this.value != '') {
         $this.addClass('focused');
@@ -68,13 +68,13 @@ $(() => {
   });
   $('#msg').autoResize();
 
-  $(window).resize( () =>{
+  $(window).resize(() => {
     changeTextAreaSize();
     var w = $(window).width();
     var h = $(window).height();
 
-    if(detectmob()){
-        window.location.replace("mob.html");
+    if (detectmob()) {
+      window.location.replace("mob.html");
     }
     // else if(screenCheck(w,h))
     // {
@@ -88,7 +88,7 @@ $(() => {
     //   $("#screen").css("visibility","hidden");
     //   $("#menu").css("visibility","visible");
     // }
-});
+  });
   $(window).on('hashchange', function () {
     var hash = window.location.hash.substring(1);
     // if(hash.localeCompare("about")==0){
@@ -114,12 +114,12 @@ $(() => {
 
 function detectmob() {
   if (navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/webOS/i) ||
-    navigator.userAgent.match(/iPhone/i) ||
-    navigator.userAgent.match(/iPad/i) ||
-    navigator.userAgent.match(/iPod/i) ||
-    navigator.userAgent.match(/BlackBerry/i) ||
-    navigator.userAgent.match(/Windows Phone/i))
+      navigator.userAgent.match(/webOS/i) ||
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPad/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/BlackBerry/i) ||
+      navigator.userAgent.match(/Windows Phone/i))
     return true;
   else
     return false;
@@ -131,9 +131,9 @@ function desk() {
   var image = document.createElement('img');
   image.src = getBgUrl(document.getElementById('logos'));
   image.onload = function () {
-    $.getScript('css/jquery.multiscroll.css', function(data, textStatus, jqxhr) {
-      $.getScript('JavaScript/jquery.multiscroll.min.js', function(data, textStatus, jqxhr) {
-        $.getScript('JavaScript/jquery.easings.min.js', function(data, textStatus, jqxhr) {
+    $.getScript('css/jquery.multiscroll.css', function (data, textStatus, jqxhr) {
+      $.getScript('JavaScript/jquery.multiscroll.min.js', function (data, textStatus, jqxhr) {
+        $.getScript('JavaScript/jquery.easings.min.js', function (data, textStatus, jqxhr) {
           topFunction();
           $("#myContainer").css("visibility", "visible");
           $(".lds-hourglass").css("top", "-45%");
@@ -161,10 +161,11 @@ function topFunction() {
   $("html").css("overflow", "hidden");
 }
 
-function screenCheck(w,h){
+function screenCheck(w, h) {
   var ratio = w / h;
-  return ( Math.abs( ratio - 4/3 ) < Math.abs( ratio - 16/9 )) ? true : false || ( w < 880 || h < 470 )
+  return (Math.abs(ratio - 4 / 3) < Math.abs(ratio - 16 / 9)) ? true : false || (w < 880 || h < 470)
 }
+
 function getBgUrl(el) {
   var bg = "";
   if (el.currentStyle) { // IE

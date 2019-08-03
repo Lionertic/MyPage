@@ -14,6 +14,15 @@ span {
     font-family: 'Saira Stencil One', cursive;
 }
 
+.padding {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+}
+
+.filler {
+    height: 1vh;
+}
+
 /*INTRO*/
 #intro {
     height: 100%;
@@ -23,6 +32,7 @@ span {
     justify-content: center;
     align-items: center;
 }
+
 .displayNav {
     top: 0;
     transition: 0.3s;
@@ -91,6 +101,7 @@ span {
 .jumbotron {
     background: #cccccc !important;
 }
+
 .more {
     text-align: center;
 }
@@ -103,6 +114,19 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+#work-name {
+    font-size: 6vh;
+}
+
+.sub-name {
+    font-size: 4vh;
+}
+
+.works-header {
+    font-size: 2.5vh;
 }
 
 /*CONTACT*/

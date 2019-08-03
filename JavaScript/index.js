@@ -14,9 +14,9 @@ $(() => {
   $(window).resize(() => {
     let w = $(window).width();
     let h = $(window).height();
-    if ((w<h)||(w<880 || h < 470)){
+    if ((w < h) || (w < 880 || h < 470)) {
       changeVisibility("hidden", "visible", "hidden")
-    } else{
+    } else {
       changeVisibility("visible", "hidden", "auto");
     }
   });
@@ -26,15 +26,15 @@ $(() => {
 
     for (let i = 1; i <= 3; i++) {
       const name = "img";
-      image.src = getBgUrl(document.getElementById(name+i));
+      image.src = getBgUrl(document.getElementById(name + i));
       image.onload = function () {
         if (i === 3) {
-            setTimeout(showPage,500);
+          setTimeout(showPage, 500);
         }
       }
     }
     const s = skrollr.init({
-      render: function(data) {
+      render: function (data) {
         let opacity = $("#overlay").css("opacity");
         if ((opacity > 0.8) || (opacity === 0)) {
           window.location.replace("desk.html#home");
@@ -48,12 +48,12 @@ $(() => {
 
 const detectmob = () => {
   if (navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/webOS/i) ||
-    navigator.userAgent.match(/iPhone/i) ||
-    navigator.userAgent.match(/iPad/i) ||
-    navigator.userAgent.match(/iPod/i) ||
-    navigator.userAgent.match(/BlackBerry/i) ||
-    navigator.userAgent.match(/Windows Phone/i))
+      navigator.userAgent.match(/webOS/i) ||
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPad/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/BlackBerry/i) ||
+      navigator.userAgent.match(/Windows Phone/i))
     return true;
   else
     return false;

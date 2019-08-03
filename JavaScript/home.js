@@ -16,31 +16,38 @@ const data = {
         y: innerHeight / 2
     }
 };
+
 class Control {
     constructor(thedata) {
         for (let k in thedata) {
             this[k] = data[k]
         }
     }
+
     set pointerVal(valObj) {
         this.pointer.x = valObj.x;
         this.pointer.y = valObj.y
     }
+
     set mouseColor(color) {
         this.mouse.style.backgroundColor = color
     }
+
     get mouseVal() {
         return {
             x: this.mx,
             y: this.my
         }
     }
+
     static transform(tar, x, y, sval) {
         tar.style.transform = `translate(${x}px,${y}px) scale(${sval})`
     }
+
     static getDist(x1, y1, x2, y2) {
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2))
     }
+
     init() {
         for (let i = 0; i < this.elems.length; i++) {
             this.lis.push(new Lis(this.elems[i], this.colors[i]));
@@ -53,6 +60,7 @@ class Control {
             })
         }
     }
+
     render() {
         this.mx += (this.pointer.x - this.mx) * this.mEase;
         this.my += (this.pointer.y - this.my) * this.mEase;
@@ -81,6 +89,7 @@ class Control {
         this.lis.forEach(e => e.render())
     }
 }
+
 class Lis {
     constructor(el, color) {
         this.el = el;
@@ -88,6 +97,7 @@ class Lis {
         this.r = 35;
         this.center = {}
     }
+
     init() {
         let rect = this.el.getBoundingClientRect();
         this.center.x = rect.left + rect.width / 2;
@@ -95,6 +105,7 @@ class Lis {
         this.dx = this.center.x;
         this.dy = this.center.y
     }
+
     render() {
         let dist = Control.getDist(controler.mouseVal.x, controler.mouseVal.y, this.center.x, this.center.y);
         if (dist < this.r) {
@@ -108,6 +119,7 @@ class Lis {
         Control.transform(this.el, this.dx - this.center.x, this.dy - this.center.y, 1)
     }
 }
+
 const controler = new Control(data);
 window.addEventListener("mousemove", e => {
     controler.pointerVal = {

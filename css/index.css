@@ -14,6 +14,7 @@
 	animation-name: img1d;
 	animation-duration: 1s;
 }
+
 @-webkit-keyframes img1d {
 	from {
 		left: 100%;
@@ -22,6 +23,7 @@
 		left: 0;
 	}
 }
+
 @keyframes img1d {
 	from {
 		left: 100%;
@@ -30,6 +32,7 @@
 		left: 0;
 	}
 }
+
 @-webkit-keyframes img1m {
 	from {
 		left: 100%;
@@ -38,6 +41,7 @@
 		left: -100%;
 	}
 }
+
 @keyframes img1m {
 	from {
 		left: 100%;
@@ -46,6 +50,7 @@
 		left: -100%;
 	}
 }
+
 #img2 {
 	width: 100%;
 	height: 450vh;
@@ -60,6 +65,7 @@
 	animation-name: img2d;
 	animation-duration: 1s;
 }
+
 @-webkit-keyframes img2d {
 	from {
 		top: -100%;
@@ -68,6 +74,7 @@
 		top: 60%;
 	}
 }
+
 @keyframes img2d {
 	from {
 		top: -100%;
@@ -76,6 +83,7 @@
 		top: 60%;
 	}
 }
+
 @-webkit-keyframes img21d {
 	0% {
 		top: 60%;
@@ -87,6 +95,7 @@
 		top: 60%;
 	}
 }
+
 @keyframes img21d {
 	0% {
 		top: 60%;
@@ -98,6 +107,7 @@
 		top: 60%;
 	}
 }
+
 @-webkit-keyframes img2m {
 	from {
 		top: -100%;
@@ -106,6 +116,7 @@
 		top: 70%;
 	}
 }
+
 @keyframes img2m {
 	from {
 		top: -100%;
@@ -114,6 +125,7 @@
 		top: 70%;
 	}
 }
+
 @-webkit-keyframes img21m {
 	0% {
 		top: 70%;
@@ -125,6 +137,7 @@
 		top: 70%;
 	}
 }
+
 @keyframes img21m {
 	0% {
 		top: 70%;
@@ -136,6 +149,7 @@
 		top: 70%;
 	}
 }
+
 #img3 {
 	width: 100%;
 	height: 90vh;
@@ -150,6 +164,7 @@
 	animation-name: img3d;
 	animation-duration: 1s;
 }
+
 @-webkit-keyframes img3d {
 	from {
 		top: 100%;
@@ -158,6 +173,7 @@
 		top: 13%;
 	}
 }
+
 @keyframes img3d {
 	from {
 		top: 100%;
@@ -166,6 +182,7 @@
 		top: 13%;
 	}
 }
+
 @-webkit-keyframes img3m {
 	from {
 		top: 100%;
@@ -174,6 +191,7 @@
 		top: 25%;
 	}
 }
+
 @keyframes img3m {
 	from {
 		top: 100%;
@@ -182,6 +200,7 @@
 		top: 25%;
 	}
 }
+
 #overlay {
 	z-index: 4;
 	height: 100%;
@@ -192,25 +211,30 @@
     left: 0;
 	background: rgba(0, 0, 0, 0.7);
 }
+
 .js-loading *,
 .js-loading *:before,
 .js-loading *:after {
     animation-play-state: paused !important;
 }
+
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  cursor: default;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	cursor: default;
 }
+
 ::-webkit-scrollbar {
-  display: none
+	display: none
 }
+
 body {
-  background-color: #1f1f1f;
-  color: #fff;
+	background-color: #1f1f1f;
+	color: #fff;
 }
-#screen{
+
+#screen {
 	visibility: hidden;
 	color: #fff;
 	margin-top: 40vh;
