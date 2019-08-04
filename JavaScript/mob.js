@@ -1,7 +1,6 @@
 $(() => {
     $("label").css('visibility', 'hidden');
-    let flag = 0;
-    $(".menu").click(function () {
+    $(".menu").click(() => {
         let rad = parseFloat($(this).css("border-radius"));
         if (rad === 50) {
             $("body").css("overflow", "hidden");
@@ -13,13 +12,6 @@ $(() => {
     $("label ul").click(() => {
         $("body").css("overflow", "visible");
         $(".dis").prop("checked", false);
-    });
-    $(window).on("orientationchange", function (event) {
-        changeUI(flag);
-        flag = 1;
-        if (event.orientation === 'landscape') {
-            $('.home-row-content').removeClass('col-xs-12 col-sm-12').addClass('col-xs-6 col-sm-6');
-        }
     });
 
     const real = parseFloat($("#intro").css("font-size"));
@@ -101,4 +93,3 @@ const changeUI = (flag) => {
         }
     }
 };
-

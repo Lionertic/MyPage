@@ -48,10 +48,19 @@ span {
     z-index: 10;
 }
 
+@media only screen and (orientation: landscape) {
+    #intro {
+        font-size: 5vw;
+    }
+
+    .displayNav {
+        font-size: 3vw !important;
+    }
+}
+
 /*HOME*/
 #home {
     height: 100%;
-    width: 100%;
     font-size: 3vh;
     display: flex;
     justify-content: center;
@@ -79,8 +88,12 @@ span {
 }
 
 @media only screen and (orientation: landscape) {
+    #home {
+        height: 100%;
+    }
+
     #home img {
-        height: 20vh;
+        height: 35vh;
         width: 20vw;
     }
 }
@@ -117,7 +130,23 @@ span {
 }
 
 .more {
+    margin-bottom: 100%;
     text-align: center;
+}
+
+@media only screen and (orientation: landscape) {
+    #skills {
+        height: auto;
+    }
+
+    .skills-content {
+        margin-top: 10%;
+    }
+
+    #skill-name {
+        font-size: 8vw;
+    }
+
 }
 
 /*WORKS*/
@@ -143,6 +172,30 @@ span {
     font-size: 2.5vh;
 }
 
+@media only screen and (orientation: landscape) {
+
+    #works {
+        height: auto;
+    }
+
+    #work-name {
+        font-size: 6vw;
+    }
+
+    .works-header {
+        font-size: 2.5vw;
+    }
+
+    .sub-name {
+        font-size: 4vw;
+    }
+
+    .work-content {
+        margin-top: 20%;
+        font-size: 2vw;
+    }
+}
+
 /*CONTACT*/
 #contact {
     height: 100%;
@@ -151,6 +204,21 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+#contact-name {
+    font-size: 6vh;
+}
+
+@media only screen and (orientation: landscape) {
+    #contact-name {
+        font-size: 6vw;
+    }
+}
+
+.icon-3d {
+    color: #1F1F1F !important;
 }
 
 /*HamBurger Menu*/

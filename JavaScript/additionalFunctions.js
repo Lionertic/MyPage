@@ -4,7 +4,7 @@
 
         // Just some abstracted details,
         // to make plugin users happy:
-        var settings = $.extend({
+        let settings = $.extend({
             onResize: function () {
             },
             animate: true,
@@ -19,7 +19,7 @@
         this.filter('textarea').each(function () {
 
             // Get rid of scrollbars and disable WebKit resizing:
-            var textarea = $(this).css({resize: 'none', 'overflow-y': 'hidden'}),
+            let textarea = $(this).css({resize: 'none', 'overflow-y': 'hidden'}),
 
                 // Cache original height, for use later:
                 origHeight = textarea.height(),
@@ -28,7 +28,7 @@
                 clone = (function () {
 
                     // Properties which may effect space taken up by chracters:
-                    var props = ['height', 'width', 'lineHeight', 'textDecoration', 'letterSpacing'],
+                    let props = ['height', 'width', 'lineHeight', 'textDecoration', 'letterSpacing'],
                         propOb = {};
 
                     // Create object of styles to apply:
@@ -52,7 +52,7 @@
                     clone.height(0).val($(this).val()).scrollTop(10000);
 
                     // Find the height of text:
-                    var scrollTop = Math.max(clone.scrollTop(), origHeight) + settings.extraSpace,
+                    let scrollTop = Math.max(clone.scrollTop(), origHeight) + settings.extraSpace,
                         toChange = $(this).add(clone);
 
                     // Don't do anything if scrollTip hasen't changed:
