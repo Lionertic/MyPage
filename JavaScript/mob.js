@@ -17,6 +17,9 @@ $(() => {
     $(window).on("orientationchange", function (event) {
         changeUI(flag);
         flag = 1;
+        if (event.orientation === 'landscape') {
+            $('.home-row-content').removeClass('col-xs-12 col-sm-12').addClass('col-xs-6 col-sm-6');
+        }
     });
 
     const real = parseFloat($("#intro").css("font-size"));
