@@ -70,8 +70,8 @@ $(() => {
 
   $(window).resize(() => {
     changeTextAreaSize();
-    var w = $(window).width();
-    var h = $(window).height();
+    let w = $(window).width();
+    let h = $(window).height();
 
     if (detectmob()) {
       window.location.replace("mob.html");
@@ -112,7 +112,7 @@ $(() => {
 
 });
 
-function detectmob() {
+const detectmob = () => {
   if (navigator.userAgent.match(/Android/i) ||
       navigator.userAgent.match(/webOS/i) ||
       navigator.userAgent.match(/iPhone/i) ||
@@ -123,7 +123,7 @@ function detectmob() {
     return true;
   else
     return false;
-}
+};
 
 function desk() {
   $(".lds-hourglass").css("top", "45%");
