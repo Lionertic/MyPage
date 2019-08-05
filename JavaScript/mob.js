@@ -44,7 +44,6 @@ $(() => {
         }
     });
     $(window).resize(() => {
-        changeTextAreaSize();
         let w = $(window).width();
         let h = $(window).height();
 

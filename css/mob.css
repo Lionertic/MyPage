@@ -467,19 +467,44 @@ span {
     #contact-name {
         font-size: 6vw;
     }
+
+    .contact-content {
+        margin-top: 60%;
+    }
 }
 
 /*FOOTER*/
 #footer {
     background-color: #1F1F1F;
     color: #cccccc;
-    align-self: baseline;
 }
 
 #footer .jumbotron {
     background: #1F1F1F !important;
     color: #cccccc;
 }
+
+.flex-wrapper {
+    display: flex;
+    min-height: auto;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+@media only screen and (orientation: landscape) {
+    #footer {
+        background-color: #1F1F1F;
+        color: #cccccc;
+        margin-top: 60%;
+    }
+
+    #footer .jumbotron {
+        background: #1F1F1F !important;
+        color: #cccccc;
+        padding: 5% 5% 5% 5%;
+    }
+}
+
 /*HamBurger Menu*/
 label .menu {
     position: fixed;

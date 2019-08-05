@@ -262,7 +262,7 @@
     </div>
 </section>
 <section id='contact'>
-    <div class="container jumbotron padding">
+    <div class="container jumbotron padding contact-content">
         <div class="row">
             <div class="row">
                 <div class="col-sm-12">
@@ -282,9 +282,6 @@
                 <div class="col-md-12">
                     <div class="form_wrapper">
                         <div class="form_container">
-                            <div class="title_container">
-                                <h2>Responsive Registration Form</h2>
-                            </div>
                             <div class="row clearfix">
                                 <div class="">
                                     <form accept-charset="UTF-8" action="https://formcarry.com/s/CEMhKfd2eA0"
@@ -296,12 +293,12 @@
                                                    placeholder="Enter Name" required type="text"/>
                                         </div>
                                         <div class="input_field">
-                                            <input class="input" id="email" name="email" placeholder="Password" required
+                                            <input class="input" id="email" name="email" placeholder="Email" required
                                                    type="email"/>
                                         </div>
                                         <div class="input_field"></span>
                                             <textarea class="input" cols="40" id="msg" name="msg"
-                                                      placeholder="Re-type Password" required></textarea>
+                                                      placeholder="MSG" required></textarea>
                                         </div>
                                         <input name="_gotcha" type="hidden">
                                         <input class="contact-button" type="submit" value="Send"/>
@@ -315,8 +312,8 @@
         </div>
     </div>
 </section>
-<section id="footer">
-    <div class="jumbotron container-fluid">
+<footer class="flex-wrapper" id="footer">
+    <div class="jumbotron container-fluid bottom_row">
         <div class="text-center row">
             <div class="col-xs-4 col-sm-4">
                 <a href="https://github.com/Lionertic" target="_blank"><i
@@ -330,16 +327,14 @@
                 <a href="https://www.linkedin.com/in/udaya-charan-5420ba142/" target="_blank"><i
                         class="jumbotron fa fa-linkedin	fa-3x icon-3d"></i></a>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a
-                    Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis,
-                    MN]</p>
-                <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com"
-                                                          target="_blank">Sunlimetech</a></p>
+            <div class=" col-xs-12 col-sm-12 col-md-12 text-center text-white">
+                <p class="copyright">
+                    With ♥ Lionertic.
+                </p>
             </div>
         </div>
     </div>
-</section>
+</footer>
 </body>
 
 <script>
@@ -347,6 +342,7 @@
     let arrow;
     const changeOrientation = () => {
         if (orientation === 90) {
+            $('#footer').css('margin-top', '50%');
             $('.home-row-content').removeClass('col-xs-12 col-sm-12')
                 .addClass('col-xs-6 col-sm-6');
             $('.work-content').addClass('jumbotron');
@@ -355,8 +351,12 @@
                 .addClass('col-xs-3 col-sm-3');
             $('.skills-content').removeClass('container')
                 .addClass('container-fluid');
+            $('.copyright').css('font-size', '8vh');
             arrow = $('.arrow').detach();
+            $('.input_field input').css('font-size', '5vh');
+            $('.input_field textarea').css('font-size', '5vh');
         } else {
+            $('#footer').css('margin-top', '0');
             $('.home-row-content').addClass('col-xs-12 col-sm-12')
                 .removeClass('col-xs-6 col-sm-6');
             $('.work-content').removeClass('jumbotron');
@@ -365,6 +365,9 @@
                 .removeClass('col-xs-3 col-sm-3');
             $('.skills-content').addClass('container')
                 .removeClass('container-fluid');
+            $('.copyright').css('font-size', '3vh');
+            $('.input_field input').css('font-size', '2vh');
+            $('.input_field textarea').css('font-size', '2vh');
             if (arrow)
                 $('#home .container').append(arrow)
         }
