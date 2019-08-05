@@ -286,50 +286,47 @@ button:active {
     transform: translateY(2px);
 }
 
-.containerskill {
-    margin-top: 25%;
+.skill {
+    margin-top: 17vh;
+    padding: 0;
 }
 
+.skill .jumbotron {
+    background: none;
+    height: 7vh !important;
+    width: 15vw;
+}
 @media only screen and (max-height: 650px) {
-    .containerskill {
+    .skill {
         margin-top: 10vh;
     }
 }
 
 /* WORKS */
-
-.worksd1 {
-    position: absolute;
-    text-align: center;
-    margin-top: 35%;
-    font-size: 3vh;
+.sub-name {
+    font-size: 4.5vh;
 }
 
-.worksd2 {
-    position: absolute;
+.work-content {
+
+    font-size: 2.5vh;
+    font-family: 'Grenze', serif;
     text-align: center;
-    margin-top: 75%;
-    font-size: 3vh;
+    vertical-align: bottom !important;
 }
 
-.worksd1r {
-    position: absolute;
-    text-align: center;
-    margin-top: 15%;
-    font-size: 3vh;
+.filler-works-right {
+    height: 8vh;
 }
 
-.worksd2r {
-    position: absolute;
-    text-align: center;
-    margin-top: 55%;
-    font-size: 3vh;
+.filler-works-left {
+    height: 50vh;
 }
 
-.worksd1, .worksd2, .worksd1r, .worksd2r {
+.works-header {
+    font-size: 3.5vh;
     font-family: 'Grenze', serif;
 }
-
 /* CONTACT */
 
 .contactdl {
@@ -481,7 +478,6 @@ form .field input[type="text"].focused,
 form .field textarea:focus,
 form .field textarea.focused {
     outline: none;
-    overflow: none;
 }
 
 /*form .field input[type="text"]:focus#msg,*/
@@ -498,14 +494,12 @@ form .field textarea:focus + label,
 form .field textarea.focused + label {
     width: 18%;
     background: #ff8080;
-    overflow: none;
     color: #1f1f1f;
 }
 
 form .field input[type="text"].focused + label,
 form .field textarea.focused + label {
     color: #fff;
-    overflow: none;
 }
 
 form .field:hover label {
@@ -529,7 +523,6 @@ form input[type="submit"] {
     -webkit-transition: all 333ms ease-in-out;
     -moz-transition: all 333ms ease-in-out;
     -o-transition: all 333ms ease-in-out;
-    -ms-transition: all 333ms ease-in-out;
     transition: all 333ms ease-in-out;
 }
 
