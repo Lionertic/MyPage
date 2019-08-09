@@ -1,4 +1,36 @@
 $(() => {
+    $('#contact_form').submit((e) => {
+        e.preventDefault();
+        Swal.fire({
+            title: 'Submit your response',
+            showLoaderOnConfirm: true,
+            preConfirm: () => {
+                return fetch(`https://us-central1-mail-36181.cloudfunctions.net/sendMail/?name=${$('#enter-name').val()}&email=${$('#email').val()}&msg=${$('#msg').val()}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(response.statusText)
+                        }
+                        return response.json()
+                    })
+                    .catch(error => {
+                        Swal.showValidationMessage(
+                            `Request failed: ${error}`
+                        )
+                    })
+            },
+            allowOutsideClick: () => !Swal.isLoading()
+        }).then((result) => {
+            if (result.value) {
+                Swal.fire({
+                    type: 'success',
+                    title: `Success`,
+                    text: "Successfully Submitted"
+                })
+            }
+        })
+    });
+
+
     $("label").css('visibility', 'hidden');
     $(".menu").click(() => {
         let rad = parseFloat($(this).css("border-radius"));
@@ -80,27 +112,27 @@ function changeUI(flag) {
     //     }
     // } else {
 
-        $("#intro").css("font-size", "5vh");
-        displayNav.css({
-            "font-size": "3vh",
-            "height": "150px",
-            "line-height": "150px"
+    $("#intro").css("font-size", "5vh");
+    displayNav.css({
+        "font-size": "3vh",
+        "height": "150px",
+        "line-height": "150px"
+    });
+    $("label .menu").css({
+        "right": "-100px",
+        "top": "-100px",
+        "width": "250px",
+        "height": "250px"
+    });
+    $("label .hamburger").css({
+        "top": "160px",
+        "left": "70px"
+    });
+    if (flag === 0) {
+        $('html, body').animate({
+            'scrollTop': $("#home").position().top - 170
         });
-        $("label .menu").css({
-            "right": "-100px",
-            "top": "-100px",
-            "width": "250px",
-            "height": "250px"
-        });
-        $("label .hamburger").css({
-            "top": "160px",
-            "left": "70px"
-        });
-        if (flag === 0) {
-            $('html, body').animate({
-                'scrollTop': $("#home").position().top - 170
-            });
-        }
+    }
     // }
 }
 
