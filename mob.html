@@ -25,6 +25,7 @@
     <script charset="utf-8" src="JavaScript/jquery.validationEngine.min.js" type="text/javascript"></script>
     <script charset="utf-8" src="JavaScript/additionalFunctions.js" type="text/javascript"></script>
     <script charset="utf-8" src="JavaScript/aos.js" type="text/javascript"></script>
+    <script charset="utf-8" src="JavaScript/mob.js" type="text/javascript"></script>
 
     <!-- FONTS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?v=3.4.2"
@@ -340,38 +341,6 @@
 <script>
     let flag = 0;
     let arrow;
-    const changeOrientation = () => {
-        if (orientation === 90) {
-            $('#footer').css('margin-top', '50%');
-            $('.home-row-content').removeClass('col-xs-12 col-sm-12')
-                .addClass('col-xs-6 col-sm-6');
-            $('.work-content').addClass('jumbotron');
-            $('#contact .container').addClass('jumbotron');
-            $('.skill-images').removeClass('col-xs-4 col-sm-4')
-                .addClass('col-xs-3 col-sm-3');
-            $('.skills-content').removeClass('container')
-                .addClass('container-fluid');
-            $('.copyright').css('font-size', '8vh');
-            arrow = $('.arrow').detach();
-            $('.input_field input').css('font-size', '5vh');
-            $('.input_field textarea').css('font-size', '5vh');
-        } else {
-            $('#footer').css('margin-top', '0');
-            $('.home-row-content').addClass('col-xs-12 col-sm-12')
-                .removeClass('col-xs-6 col-sm-6');
-            $('.work-content').removeClass('jumbotron');
-            $('#contact .container').removeClass('jumbotron');
-            $('.skill-images').addClass('col-xs-4 col-sm-4')
-                .removeClass('col-xs-3 col-sm-3');
-            $('.skills-content').addClass('container')
-                .removeClass('container-fluid');
-            $('.copyright').css('font-size', '3vh');
-            $('.input_field input').css('font-size', '2vh');
-            $('.input_field textarea').css('font-size', '2vh');
-            if (arrow)
-                $('#home .container').append(arrow)
-        }
-    };
     const slowScroll = (el) => {
         $('html, body').animate(
             {'scrollTop': $(el).position().top},
@@ -379,14 +348,11 @@
         );
     };
     changeOrientation();
-
     AOS.init();
     $(window).on("orientationchange", (event) => {
-        changeUI(flag);
-        flag = 1;
+        changeUI(this.flag);
+        this.flag = 1;
         changeOrientation()
     });
-
 </script>
-<script charset="utf-8" src="JavaScript/mob.js" type="text/javascript"></script>
 </html>

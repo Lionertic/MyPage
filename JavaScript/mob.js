@@ -53,31 +53,33 @@ $(() => {
     });
 });
 
-const changeUI = (flag) => {
+function changeUI(flag) {
+
     const displayNav = $('.displayNav');
-    if ($(window).height() < 2000) {
-        $("#intro").css("font-size", "10vh");
-        displayNav.css({
-            "font-size": "6vh",
-            "height": "100px",
-            "line-height": "100px"
-        });
-        $("label .menu").css({
-            "right": "-100px",
-            "top": "-100px",
-            "width": "200px",
-            "height": "200px"
-        });
-        $("label .hamburger").css({
-            "top": "135px",
-            "left": "35px"
-        });
-        if (flag === 0) {
-            $('html, body').animate({
-                'scrollTop': $("#home").position().top - 120
-            });
-        }
-    } else {
+    // if ($(window).height() < 2000) {
+    //     $("#intro").css("font-size", "100vh");
+    //     displayNav.css({
+    //         "font-size": "6vh",
+    //         "height": "100px",
+    //         "line-height": "100px"
+    //     });
+    //     $("label .menu").css({
+    //         "right": "-100px",
+    //         "top": "-100px",
+    //         "width": "200px",
+    //         "height": "200px"
+    //     });
+    //     $("label .hamburger").css({
+    //         "top": "135px",
+    //         "left": "35px"
+    //     });
+    //     if (flag === 0) {
+    //         $('html, body').animate({
+    //             'scrollTop': $("#home").position().top - 120
+    //         });
+    //     }
+    // } else {
+
         $("#intro").css("font-size", "5vh");
         displayNav.css({
             "font-size": "3vh",
@@ -99,8 +101,41 @@ const changeUI = (flag) => {
                 'scrollTop': $("#home").position().top - 170
             });
         }
+    // }
+}
+
+function changeOrientation() {
+    if (orientation === 90) {
+        $('#footer').css('margin-top', '50%');
+        $('.home-row-content').removeClass('col-xs-12 col-sm-12')
+            .addClass('col-xs-6 col-sm-6');
+        $('.work-content').addClass('jumbotron');
+        $('#contact .container').addClass('jumbotron');
+        $('.skill-images').removeClass('col-xs-4 col-sm-4')
+            .addClass('col-xs-3 col-sm-3');
+        $('.skills-content').removeClass('container')
+            .addClass('container-fluid');
+        $('.copyright').css('font-size', '8vh');
+        arrow = $('.arrow').detach();
+        $('.input_field input').css('font-size', '5vh');
+        $('.input_field textarea').css('font-size', '5vh');
+    } else {
+        $('#footer').css('margin-top', '0');
+        $('.home-row-content').addClass('col-xs-12 col-sm-12')
+            .removeClass('col-xs-6 col-sm-6');
+        $('.work-content').removeClass('jumbotron');
+        $('#contact .container').removeClass('jumbotron');
+        $('.skill-images').addClass('col-xs-4 col-sm-4')
+            .removeClass('col-xs-3 col-sm-3');
+        $('.skills-content').addClass('container')
+            .removeClass('container-fluid');
+        $('.copyright').css('font-size', '3vh');
+        $('.input_field input').css('font-size', '2vh');
+        $('.input_field textarea').css('font-size', '2vh');
+        if (arrow)
+            $('#home .container').append(arrow)
     }
-};
+}
 
 const detectMob = () => {
     if (navigator.userAgent.match(/Android/i) ||
