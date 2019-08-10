@@ -32,19 +32,6 @@ $(() => {
 
 
     $("label").css('visibility', 'hidden');
-    $(".menu").click(() => {
-        let rad = parseFloat($(this).css("border-radius"));
-        if (rad === 50) {
-            $("body").css("overflow", "hidden");
-        } else {
-            $("body").css("overflow", "visible");
-        }
-    });
-
-    $("label ul").click(() => {
-        $("body").css("overflow", "visible");
-        $(".dis").prop("checked", false);
-    });
 
     const real = parseFloat($("#intro").css("font-size"));
 
