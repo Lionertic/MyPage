@@ -41,7 +41,7 @@ $(() => {
     $(document).scroll(() => {
         let scroll = $(window).scrollTop();
         let objectPosition = ($(window).height()) / 20;
-        // let homePosition = $("#home").position().top;
+
         if (scroll > objectPosition) {
             $('#name').addClass('displayNav');
             $("#bar").css("visibility", "visible");
@@ -75,52 +75,55 @@ $(() => {
 function changeUI(flag) {
 
     const displayNav = $('.displayNav');
-    // if ($(window).height() < 2000) {
-    //     $("#intro").css("font-size", "100vh");
-    //     displayNav.css({
-    //         "font-size": "6vh",
-    //         "height": "100px",
-    //         "line-height": "100px"
-    //     });
-    //     $("label .menu").css({
-    //         "right": "-100px",
-    //         "top": "-100px",
-    //         "width": "200px",
-    //         "height": "200px"
-    //     });
-    //     $("label .hamburger").css({
-    //         "top": "135px",
-    //         "left": "35px"
-    //     });
-    //     if (flag === 0) {
-    //         $('html, body').animate({
-    //             'scrollTop': $("#home").position().top - 120
-    //         });
-    //     }
-    // } else {
 
-    $("#intro").css("font-size", "5vh");
-    displayNav.css({
-        "font-size": "3vh",
-        "height": "150px",
-        "line-height": "150px"
-    });
-    $("label .menu").css({
-        "right": "-100px",
-        "top": "-100px",
-        "width": "250px",
-        "height": "250px"
-    });
-    $("label .hamburger").css({
-        "top": "160px",
-        "left": "70px"
-    });
-    if (flag === 0) {
-        $('html, body').animate({
-            'scrollTop': $("#home").position().top - 170
+    if (orientation === 90) {
+        $("#intro").css("font-size", "10vh");
+        displayNav.css({
+            "font-size": "6vh",
+            "height": "100px",
+            "line-height": "100px"
         });
+        $("label .menu").css({
+            "right": "-100px",
+            "top": "-100px",
+            "width": "200px",
+            "height": "200px"
+        });
+        $("label .hamburger").css({
+            "top": "135px",
+            "left": "40px"
+        });
+        $("label li a").css({
+            "font-size": "3vw"
+        });
+        if (flag === 0) {
+            $('html, body').animate({
+                'scrollTop': $("#home").position().top - 120
+            });
+        }
+    } else {
+        $("#intro").css("font-size", "5vh");
+        displayNav.css({
+            "font-size": "3vh",
+            "height": "150px",
+            "line-height": "150px"
+        });
+        $("label .menu").css({
+            "right": "-100px",
+            "top": "-100px",
+            "width": "250px",
+            "height": "250px"
+        });
+        $("label .hamburger").css({
+            "top": "160px",
+            "left": "70px"
+        });
+        if (flag === 0) {
+            $('html, body').animate({
+                'scrollTop': $("#home").position().top - 170
+            });
+        }
     }
-    // }
 }
 
 function changeOrientation() {
@@ -168,3 +171,11 @@ const detectMob = () => {
     else
         return false;
 };
+
+function navigationBar(check) {
+    if (bar) {
+        $('#bar ul').append(bar)
+    } else {
+        bar = $('#bar ul li').detach()
+    }
+}

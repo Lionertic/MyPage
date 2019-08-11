@@ -20,7 +20,7 @@ span {
 }
 
 .filler {
-    height: 1vh;
+    /*height: 0.1vh;*/
 }
 
 /*INTRO*/
@@ -52,7 +52,6 @@ span {
     #intro {
         font-size: 5vw;
     }
-
     .displayNav {
         font-size: 3vw !important;
     }
@@ -191,7 +190,7 @@ span {
     }
 
     .work-content {
-        margin-top: 20%;
+        margin-top: 10%;
         font-size: 2vw;
     }
 }
