@@ -370,6 +370,8 @@
     };
     changeOrientation();
     AOS.init();
+    $("label").css('visibility', 'hidden');
+
     $(window).on("orientationchange", (event) => {
         changeUI(this.flag);
         this.flag = 1;
@@ -382,7 +384,8 @@
         if (rad === 50) {
             $("body").css("overflow", "hidden");
         } else {
-            $("body").css("overflow", "visible");
+            if ($('label').css('visibility') === 'hidden')
+                $("body").css("overflow", "visible");
         }
     });
 

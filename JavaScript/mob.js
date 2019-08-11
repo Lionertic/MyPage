@@ -30,8 +30,8 @@ $(() => {
         })
     });
 
-
-    $("label").css('visibility', 'hidden');
+    if ($("label").css('visibility') === 'hidden')
+        $("body").css("overflow", "visible");
 
     const real = parseFloat($("#intro").css("font-size"));
 
