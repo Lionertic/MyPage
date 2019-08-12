@@ -25,7 +25,10 @@ $(() => {
                     type: 'success',
                     title: `Success`,
                     text: "Successfully Submitted"
-                })
+                });
+                $('#enter-name').val('');
+                $('#email').val('');
+                $('#msg').val('')
             }
         })
     });
