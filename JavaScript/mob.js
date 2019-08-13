@@ -176,9 +176,5 @@ const detectMob = () => {
 };
 
 function navigationBar(check) {
-    if (bar) {
-        $('#bar ul').append(bar)
-    } else {
-        bar = $('#bar ul li').detach()
-    }
+
 }

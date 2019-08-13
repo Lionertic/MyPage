@@ -358,7 +358,7 @@
     let flag = 0;
     let arrow, bar;
     let itemActive = false;
-    bar = $('#bar ul li').detach();
+    bar = $('#bar ul').detach();
 
     navigationBar(itemActive);
 
@@ -380,7 +380,11 @@
     $(".menu").click(() => {
         let rad = parseFloat($('.menu').css("border-radius"));
         itemActive = !itemActive;
-        navigationBar(itemActive);
+        if (bar && itemActive) {
+            $('#bar').append(bar)
+        } else {
+            bar = $('#bar ul').detach()
+        }
         if (rad === 50) {
             $("body").css("overflow", "hidden");
         } else {
@@ -392,7 +396,13 @@
     $("label ul").click(() => {
         $("body").css("overflow", "visible");
         $(".dis").prop("checked", false);
-
+        itemActive = !itemActive;
+        if (bar && itemActive) {
+            $('#bar').append(bar)
+        } else {
+            bar = $('#bar ul').detach()
+        }
     });
+
 </script>
 </html>
