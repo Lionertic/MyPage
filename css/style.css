@@ -723,11 +723,14 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: 0.3s;
 }
 .work .desc h3 {
+  color: #BA1200;
   font-size: 20px;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   -webkit-transform: translate3d(0, -15px, 0);
   transform: translate3d(0, -15px, 0);
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 .work .desc span {
   display: block;
