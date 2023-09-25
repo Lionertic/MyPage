@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6, figure {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(186, 18, 0, 0.8);
+  background: rgba(186, 18, 0, 0.75) !important;
 }
 #mine-header .display-t,
 .mine-cover .display-t {
@@ -691,76 +691,6 @@ h1, h2, h3, h4, h5, h6, figure {
     right: auto;
   }
 }
-.progress-wrap {
-  width: 100%;
-  float: left;
-  margin-bottom: 10px;
-}
-.progress-wrap h3 {
-  font-size: 16px;
-  display: block;
-  margin-bottom: 10px;
-  float: left;
-  width: 100%;
-}
-.progress-wrap h3 .name-left {
-  float: left;
-}
-.progress-wrap h3 .value-right {
-  float: right;
-}
-
-.progress {
-  width: 100%;
-  float: left;
-  height: 5px;
-  box-shadow: none;
-}
-
-.progress-bar {
-  background-color: #2F3C4F;
-  height: 5px;
-  display: block;
-  box-shadow: none;
-}
-.progress-bar.progress-bar-1 {
-  background-color: #2980b9 !important;
-}
-.progress-bar.progress-bar-2 {
-  background-color: #c0392b !important;
-}
-.progress-bar.progress-bar-3 {
-  background-color: #d35400 !important;
-}
-.progress-bar.progress-bar-4 {
-  background-color: #8e44ad !important;
-}
-.progress-bar.progress-bar-5 {
-  background-color: #27ae60 !important;
-}
-
-.chart {
-  width: 160px;
-  height: 160px;
-  margin: 0 auto 40px auto;
-  position: relative;
-  text-align: center;
-}
-.chart span {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -30px;
-  width: 100%;
-}
-.chart span strong {
-  display: block;
-}
-.chart canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
 
 .work {
   background-size: 100px;
@@ -869,14 +799,16 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
   margin-bottom: 40px;
 }
-
+.posted_on {
+    color: black !important;
+}
 .mine-blog .blog-text {
   margin-bottom: 30px;
   position: relative;
   width: 100%;
   padding: 30px;
   float: left;
-  background: rgba(186, 18, 0, 0.9);
+  background: rgba(186, 18, 0, 0.75);
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
@@ -953,35 +885,15 @@ h1, h2, h3, h4, h5, h6, figure {
 .choose textarea {
   border-color: #031927;
 }
-#mine-consult .video, #mine-consult .choose {
+#mine-consult .choose {
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
-  #mine-consult .video, #mine-consult .choose {
-    width: 100% !important;
+    #mine-consult .choose {
+        width: 100% !important;
   }
 }
-#mine-consult .video {
-  display: table;
-  width: 50%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-}
-@media screen and (max-width: 768px) {
-  #mine-consult .video {
-    display: none;
-  }
-}
+
 #mine-consult .choose {
   width: 50%;
   padding: 4em;
@@ -991,26 +903,6 @@ h1, h2, h3, h4, h5, h6, figure {
     width: 100%;
     padding: 4em 1em;
   }
-}
-
-.mine-video {
-  overflow: hidden;
-}
-@media screen and (max-width: 992px) {
-  .mine-video {
-    height: 450px;
-  }
-}
-.mine-video .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.1);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
 }
 
 #mine-footer {
@@ -1070,17 +962,6 @@ input[type="text"] {
 
 .form-group {
   margin-bottom: 30px;
-}
-
-#map {
-  width: 100%;
-  height: 500px;
-  position: relative;
-}
-@media screen and (max-width: 768px) {
-  #map {
-    height: 200px;
-  }
 }
 
 .gototop {
